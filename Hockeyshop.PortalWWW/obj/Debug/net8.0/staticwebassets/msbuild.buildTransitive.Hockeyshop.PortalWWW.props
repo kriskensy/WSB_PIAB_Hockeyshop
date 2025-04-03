@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Hockeyshop.PortalWWW.props" />
+</Project>
