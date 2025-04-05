@@ -1,3 +1,14 @@
+wwwroot\content\gift card.jpg
+wwwroot\content\grays emoji ball.webp
+wwwroot\content\grays highlights.webp
+wwwroot\content\grays hoodie.webp
+wwwroot\content\grays shinguards.webp
+wwwroot\content\grays stick.webp
+wwwroot\content\hockey news.jpg
+wwwroot\content\hockey1.jpg
+wwwroot\content\hockey2.jpg
+wwwroot\content\hockey3.jpg
+wwwroot\content\hockey4.jpg
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js

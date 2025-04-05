@@ -1,5 +1,6 @@
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\appsettings.Development.json
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\appsettings.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\libman.json
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Hockeyshop.PortalWWW.staticwebassets.runtime.json
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Hockeyshop.PortalWWW.staticwebassets.endpoints.json
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Hockeyshop.PortalWWW.exe

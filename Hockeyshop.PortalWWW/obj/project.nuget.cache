@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ka8MBjb6tXM=",
+  "dgSpecHash": "2kTf20R+Hgs=",
   "success": true,
   "projectFilePath": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Kris\\.nuget\\packages\\font.awesome\\5.15.4\\font.awesome.5.15.4.nupkg.sha512",
+    "C:\\Users\\Kris\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

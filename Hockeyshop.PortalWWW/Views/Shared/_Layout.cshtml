@@ -3,42 +3,281 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Hockeyshop.PortalWWW</title>
+    <title>@ViewData["Title"] - Besthockey</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Hockeyshop.PortalWWW.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Hockeyshop.PortalWWW</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Besthockey</a>
+
+                <ul class="nav nav-pills me-auto">
+                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="HockeyNews">News</a>
+                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="SticksTechnology">Sticks technology</a>
+                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="OurTeam">Our team</a>
+
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">Shop</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Sticks">Sticks</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Protection">Protection</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Bags">Bags</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Shoes">Shoes</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Balls">Balls</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Accessories">Accessories</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="btn-group ms-auto" role="group">
+                    <a asp-area="" asp-controller="Cart" asp-action="CartIndex" class="btn btn-success">
+                        <i class="fa-solid fa-cart-shopping"></i> Cart
+                    </a>
+                    <a asp-area="" asp-controller="Account" asp-action="AccountIndex" class="btn btn-success">
+                        <i class="fa-solid fa-user"></i> Account
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    @* Layout container *@
+    <div class="container align-content-center">
+        @* Products section *@
+        <div class="products-section py-5">
+            <div class="container">
+                <div class="row">
+
+                    @* <div class="col-3"> *@
+                    @*     <h2>Brands</h2> *@
+                    @*     <div class="list-group flex-sm-row flex-md-column"> *@
+                    @*         <a class="list-group-item list-group-item-action" href="#">Adidas</a> *@
+                    @*         <a class="list-group-item list-group-item-action" href="#">JDH</a> *@
+                    @*         <a class="list-group-item list-group-item-action" href="#">Grays</a> *@
+                    @*         <a class="list-group-item list-group-item-action" href="#">Malik</a> *@
+                    @*         <a class="list-group-item list-group-item-action" href="#">Osaka</a> *@
+                    @*         <a class="list-group-item list-group-item-action" href="#">Reece</a> *@
+                    @*         <a class="list-group-item list-group-item-action" href="#">TK</a> *@
+                    @*     </div> *@
+                    @* </div> *@
+
+                    <div class="col-12">
+                        <h4>New arrivals</h4>
+                        <div class="row">
+                            <div class="col-3 col-sm-6 col-lg-3">
+                                <div class="card">
+                                    <a href="#" class="stretched-link">
+                                        <img src="~/content/grays stick.webp" alt="Hockeystick">
+                                        <div class="card-body">
+                                            <h5>GTI 10000 Probow Stick</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-3 col-sm-6 col-lg-3">
+                                <div class="card">
+                                    <a href="#" class="stretched-link">
+                                        <img src="~/content/grays hoodie.webp" alt="Hoodie">
+                                        <div class="card-body">
+                                            <h5>Performance Hoodie</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-3 col-sm-6 col-lg-3">
+                                <div class="card">
+                                    <a href="#" class="stretched-link">
+                                        <img src="~/content/grays shinguards.webp" alt="Shinguards">
+                                        <div class="card-body">
+                                            <h5>G800 Shinguards</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-3 col-sm-6 col-lg-3">
+                                <div class="card">
+                                    <a href="#" class="stretched-link">
+                                        <img src="~/content/grays emoji ball.webp" alt="Emoji ball">
+                                        <div class="card-body">
+                                            <h5>Emoji Ball - Geeky</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* Highlights section *@
+        <div class="highlights-section py-5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 position-relative">
+                        <h5 class="card-title">Our highlights</h5>
+                        <div class="card mb-3 position-relative">
+                            <a class="stretched-link" asp-area="" asp-controller="Home" asp-action="OurHighlights">
+                                <img src="~/content/grays highlights.webp" alt="Best hockeysticks" class="card-img-top">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h5 class="card-title">Gift cards</h5>
+                        <div class="card mb-3 position-relative">
+                            <a class="stretched-link" asp-area="" asp-controller="Home" asp-action="GiftCards">
+                                <img src="~/content/gift card.jpg" alt="Gift card" class="card-img-top">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 position-relative">
+                        <h5 class="card-title">Hockey news</h5>
+                        <div class="card mb-3 position-relative">
+                            <a class="stretched-link" asp-area="" asp-controller="Home" asp-action="HockeyNews">
+                                <img src="~/content/hockey news.jpg" alt="Hockey news" class="card-img-top">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* Shop rules section *@
+        <div class="shop-section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 col-md-4">
+                        <div class="card p-3 mb-3">
+                            <div class="row">
+                                <div class="col-md-2 d-none d-md-block"><i class="pt-4 ps-3 fa-solid fa-truck-fast"></i></div>
+                                <div class="col-md-10">
+                                    <div class="card-body">
+                                        <h3>Free shipping</h3>
+                                        <p>"Shop More, Save More: Enjoy Free Shipping on Every Order, Straight to Your Door!"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card p-3 mb-3">
+                            <div class="row">
+                                <div class="col-md-2 d-none d-md-block"><i class="pt-4 ps-3 fa-solid fa-money-bill-wave"></i></div>
+                                <div class="col-md-10">
+                                    <div class="card-body">
+                                        <h3>60-day refund</h3>
+                                        <p>"Shop with Confidence: 60-Day Refund Guarantee for Worry-Free Returns!"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card p-3 mb-3">
+                            <div class="row">
+                                <div class="col-md-2 d-none d-md-block"><i class="pt-4 ps-3 fa-solid fa-headset"></i></div>
+                                <div class="col-md-10">
+                                    <div class="card-body">
+                                        <h3>24/7 support</h3>
+                                        <p>"Here for You Anytime: 24/7 Support to Keep You Going Around the Clock!"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        @* Contact section *@
+        <div class="contact-section p-3">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 col-md-4 order-3 order-md-1">
+                        <div class="card px-5 mb-3">
+                            <div class="card-body">
+                                <h3>Newsletter</h3>
+                                <p>Subscribe to our newsletter.</p>
+                                <form class="contact-form">
+                                    <div class="mb-3">
+                                        <input type="email" name="email" placeholder="Enter your e-mail" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 order-1 order-md-2">
+                        <div class="card px-5 mb-3">
+                            <div class="card-body">
+                                <h3>Social</h3>
+                                <p>Follow us on our social media.</p>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fab fa-youtube"></i>Youtube</a></li>
+                                    <li><a href="#"><i class="fab fa-github"></i>GitHub</a></li>
+                                    <li><a href="#"><i class="fab fa-reddit-alien"></i>Reddit</a></li>
+                                    <li><a href="#"><i class="fab fa-discord"></i>Discord</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 order-2 order-md-3">
+                        <div class="card px-5 mb-3">
+                            <div class="card-body">
+                                <h3>Contact us</h3>
+                                <div class="contact-wrapper">
+                                    <div class="contact-info">
+                                        <p>Starlight str 5</p>
+                                        <p>3245 Brisbane</p>
+                                        <p>Australia</p>
+                                        <a href="#" class="link-primary">support@besthockey.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer py-3">
         <div class="container">
-            &copy; 2025 - Hockeyshop.PortalWWW - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row w-100">
+                <div class="col-12 col-md-4">
+                    <p>Copyright &copy; Kris</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">About</a></li>
+                        <li class="list-inline-item"><a href="#">Privacy policy</a></li>
+                        <li class="list-inline-item"><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

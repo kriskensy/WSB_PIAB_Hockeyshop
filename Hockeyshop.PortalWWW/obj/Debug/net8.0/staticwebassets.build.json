@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NC7qafIqz/Enotz3w8lt8GKdws3zdyrGFfSa8D9ohXw=",
+  "Hash": "frcxWEX4FGV2UA5XfukSslXGiRP0npiEduV1ly+2N4U=",
   "Source": "Hockeyshop.PortalWWW",
   "BasePath": "_content/Hockeyshop.PortalWWW",
   "Mode": "Default",
@@ -59,6 +59,237 @@
       "OriginalItemSpec": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Hockeyshop.PortalWWW.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\gift card.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/gift card#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "14sfp3iz2p",
+      "Integrity": "EcFTjoK0KrIL/qReV17ZHFMydK5VUPu/Llm1/4MTaz8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\gift card.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays emoji ball.webp",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/grays emoji ball#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "q98zen2apw",
+      "Integrity": "YsH1BA0qyC2MqLqop0u0a91d1v+WiGZ9Ka+19dCWnio=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\grays emoji ball.webp"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays highlights.webp",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/grays highlights#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yfkoczqe7r",
+      "Integrity": "gmq0P3rsVZn+5uunepFMl6C72lQsaGExkd9p9i+uRc4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\grays highlights.webp"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays hoodie.webp",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/grays hoodie#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hgh59w5g5v",
+      "Integrity": "oWAvXmKzWa8X681nALjpdOAiMYLHOwCf2ANHeeJCB18=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\grays hoodie.webp"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays shinguards.webp",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/grays shinguards#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f2sfy4lvh4",
+      "Integrity": "1z0kiAK3puxaTOMLst2HLtjL3DhIxQ32VfqKFn1Y+vg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\grays shinguards.webp"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays stick.webp",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/grays stick#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wpc5ypx6ff",
+      "Integrity": "pMVG53fVCLA2QxrIqPSZz3M1Dg3t3wTjNejOB7mY/iw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\grays stick.webp"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey news.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/hockey news#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qz4rjge69h",
+      "Integrity": "+hrmKNrydeaYOI3xVnTeKOWb4H6oEr+yQr/WRiAKPpI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\hockey news.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey1.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/hockey1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "51jsh8l3gz",
+      "Integrity": "WTCQa8HdXW9DNEILT8cZdbzRmWbLXAnUBnvlZcgBfQA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\hockey1.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey2.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/hockey2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b3yrwzlh0j",
+      "Integrity": "VwGnQ3o59/xAbVRbscS74fXSoHZClhT2znDbPRiFIEA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\hockey2.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey3.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/hockey3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "07naal5q2f",
+      "Integrity": "7CETd9j0MIgLLNWedvLHLTwRoY4slH6kfcZ8Mx8yIbM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\hockey3.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey4.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/hockey4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "exoeyx0xap",
+      "Integrity": "TsRKM20bQHHQ7zafP776pggGWmVHvFO8BB/MplQcjik=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\hockey4.jpg"
+    },
+    {
       "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
       "SourceId": "Hockeyshop.PortalWWW",
       "SourceType": "Discovered",
@@ -73,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "4izzm7ucjo",
+      "Integrity": "fNB5xaFaRFlln1lUKJebPTHX3byNoRIEYCsbfOIyY9s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1321,8 +1552,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
+      "Route": "content/gift card.14sfp3iz2p.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\gift card.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1331,19 +1562,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "1041397"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/css"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"EcFTjoK0KrIL/qReV17ZHFMydK5VUPu/Llm1/4MTaz8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 15:41:19 GMT"
+          "Value": "Sat, 09 Nov 2024 15:09:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,7 +1584,909 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "14sfp3iz2p"
+        },
+        {
+          "Name": "label",
+          "Value": "content/gift card.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EcFTjoK0KrIL/qReV17ZHFMydK5VUPu/Llm1/4MTaz8="
+        }
+      ]
+    },
+    {
+      "Route": "content/gift card.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\gift card.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1041397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EcFTjoK0KrIL/qReV17ZHFMydK5VUPu/Llm1/4MTaz8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 15:09:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EcFTjoK0KrIL/qReV17ZHFMydK5VUPu/Llm1/4MTaz8="
+        }
+      ]
+    },
+    {
+      "Route": "content/grays emoji ball.q98zen2apw.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays emoji ball.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "127386"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YsH1BA0qyC2MqLqop0u0a91d1v+WiGZ9Ka+19dCWnio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 11:01:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q98zen2apw"
+        },
+        {
+          "Name": "label",
+          "Value": "content/grays emoji ball.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YsH1BA0qyC2MqLqop0u0a91d1v+WiGZ9Ka+19dCWnio="
+        }
+      ]
+    },
+    {
+      "Route": "content/grays emoji ball.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays emoji ball.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "127386"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YsH1BA0qyC2MqLqop0u0a91d1v+WiGZ9Ka+19dCWnio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 11:01:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YsH1BA0qyC2MqLqop0u0a91d1v+WiGZ9Ka+19dCWnio="
+        }
+      ]
+    },
+    {
+      "Route": "content/grays highlights.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays highlights.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "281304"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gmq0P3rsVZn+5uunepFMl6C72lQsaGExkd9p9i+uRc4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 11:51:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gmq0P3rsVZn+5uunepFMl6C72lQsaGExkd9p9i+uRc4="
+        }
+      ]
+    },
+    {
+      "Route": "content/grays highlights.yfkoczqe7r.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays highlights.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "281304"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gmq0P3rsVZn+5uunepFMl6C72lQsaGExkd9p9i+uRc4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 11:51:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yfkoczqe7r"
+        },
+        {
+          "Name": "label",
+          "Value": "content/grays highlights.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gmq0P3rsVZn+5uunepFMl6C72lQsaGExkd9p9i+uRc4="
+        }
+      ]
+    },
+    {
+      "Route": "content/grays hoodie.hgh59w5g5v.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays hoodie.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "677044"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oWAvXmKzWa8X681nALjpdOAiMYLHOwCf2ANHeeJCB18=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 10:59:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hgh59w5g5v"
+        },
+        {
+          "Name": "label",
+          "Value": "content/grays hoodie.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oWAvXmKzWa8X681nALjpdOAiMYLHOwCf2ANHeeJCB18="
+        }
+      ]
+    },
+    {
+      "Route": "content/grays hoodie.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays hoodie.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "677044"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oWAvXmKzWa8X681nALjpdOAiMYLHOwCf2ANHeeJCB18=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 10:59:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oWAvXmKzWa8X681nALjpdOAiMYLHOwCf2ANHeeJCB18="
+        }
+      ]
+    },
+    {
+      "Route": "content/grays shinguards.f2sfy4lvh4.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays shinguards.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "314836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1z0kiAK3puxaTOMLst2HLtjL3DhIxQ32VfqKFn1Y+vg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 10:58:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f2sfy4lvh4"
+        },
+        {
+          "Name": "label",
+          "Value": "content/grays shinguards.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1z0kiAK3puxaTOMLst2HLtjL3DhIxQ32VfqKFn1Y+vg="
+        }
+      ]
+    },
+    {
+      "Route": "content/grays shinguards.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays shinguards.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "314836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1z0kiAK3puxaTOMLst2HLtjL3DhIxQ32VfqKFn1Y+vg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 10:58:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1z0kiAK3puxaTOMLst2HLtjL3DhIxQ32VfqKFn1Y+vg="
+        }
+      ]
+    },
+    {
+      "Route": "content/grays stick.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays stick.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29502"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pMVG53fVCLA2QxrIqPSZz3M1Dg3t3wTjNejOB7mY/iw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 10:56:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pMVG53fVCLA2QxrIqPSZz3M1Dg3t3wTjNejOB7mY/iw="
+        }
+      ]
+    },
+    {
+      "Route": "content/grays stick.wpc5ypx6ff.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\grays stick.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29502"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pMVG53fVCLA2QxrIqPSZz3M1Dg3t3wTjNejOB7mY/iw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 10:56:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wpc5ypx6ff"
+        },
+        {
+          "Name": "label",
+          "Value": "content/grays stick.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pMVG53fVCLA2QxrIqPSZz3M1Dg3t3wTjNejOB7mY/iw="
+        }
+      ]
+    },
+    {
+      "Route": "content/hockey news.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey news.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2080269"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+hrmKNrydeaYOI3xVnTeKOWb4H6oEr+yQr/WRiAKPpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 11:55:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+hrmKNrydeaYOI3xVnTeKOWb4H6oEr+yQr/WRiAKPpI="
+        }
+      ]
+    },
+    {
+      "Route": "content/hockey news.qz4rjge69h.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey news.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2080269"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+hrmKNrydeaYOI3xVnTeKOWb4H6oEr+yQr/WRiAKPpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 09 Nov 2024 11:55:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qz4rjge69h"
+        },
+        {
+          "Name": "label",
+          "Value": "content/hockey news.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+hrmKNrydeaYOI3xVnTeKOWb4H6oEr+yQr/WRiAKPpI="
+        }
+      ]
+    },
+    {
+      "Route": "content/hockey1.51jsh8l3gz.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95426"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WTCQa8HdXW9DNEILT8cZdbzRmWbLXAnUBnvlZcgBfQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Nov 2024 19:08:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "51jsh8l3gz"
+        },
+        {
+          "Name": "label",
+          "Value": "content/hockey1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WTCQa8HdXW9DNEILT8cZdbzRmWbLXAnUBnvlZcgBfQA="
+        }
+      ]
+    },
+    {
+      "Route": "content/hockey1.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95426"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WTCQa8HdXW9DNEILT8cZdbzRmWbLXAnUBnvlZcgBfQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Nov 2024 19:08:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WTCQa8HdXW9DNEILT8cZdbzRmWbLXAnUBnvlZcgBfQA="
+        }
+      ]
+    },
+    {
+      "Route": "content/hockey2.b3yrwzlh0j.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477763"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VwGnQ3o59/xAbVRbscS74fXSoHZClhT2znDbPRiFIEA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Nov 2024 19:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b3yrwzlh0j"
+        },
+        {
+          "Name": "label",
+          "Value": "content/hockey2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VwGnQ3o59/xAbVRbscS74fXSoHZClhT2znDbPRiFIEA="
+        }
+      ]
+    },
+    {
+      "Route": "content/hockey2.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477763"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VwGnQ3o59/xAbVRbscS74fXSoHZClhT2znDbPRiFIEA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Nov 2024 19:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VwGnQ3o59/xAbVRbscS74fXSoHZClhT2znDbPRiFIEA="
+        }
+      ]
+    },
+    {
+      "Route": "content/hockey3.07naal5q2f.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "470064"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7CETd9j0MIgLLNWedvLHLTwRoY4slH6kfcZ8Mx8yIbM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Nov 2024 19:19:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "07naal5q2f"
+        },
+        {
+          "Name": "label",
+          "Value": "content/hockey3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7CETd9j0MIgLLNWedvLHLTwRoY4slH6kfcZ8Mx8yIbM="
+        }
+      ]
+    },
+    {
+      "Route": "content/hockey3.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "470064"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7CETd9j0MIgLLNWedvLHLTwRoY4slH6kfcZ8Mx8yIbM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Nov 2024 19:19:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7CETd9j0MIgLLNWedvLHLTwRoY4slH6kfcZ8Mx8yIbM="
+        }
+      ]
+    },
+    {
+      "Route": "content/hockey4.exoeyx0xap.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "694498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TsRKM20bQHHQ7zafP776pggGWmVHvFO8BB/MplQcjik=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Nov 2024 19:19:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "exoeyx0xap"
+        },
+        {
+          "Name": "label",
+          "Value": "content/hockey4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TsRKM20bQHHQ7zafP776pggGWmVHvFO8BB/MplQcjik="
+        }
+      ]
+    },
+    {
+      "Route": "content/hockey4.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\hockey4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "694498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TsRKM20bQHHQ7zafP776pggGWmVHvFO8BB/MplQcjik=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Nov 2024 19:19:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TsRKM20bQHHQ7zafP776pggGWmVHvFO8BB/MplQcjik="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.4izzm7ucjo.css",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2025"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fNB5xaFaRFlln1lUKJebPTHX3byNoRIEYCsbfOIyY9s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Apr 2025 12:52:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4izzm7ucjo"
         },
         {
           "Name": "label",
@@ -1361,7 +2494,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-fNB5xaFaRFlln1lUKJebPTHX3byNoRIEYCsbfOIyY9s="
         }
       ]
     },
@@ -1376,7 +2509,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "2025"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +2517,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"fNB5xaFaRFlln1lUKJebPTHX3byNoRIEYCsbfOIyY9s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 15:41:19 GMT"
+          "Value": "Sat, 05 Apr 2025 12:52:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +2531,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-fNB5xaFaRFlln1lUKJebPTHX3byNoRIEYCsbfOIyY9s="
         }
       ]
     },
@@ -1507,7 +2640,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 15:44:09 GMT"
+          "Value": "Sat, 05 Apr 2025 10:45:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1552,7 +2685,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 15:44:09 GMT"
+          "Value": "Sat, 05 Apr 2025 10:45:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1597,7 +2730,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 15:44:09 GMT"
+          "Value": "Sat, 05 Apr 2025 10:45:57 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1634,7 +2767,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 15:44:09 GMT"
+          "Value": "Sat, 05 Apr 2025 10:45:57 GMT"
         },
         {
           "Name": "Cache-Control",

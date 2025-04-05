@@ -18,6 +18,28 @@ namespace Hockeyshop.PortalWWW.Controllers
             return View();
         }
 
+        public IActionResult SticksTechnology()
+        {
+            return View();
+        }
+
+        public IActionResult OurTeam()
+        {
+            return View();
+        }
+
+        public IActionResult HockeyNews()
+        {
+            return View();
+        }
+        public IActionResult OurHighlights()
+        {
+            return View();
+        }
+        public IActionResult GiftCards()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

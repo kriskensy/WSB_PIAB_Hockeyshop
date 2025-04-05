@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hockeyshop.PortalWWW")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4f6c9331d89466297caea34ce3a33cae4c43c0d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33e2e109150d39a38808bbfea19c4a9d4941b23c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hockeyshop.PortalWWW")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hockeyshop.PortalWWW")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
