@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "frcxWEX4FGV2UA5XfukSslXGiRP0npiEduV1ly+2N4U=",
+  "Hash": "bVk2SD7A2HPINpklHQnLNPLsqi+wiRY7aHHrdUvYfvw=",
   "Source": "Hockeyshop.PortalWWW",
   "BasePath": "_content/Hockeyshop.PortalWWW",
   "Mode": "Default",
@@ -304,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4izzm7ucjo",
-      "Integrity": "fNB5xaFaRFlln1lUKJebPTHX3byNoRIEYCsbfOIyY9s=",
+      "Fingerprint": "o3eulg0x1x",
+      "Integrity": "HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl+Qc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2454,51 +2454,6 @@
       ]
     },
     {
-      "Route": "css/site.4izzm7ucjo.css",
-      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2025"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"fNB5xaFaRFlln1lUKJebPTHX3byNoRIEYCsbfOIyY9s=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 12:52:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4izzm7ucjo"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-fNB5xaFaRFlln1lUKJebPTHX3byNoRIEYCsbfOIyY9s="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2517,11 +2472,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fNB5xaFaRFlln1lUKJebPTHX3byNoRIEYCsbfOIyY9s=\""
+          "Value": "\"HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl+Qc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 12:52:53 GMT"
+          "Value": "Sat, 05 Apr 2025 18:09:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2531,7 +2486,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fNB5xaFaRFlln1lUKJebPTHX3byNoRIEYCsbfOIyY9s="
+          "Value": "sha256-HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl+Qc="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.o3eulg0x1x.css",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2025"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl+Qc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Apr 2025 18:09:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o3eulg0x1x"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl+Qc="
         }
       ]
     },
