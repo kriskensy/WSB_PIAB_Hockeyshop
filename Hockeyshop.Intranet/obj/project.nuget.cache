@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Nra7gAnOn64=",
+  "dgSpecHash": "zQBeEfvDUjU=",
   "success": true,
   "projectFilePath": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Intranet\\Hockeyshop.Intranet.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Kris\\.nuget\\packages\\font.awesome\\5.15.4\\font.awesome.5.15.4.nupkg.sha512"
+    "C:\\Users\\Kris\\.nuget\\packages\\font.awesome\\5.15.4\\font.awesome.5.15.4.nupkg.sha512",
+    "C:\\Users\\Kris\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

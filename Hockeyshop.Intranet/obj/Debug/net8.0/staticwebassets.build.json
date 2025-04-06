@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lH0AcFWMzxXXUkbG18MR6I3A+nqhpfd383iOrZci4p4=",
+  "Hash": "ErPP1H/zYtBvx1i0BxYUZhAufPtlMv9sXudnkCzL6/w=",
   "Source": "Hockeyshop.Intranet",
   "BasePath": "_content/Hockeyshop.Intranet",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7fixqqeioi",
-      "Integrity": "gz361lh8NYlB+E1NuG10f92aG3c7OxgSbv4ctKCb8yQ=",
+      "Fingerprint": "imq1cgmx41",
+      "Integrity": "9lbXrs+vUAeMddY8gbonhnFyQcyohhAFWyTRI9FmwM4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1321,51 +1321,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.7fixqqeioi.css",
-      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Intranet\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3068"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gz361lh8NYlB+E1NuG10f92aG3c7OxgSbv4ctKCb8yQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 09:03:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7fixqqeioi"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gz361lh8NYlB+E1NuG10f92aG3c7OxgSbv4ctKCb8yQ="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Intranet\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1376,7 +1331,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3068"
+          "Value": "2847"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +1339,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gz361lh8NYlB+E1NuG10f92aG3c7OxgSbv4ctKCb8yQ=\""
+          "Value": "\"9lbXrs+vUAeMddY8gbonhnFyQcyohhAFWyTRI9FmwM4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 09:03:48 GMT"
+          "Value": "Sun, 06 Apr 2025 12:31:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +1353,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gz361lh8NYlB+E1NuG10f92aG3c7OxgSbv4ctKCb8yQ="
+          "Value": "sha256-9lbXrs+vUAeMddY8gbonhnFyQcyohhAFWyTRI9FmwM4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.imq1cgmx41.css",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Intranet\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2847"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9lbXrs+vUAeMddY8gbonhnFyQcyohhAFWyTRI9FmwM4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 12:31:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "imq1cgmx41"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9lbXrs+vUAeMddY8gbonhnFyQcyohhAFWyTRI9FmwM4="
         }
       ]
     },
