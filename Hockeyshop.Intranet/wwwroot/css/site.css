@@ -22,6 +22,10 @@ html {
   margin: 0px;
 }
 
+.container {
+    margin-left: 320px;
+}
+
 /*styles for intranet*/
 .admin-navbar {
     background-color: #2c3e50;
@@ -65,6 +69,35 @@ html {
     color: black;
 }
 
+/*Quick Access cards*/
+.quick-access-cards {
+    position: relative;
+    height: calc(100vh - 70px);
+    width: 320px;
+    overflow-y: auto;
+}
+
+.quick-access-cards .card {
+    border: none;
+}
+
+.quick-access-cards .card:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+/*responsiveness */
+@media (max-width: 768px) {
+    .quick-access-cards {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
 /*buttons*/
 button,
 a.btn {
@@ -74,7 +107,7 @@ a.btn {
 /*navbar*/
 
 /*carousel*/
-.carousel-inner, .carousel-item {
+/*.carousel-inner, .carousel-item {
     height: 100vh;
 }
 
@@ -82,7 +115,7 @@ a.btn {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-}
+}*/
 
 
 /*products-section*/
@@ -104,7 +137,7 @@ a.btn {
 }
 
 /*contact-section*/
-.contact-section {
+/*.contact-section {
     background-color: #44445a;
 }
 
@@ -135,48 +168,10 @@ a.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-}
+}*/
 
 /*footer*/
 .page-footer {
     background-color: #2c3e50;
     color: #ffffff;
-}
-
-
-
-
-/* Quick Access Cards Styling */
-.quick-access-cards {
-    position: relative;
-    height: calc(100vh - 70px);
-    width: 320px; /* Fixed width for vertical cards */
-    overflow-y: auto; /* Enable scrolling if content exceeds height */
-}
-
-.quick-access-cards .card {
-    border: none;
-}
-
-.quick-access-cards .card:hover {
-    transform: scale(1.02); /* Slight zoom effect on hover */
-    transition: transform 0.2s ease-in-out;
-}
-
-/* Adjust content margin for responsiveness */
-@media (max-width: 768px) {
-    .quick-access-cards {
-        
-        width: 100%;
-        height: auto;
-    }
-
-    .content {
-        margin-left: 0;
-    }
-}
-
-/* Main Content */
-.container {
-    margin-left: 320px; /* Matches cards width + spacing */
 }

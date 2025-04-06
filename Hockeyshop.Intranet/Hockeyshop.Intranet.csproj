@@ -10,4 +10,13 @@
     <PackageReference Include="Font.Awesome" Version="5.15.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Inventory\" />
+    <Folder Include="Models\Calender\" />
+    <Folder Include="Models\Documents\" />
+    <Folder Include="Models\Help\" />
+    <Folder Include="Models\Management\" />
+    <Folder Include="Models\Support\" />
+  </ItemGroup>
+
 </Project>
