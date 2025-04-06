@@ -1,4 +1,5 @@
 ﻿using Hockeyshop.Intranet.Models.Inventory;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -14,7 +15,7 @@ namespace Hockeyshop.Intranet.Models.Orders
         public int Quantity { get; set; }
 
         [Required(ErrorMessage = "The Unit Price field is required.")]
-        //[Precision(18, 2)]
+        [Precision(18, 2)]
         [Range(0.01, double.MaxValue, ErrorMessage = "The Unit Price must be greater than 0.")]
         [Display(Name = "Unit Price")]
         public decimal UnitPrice { get; set; }

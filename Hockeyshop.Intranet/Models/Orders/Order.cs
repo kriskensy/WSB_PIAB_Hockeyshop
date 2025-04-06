@@ -1,4 +1,5 @@
 ﻿using Hockeyshop.Intranet.Models.Management;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -18,7 +19,7 @@ namespace Hockeyshop.Intranet.Models.Orders
         public string Status { get; set; }
 
         [Required(ErrorMessage = "The Total Amount field is required.")]
-        //[Precision(18, 2)]
+        [Precision(18, 2)]
         [Range(0.01, double.MaxValue, ErrorMessage = "The Total Amount must be greater than 0.")]
         [Display(Name = "Total Amount")]
         public decimal TotalAmount { get; set; }

@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Hockeyshop.Intranet.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<HockeyshopIntranetContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("HockeyshopIntranetContext") ?? throw new InvalidOperationException("Connection string 'HockeyshopIntranetContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
