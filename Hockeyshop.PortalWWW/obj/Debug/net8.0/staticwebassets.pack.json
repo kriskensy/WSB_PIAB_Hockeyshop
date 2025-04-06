@@ -49,6 +49,46 @@
       "PackagePath": "staticwebassets\\content\\hockey4.jpg"
     },
     {
+      "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\anna-nowak.jpg",
+      "PackagePath": "staticwebassets\\content\\img_ourTeam\\anna-nowak.jpg"
+    },
+    {
+      "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\jan-kowalski.jpg",
+      "PackagePath": "staticwebassets\\content\\img_ourTeam\\jan-kowalski.jpg"
+    },
+    {
+      "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\piotr-wisniewski.jpg",
+      "PackagePath": "staticwebassets\\content\\img_ourTeam\\piotr-wisniewski.jpg"
+    },
+    {
+      "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\team-introduction-poland.jpg",
+      "PackagePath": "staticwebassets\\content\\img_ourTeam\\team-introduction-poland.jpg"
+    },
+    {
+      "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\aramid.webp",
+      "PackagePath": "staticwebassets\\content\\img_sticksTechnology\\aramid.webp"
+    },
+    {
+      "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\carbon-fiber.webp",
+      "PackagePath": "staticwebassets\\content\\img_sticksTechnology\\carbon-fiber.webp"
+    },
+    {
+      "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\evolution-of-hockey-sticks.jpg",
+      "PackagePath": "staticwebassets\\content\\img_sticksTechnology\\evolution-of-hockey-sticks.jpg"
+    },
+    {
+      "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\fiberglass.webp",
+      "PackagePath": "staticwebassets\\content\\img_sticksTechnology\\fiberglass.webp"
+    },
+    {
+      "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\manufacturing-process.webp",
+      "PackagePath": "staticwebassets\\content\\img_sticksTechnology\\manufacturing-process.webp"
+    },
+    {
+      "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\stick-comparison.jpg",
+      "PackagePath": "staticwebassets\\content\\img_sticksTechnology\\stick-comparison.jpg"
+    },
+    {
       "Id": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

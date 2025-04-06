@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bVk2SD7A2HPINpklHQnLNPLsqi+wiRY7aHHrdUvYfvw=",
+  "Hash": "DuH9w2qJQQeuwBfR5ccLXONRb8pZORzR0euZHhuQUpM=",
   "Source": "Hockeyshop.PortalWWW",
   "BasePath": "_content/Hockeyshop.PortalWWW",
   "Mode": "Default",
@@ -288,6 +288,216 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\content\\hockey4.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\anna-nowak.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/img_ourTeam/anna-nowak#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u2iova53y7",
+      "Integrity": "epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_ourTeam\\anna-nowak.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\jan-kowalski.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/img_ourTeam/jan-kowalski#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u2iova53y7",
+      "Integrity": "epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_ourTeam\\jan-kowalski.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\piotr-wisniewski.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/img_ourTeam/piotr-wisniewski#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u2iova53y7",
+      "Integrity": "epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_ourTeam\\piotr-wisniewski.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\team-introduction-poland.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/img_ourTeam/team-introduction-poland#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rt5zrw4hd4",
+      "Integrity": "wfxiX+SFJIaA6CpJPz73IqtuksD5WbSvsEmAG6IHncA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_ourTeam\\team-introduction-poland.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\aramid.webp",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/img_sticksTechnology/aramid#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3fwp51zmwi",
+      "Integrity": "X+k9vmeWjFQV+1FwnM1T4iXBfKZvfZsMOjPNKftqhqk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_sticksTechnology\\aramid.webp"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\carbon-fiber.webp",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/img_sticksTechnology/carbon-fiber#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sfh6m8r82q",
+      "Integrity": "yEPwfcfk5Md+G914V07dSU5iMakkWlbFBd3H0+Ol5hE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_sticksTechnology\\carbon-fiber.webp"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\evolution-of-hockey-sticks.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/img_sticksTechnology/evolution-of-hockey-sticks#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ia2ndkp9g8",
+      "Integrity": "pseUmV6IthvbmO02O9pDHOBonig91qzu6iIdZrrRF5A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_sticksTechnology\\evolution-of-hockey-sticks.jpg"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\fiberglass.webp",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/img_sticksTechnology/fiberglass#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yl2ntwx5xe",
+      "Integrity": "9nn9OfmWQzddK1fpY6QO3YEVNYGKxR89dHcP+v0ZxXw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_sticksTechnology\\fiberglass.webp"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\manufacturing-process.webp",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/img_sticksTechnology/manufacturing-process#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2x1gbl30jx",
+      "Integrity": "tvxICU/iBBg/2ba1JXcAJH/74hqboCWmlME5NJQc4iY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_sticksTechnology\\manufacturing-process.webp"
+    },
+    {
+      "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\stick-comparison.jpg",
+      "SourceId": "Hockeyshop.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Hockeyshop.PortalWWW",
+      "RelativePath": "content/img_sticksTechnology/stick-comparison#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lxpu4bpm5t",
+      "Integrity": "N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\img_sticksTechnology\\stick-comparison.jpg"
     },
     {
       "Identity": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
@@ -2450,6 +2660,826 @@
         {
           "Name": "integrity",
           "Value": "sha256-TsRKM20bQHHQ7zafP776pggGWmVHvFO8BB/MplQcjik="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_ourTeam/anna-nowak.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\anna-nowak.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1472054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 10:03:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_ourTeam/anna-nowak.u2iova53y7.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\anna-nowak.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1472054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 10:03:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u2iova53y7"
+        },
+        {
+          "Name": "label",
+          "Value": "content/img_ourTeam/anna-nowak.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_ourTeam/jan-kowalski.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\jan-kowalski.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1472054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 10:03:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_ourTeam/jan-kowalski.u2iova53y7.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\jan-kowalski.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1472054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 10:03:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u2iova53y7"
+        },
+        {
+          "Name": "label",
+          "Value": "content/img_ourTeam/jan-kowalski.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_ourTeam/piotr-wisniewski.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\piotr-wisniewski.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1472054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 10:03:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_ourTeam/piotr-wisniewski.u2iova53y7.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\piotr-wisniewski.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1472054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 10:03:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u2iova53y7"
+        },
+        {
+          "Name": "label",
+          "Value": "content/img_ourTeam/piotr-wisniewski.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-epcVxU2v2E2lygj+tSIQ8E+zoIkqsJbE+z/ZIiTDZAw="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_ourTeam/team-introduction-poland.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\team-introduction-poland.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "239031"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wfxiX+SFJIaA6CpJPz73IqtuksD5WbSvsEmAG6IHncA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 10:05:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wfxiX+SFJIaA6CpJPz73IqtuksD5WbSvsEmAG6IHncA="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_ourTeam/team-introduction-poland.rt5zrw4hd4.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_ourTeam\\team-introduction-poland.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "239031"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wfxiX+SFJIaA6CpJPz73IqtuksD5WbSvsEmAG6IHncA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 10:05:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rt5zrw4hd4"
+        },
+        {
+          "Name": "label",
+          "Value": "content/img_ourTeam/team-introduction-poland.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wfxiX+SFJIaA6CpJPz73IqtuksD5WbSvsEmAG6IHncA="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/aramid.3fwp51zmwi.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\aramid.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "66040"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X+k9vmeWjFQV+1FwnM1T4iXBfKZvfZsMOjPNKftqhqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:35:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3fwp51zmwi"
+        },
+        {
+          "Name": "label",
+          "Value": "content/img_sticksTechnology/aramid.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X+k9vmeWjFQV+1FwnM1T4iXBfKZvfZsMOjPNKftqhqk="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/aramid.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\aramid.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "66040"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X+k9vmeWjFQV+1FwnM1T4iXBfKZvfZsMOjPNKftqhqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:35:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X+k9vmeWjFQV+1FwnM1T4iXBfKZvfZsMOjPNKftqhqk="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/carbon-fiber.sfh6m8r82q.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\carbon-fiber.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "62794"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yEPwfcfk5Md+G914V07dSU5iMakkWlbFBd3H0+Ol5hE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:35:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sfh6m8r82q"
+        },
+        {
+          "Name": "label",
+          "Value": "content/img_sticksTechnology/carbon-fiber.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yEPwfcfk5Md+G914V07dSU5iMakkWlbFBd3H0+Ol5hE="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/carbon-fiber.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\carbon-fiber.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "62794"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yEPwfcfk5Md+G914V07dSU5iMakkWlbFBd3H0+Ol5hE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:35:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yEPwfcfk5Md+G914V07dSU5iMakkWlbFBd3H0+Ol5hE="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/evolution-of-hockey-sticks.ia2ndkp9g8.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\evolution-of-hockey-sticks.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "352743"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pseUmV6IthvbmO02O9pDHOBonig91qzu6iIdZrrRF5A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:26:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ia2ndkp9g8"
+        },
+        {
+          "Name": "label",
+          "Value": "content/img_sticksTechnology/evolution-of-hockey-sticks.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pseUmV6IthvbmO02O9pDHOBonig91qzu6iIdZrrRF5A="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/evolution-of-hockey-sticks.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\evolution-of-hockey-sticks.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "352743"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pseUmV6IthvbmO02O9pDHOBonig91qzu6iIdZrrRF5A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:26:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pseUmV6IthvbmO02O9pDHOBonig91qzu6iIdZrrRF5A="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/fiberglass.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\fiberglass.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37760"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9nn9OfmWQzddK1fpY6QO3YEVNYGKxR89dHcP+v0ZxXw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:35:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9nn9OfmWQzddK1fpY6QO3YEVNYGKxR89dHcP+v0ZxXw="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/fiberglass.yl2ntwx5xe.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\fiberglass.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37760"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9nn9OfmWQzddK1fpY6QO3YEVNYGKxR89dHcP+v0ZxXw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:35:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yl2ntwx5xe"
+        },
+        {
+          "Name": "label",
+          "Value": "content/img_sticksTechnology/fiberglass.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9nn9OfmWQzddK1fpY6QO3YEVNYGKxR89dHcP+v0ZxXw="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/manufacturing-process.2x1gbl30jx.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\manufacturing-process.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82840"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tvxICU/iBBg/2ba1JXcAJH/74hqboCWmlME5NJQc4iY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:44:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2x1gbl30jx"
+        },
+        {
+          "Name": "label",
+          "Value": "content/img_sticksTechnology/manufacturing-process.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tvxICU/iBBg/2ba1JXcAJH/74hqboCWmlME5NJQc4iY="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/manufacturing-process.webp",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\manufacturing-process.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82840"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tvxICU/iBBg/2ba1JXcAJH/74hqboCWmlME5NJQc4iY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:44:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tvxICU/iBBg/2ba1JXcAJH/74hqboCWmlME5NJQc4iY="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/stick-comparison.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\stick-comparison.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:31:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk="
+        }
+      ]
+    },
+    {
+      "Route": "content/img_sticksTechnology/stick-comparison.lxpu4bpm5t.jpg",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\content\\img_sticksTechnology\\stick-comparison.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 09:31:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lxpu4bpm5t"
+        },
+        {
+          "Name": "label",
+          "Value": "content/img_sticksTechnology/stick-comparison.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk="
         }
       ]
     },

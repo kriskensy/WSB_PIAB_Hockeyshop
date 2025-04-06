@@ -132,6 +132,126 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-TsRKM20bQHHQ7zafP776pggGWmVHvFO8BB/MplQcjik="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"694498"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022TsRKM20bQHHQ7zafP776pggGWmVHvFO8BB/MplQcjik=\u0022"},{"Name":"Last-Modified","Value":"Fri, 08 Nov 2024 19:19:37 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_ourTeam/anna-nowak.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_ourTeam\anna-nowak.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1472054"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 10:03:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_ourTeam/anna-nowak.u2iova53y7.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_ourTeam\anna-nowak.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u2iova53y7"},{"Name":"integrity","Value":"sha256-epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_ourTeam/anna-nowak.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1472054"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 10:03:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_ourTeam/jan-kowalski.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_ourTeam\jan-kowalski.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1472054"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 10:03:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_ourTeam/jan-kowalski.u2iova53y7.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_ourTeam\jan-kowalski.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u2iova53y7"},{"Name":"integrity","Value":"sha256-epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_ourTeam/jan-kowalski.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1472054"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 10:03:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_ourTeam/piotr-wisniewski.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_ourTeam\piotr-wisniewski.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1472054"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 10:03:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_ourTeam/piotr-wisniewski.u2iova53y7.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_ourTeam\piotr-wisniewski.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u2iova53y7"},{"Name":"integrity","Value":"sha256-epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_ourTeam/piotr-wisniewski.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1472054"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022epcVxU2v2E2lygj\u002BtSIQ8E\u002BzoIkqsJbE\u002Bz/ZIiTDZAw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 10:03:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_ourTeam/team-introduction-poland.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_ourTeam\team-introduction-poland.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-wfxiX\u002BSFJIaA6CpJPz73IqtuksD5WbSvsEmAG6IHncA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"239031"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022wfxiX\u002BSFJIaA6CpJPz73IqtuksD5WbSvsEmAG6IHncA=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 10:05:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_ourTeam/team-introduction-poland.rt5zrw4hd4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_ourTeam\team-introduction-poland.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rt5zrw4hd4"},{"Name":"integrity","Value":"sha256-wfxiX\u002BSFJIaA6CpJPz73IqtuksD5WbSvsEmAG6IHncA="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_ourTeam/team-introduction-poland.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"239031"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022wfxiX\u002BSFJIaA6CpJPz73IqtuksD5WbSvsEmAG6IHncA=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 10:05:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/aramid.3fwp51zmwi.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\aramid.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3fwp51zmwi"},{"Name":"integrity","Value":"sha256-X\u002Bk9vmeWjFQV\u002B1FwnM1T4iXBfKZvfZsMOjPNKftqhqk="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/aramid.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"66040"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022X\u002Bk9vmeWjFQV\u002B1FwnM1T4iXBfKZvfZsMOjPNKftqhqk=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:35:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/aramid.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\aramid.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-X\u002Bk9vmeWjFQV\u002B1FwnM1T4iXBfKZvfZsMOjPNKftqhqk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"66040"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022X\u002Bk9vmeWjFQV\u002B1FwnM1T4iXBfKZvfZsMOjPNKftqhqk=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:35:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/carbon-fiber.sfh6m8r82q.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\carbon-fiber.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sfh6m8r82q"},{"Name":"integrity","Value":"sha256-yEPwfcfk5Md\u002BG914V07dSU5iMakkWlbFBd3H0\u002BOl5hE="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/carbon-fiber.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"62794"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022yEPwfcfk5Md\u002BG914V07dSU5iMakkWlbFBd3H0\u002BOl5hE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:35:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/carbon-fiber.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\carbon-fiber.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-yEPwfcfk5Md\u002BG914V07dSU5iMakkWlbFBd3H0\u002BOl5hE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"62794"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022yEPwfcfk5Md\u002BG914V07dSU5iMakkWlbFBd3H0\u002BOl5hE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:35:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/evolution-of-hockey-sticks.ia2ndkp9g8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\evolution-of-hockey-sticks.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ia2ndkp9g8"},{"Name":"integrity","Value":"sha256-pseUmV6IthvbmO02O9pDHOBonig91qzu6iIdZrrRF5A="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/evolution-of-hockey-sticks.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"352743"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022pseUmV6IthvbmO02O9pDHOBonig91qzu6iIdZrrRF5A=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:26:30 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/evolution-of-hockey-sticks.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\evolution-of-hockey-sticks.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pseUmV6IthvbmO02O9pDHOBonig91qzu6iIdZrrRF5A="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"352743"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022pseUmV6IthvbmO02O9pDHOBonig91qzu6iIdZrrRF5A=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:26:30 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/fiberglass.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\fiberglass.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-9nn9OfmWQzddK1fpY6QO3YEVNYGKxR89dHcP\u002Bv0ZxXw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"37760"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u00229nn9OfmWQzddK1fpY6QO3YEVNYGKxR89dHcP\u002Bv0ZxXw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:35:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/fiberglass.yl2ntwx5xe.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\fiberglass.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"yl2ntwx5xe"},{"Name":"integrity","Value":"sha256-9nn9OfmWQzddK1fpY6QO3YEVNYGKxR89dHcP\u002Bv0ZxXw="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/fiberglass.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"37760"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u00229nn9OfmWQzddK1fpY6QO3YEVNYGKxR89dHcP\u002Bv0ZxXw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:35:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/manufacturing-process.2x1gbl30jx.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\manufacturing-process.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2x1gbl30jx"},{"Name":"integrity","Value":"sha256-tvxICU/iBBg/2ba1JXcAJH/74hqboCWmlME5NJQc4iY="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/manufacturing-process.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"82840"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022tvxICU/iBBg/2ba1JXcAJH/74hqboCWmlME5NJQc4iY=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:44:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/manufacturing-process.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\manufacturing-process.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-tvxICU/iBBg/2ba1JXcAJH/74hqboCWmlME5NJQc4iY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"82840"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022tvxICU/iBBg/2ba1JXcAJH/74hqboCWmlME5NJQc4iY=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:44:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/stick-comparison.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\stick-comparison.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"38655"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:31:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/stick-comparison.lxpu4bpm5t.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\img_sticksTechnology\stick-comparison.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lxpu4bpm5t"},{"Name":"integrity","Value":"sha256-N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/stick-comparison.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"38655"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:31:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

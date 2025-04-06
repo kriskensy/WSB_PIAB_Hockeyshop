@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XdXChnEnFYeI4uujiX2RMcWbTuDUXAIfIiYweWXNv64=",
+  "Hash": "lH0AcFWMzxXXUkbG18MR6I3A+nqhpfd383iOrZci4p4=",
   "Source": "Hockeyshop.Intranet",
   "BasePath": "_content/Hockeyshop.Intranet",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "auuyzq3q1p",
-      "Integrity": "oitTL8gxsqUNDgeJ20Ds1SyBCJfMBpELxMMPzg1rRn0=",
+      "Fingerprint": "7fixqqeioi",
+      "Integrity": "gz361lh8NYlB+E1NuG10f92aG3c7OxgSbv4ctKCb8yQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1321,7 +1321,7 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.auuyzq3q1p.css",
+      "Route": "css/site.7fixqqeioi.css",
       "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Intranet\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1331,7 +1331,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2294"
+          "Value": "3068"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1339,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oitTL8gxsqUNDgeJ20Ds1SyBCJfMBpELxMMPzg1rRn0=\""
+          "Value": "\"gz361lh8NYlB+E1NuG10f92aG3c7OxgSbv4ctKCb8yQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 20:00:19 GMT"
+          "Value": "Sun, 06 Apr 2025 09:03:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,7 +1353,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "auuyzq3q1p"
+          "Value": "7fixqqeioi"
         },
         {
           "Name": "label",
@@ -1361,7 +1361,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-oitTL8gxsqUNDgeJ20Ds1SyBCJfMBpELxMMPzg1rRn0="
+          "Value": "sha256-gz361lh8NYlB+E1NuG10f92aG3c7OxgSbv4ctKCb8yQ="
         }
       ]
     },
@@ -1376,7 +1376,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2294"
+          "Value": "3068"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +1384,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oitTL8gxsqUNDgeJ20Ds1SyBCJfMBpELxMMPzg1rRn0=\""
+          "Value": "\"gz361lh8NYlB+E1NuG10f92aG3c7OxgSbv4ctKCb8yQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 20:00:19 GMT"
+          "Value": "Sun, 06 Apr 2025 09:03:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +1398,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-oitTL8gxsqUNDgeJ20Ds1SyBCJfMBpELxMMPzg1rRn0="
+          "Value": "sha256-gz361lh8NYlB+E1NuG10f92aG3c7OxgSbv4ctKCb8yQ="
         }
       ]
     },
