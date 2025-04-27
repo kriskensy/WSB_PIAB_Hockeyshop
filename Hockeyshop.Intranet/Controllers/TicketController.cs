@@ -5,17 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Intranet.Data;
-using Hockeyshop.Intranet.Models.Support;
-using Hockeyshop.Intranet.Models.Management;
+using Hockeyshop.Data.Data.Support;
+using Hockeyshop.Data.Data.Management;
+using Hockeyshop.Data.Data;
 
 namespace Hockeyshop.Intranet.Controllers
 {
     public class TicketController : Controller
     {
-        private readonly HockeyshopIntranetContext _context;
+        private readonly HockeyshopContext _context;
 
-        public TicketController(HockeyshopIntranetContext context)
+        public TicketController(HockeyshopContext context)
         {
             _context = context;
         }

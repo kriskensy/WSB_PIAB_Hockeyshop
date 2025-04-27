@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Intranet.Data;
-using Hockeyshop.Intranet.Models.Inventory;
+using Hockeyshop.Data.Data.Inventory;
+using Hockeyshop.Data.Data;
 
 namespace Hockeyshop.Intranet.Controllers
 {
     public class StockController : Controller
     {
-        private readonly HockeyshopIntranetContext _context;
+        private readonly HockeyshopContext _context;
 
-        public StockController(HockeyshopIntranetContext context)
+        public StockController(HockeyshopContext context)
         {
             _context = context;
         }

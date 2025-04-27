@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Intranet.Data;
-using Hockeyshop.Intranet.Models.Management;
+using Hockeyshop.Data.Data.Management;
+using Hockeyshop.Data.Data;
 
 namespace Hockeyshop.Intranet.Controllers
 {
     public class UserController : Controller
     {
-        private readonly HockeyshopIntranetContext _context;
+        private readonly HockeyshopContext _context;
 
-        public UserController(HockeyshopIntranetContext context)
+        public UserController(HockeyshopContext context)
         {
             _context = context;
         }

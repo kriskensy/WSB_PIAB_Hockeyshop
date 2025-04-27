@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Intranet.Data;
-using Hockeyshop.Intranet.Models.Orders;
+using Hockeyshop.Data.Data.Orders;
+using Hockeyshop.Data.Data;
 
 namespace Hockeyshop.Intranet.Controllers
 {
     public class OrderController : Controller
     {
-        private readonly HockeyshopIntranetContext _context;
+        private readonly HockeyshopContext _context;
 
-        public OrderController(HockeyshopIntranetContext context)
+        public OrderController(HockeyshopContext context)
         {
             _context = context;
         }

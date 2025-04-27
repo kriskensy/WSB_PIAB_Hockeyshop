@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Intranet.Data;
-using Hockeyshop.Intranet.Models.Documents;
+using Hockeyshop.Data.Data;
+using Hockeyshop.Data.Data.Documents;
 
 namespace Hockeyshop.Intranet.Controllers
 {
     public class DocumentCategoryController : Controller
     {
-        private readonly HockeyshopIntranetContext _context;
+        private readonly HockeyshopContext _context;
 
-        public DocumentCategoryController(HockeyshopIntranetContext context)
+        public DocumentCategoryController(HockeyshopContext context)
         {
             _context = context;
         }

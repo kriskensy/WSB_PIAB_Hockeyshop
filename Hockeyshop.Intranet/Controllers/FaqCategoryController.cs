@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Intranet.Data;
-using Hockeyshop.Intranet.Models.Help;
+using Hockeyshop.Data.Data.Help;
+using Hockeyshop.Data.Data;
 
 namespace Hockeyshop.Intranet.Controllers
 {
     public class FaqCategoryController : Controller
     {
-        private readonly HockeyshopIntranetContext _context;
+        private readonly HockeyshopContext _context;
 
-        public FaqCategoryController(HockeyshopIntranetContext context)
+        public FaqCategoryController(HockeyshopContext context)
         {
             _context = context;
         }

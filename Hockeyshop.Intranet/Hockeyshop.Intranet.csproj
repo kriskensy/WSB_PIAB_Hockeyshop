@@ -17,4 +17,8 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Hockeyshop.Data\Hockeyshop.Data.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hockeyshop.PortalWWW", "Hockeyshop.PortalWWW\Hockeyshop.PortalWWW.csproj", "{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hockeyshop.Intranet", "Hockeyshop.Intranet\Hockeyshop.Intranet.csproj", "{7522FFB5-29D2-4709-8E3D-114D649977BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hockeyshop.Data", "Hockeyshop.Data\Hockeyshop.Data.csproj", "{82252C9C-0327-45AF-8355-6BDB71605775}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7522FFB5-29D2-4709-8E3D-114D649977BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7522FFB5-29D2-4709-8E3D-114D649977BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7522FFB5-29D2-4709-8E3D-114D649977BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82252C9C-0327-45AF-8355-6BDB71605775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82252C9C-0327-45AF-8355-6BDB71605775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82252C9C-0327-45AF-8355-6BDB71605775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82252C9C-0327-45AF-8355-6BDB71605775}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
