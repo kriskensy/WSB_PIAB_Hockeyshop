@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DuH9w2qJQQeuwBfR5ccLXONRb8pZORzR0euZHhuQUpM=",
+  "Hash": "4fiaiXP8vx/TzzmgzICdAd19cW4vkxYt3+ktJzjcgvk=",
   "Source": "Hockeyshop.PortalWWW",
   "BasePath": "_content/Hockeyshop.PortalWWW",
   "Mode": "Default",
@@ -514,8 +514,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "o3eulg0x1x",
-      "Integrity": "HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl+Qc=",
+      "Fingerprint": "53k4m3irrf",
+      "Integrity": "seCdwjwOgNddijU8rjzTAe0+F/wOQVsy+lPdtxi72W0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -3484,6 +3484,51 @@
       ]
     },
     {
+      "Route": "css/site.53k4m3irrf.css",
+      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3141"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"seCdwjwOgNddijU8rjzTAe0+F/wOQVsy+lPdtxi72W0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 17:21:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "53k4m3irrf"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-seCdwjwOgNddijU8rjzTAe0+F/wOQVsy+lPdtxi72W0="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -3494,7 +3539,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2025"
+          "Value": "3141"
         },
         {
           "Name": "Content-Type",
@@ -3502,11 +3547,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl+Qc=\""
+          "Value": "\"seCdwjwOgNddijU8rjzTAe0+F/wOQVsy+lPdtxi72W0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 18:09:08 GMT"
+          "Value": "Mon, 28 Apr 2025 17:21:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3516,52 +3561,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl+Qc="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.o3eulg0x1x.css",
-      "AssetFile": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2025"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl+Qc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 18:09:08 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "o3eulg0x1x"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl+Qc="
+          "Value": "sha256-seCdwjwOgNddijU8rjzTAe0+F/wOQVsy+lPdtxi72W0="
         }
       ]
     },

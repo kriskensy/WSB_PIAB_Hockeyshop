@@ -252,17 +252,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lxpu4bpm5t"},{"Name":"integrity","Value":"sha256-N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/content/img_sticksTechnology/stick-comparison.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"38655"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022N4FDeZXl1OHvj8aPXYRtd1wLqJkwSj7j1e1wNZGt7hk=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 09:31:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/css/site.53k4m3irrf.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"53k4m3irrf"},{"Name":"integrity","Value":"sha256-seCdwjwOgNddijU8rjzTAe0\u002BF/wOQVsy\u002BlPdtxi72W0="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3141"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022seCdwjwOgNddijU8rjzTAe0\u002BF/wOQVsy\u002BlPdtxi72W0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 17:21:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl\u002BQc="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2025"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl\u002BQc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 05 Apr 2025 18:09:08 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/css/site.o3eulg0x1x.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"o3eulg0x1x"},{"Name":"integrity","Value":"sha256-HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl\u002BQc="},{"Name":"label","Value":"_content/Hockeyshop.PortalWWW/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2025"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HKiqJmap3PG5IwZwiD2LLx7Lu0Z34yYzA5D5KuRl\u002BQc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 05 Apr 2025 18:09:08 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-seCdwjwOgNddijU8rjzTAe0\u002BF/wOQVsy\u002BlPdtxi72W0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3141"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022seCdwjwOgNddijU8rjzTAe0\u002BF/wOQVsy\u002BlPdtxi72W0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 28 Apr 2025 17:21:58 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Hockeyshop.PortalWWW/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>

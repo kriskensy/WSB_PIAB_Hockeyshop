@@ -1,7 +1,13 @@
+using Hockeyshop.Data.Data;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<HockeyshopContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("HockeyshopContext") ?? throw new InvalidOperationException("Connection string 'HockeyshopContext' not found.")));
 
 var app = builder.Build();
 
