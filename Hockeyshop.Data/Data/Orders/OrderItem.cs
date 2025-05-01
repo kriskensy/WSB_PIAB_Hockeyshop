@@ -1,12 +1,6 @@
-﻿using Hockeyshop.Data.Data.Inventory;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+using Hockeyshop.Data.Data.Products;
 
 namespace Hockeyshop.Data.Data.Orders
 {
@@ -15,26 +9,23 @@ namespace Hockeyshop.Data.Data.Orders
         [Key]
         public int IdOrderItem { get; set; }
 
+        [Required(ErrorMessage = "The Order field is required.")]
+        [ForeignKey("Order")]
+        [Display(Name = "Order ID")]
+        public int IdOrder { get; set; }
+        public Order Order { get; set; }
+
+        [Required(ErrorMessage = "The Product field is required.")]
+        [ForeignKey("Product")]
+        [Display(Name = "Product ID")]
+        public int IdProduct { get; set; }
+        public Product Product { get; set; }
+
         [Required(ErrorMessage = "The Quantity field is required.")]
-        [Range(1, int.MaxValue, ErrorMessage = "The Quantity must be at least 1.")]
         public int Quantity { get; set; }
 
         [Required(ErrorMessage = "The Unit Price field is required.")]
-        [Precision(18, 2)]
-        [Range(0.01, double.MaxValue, ErrorMessage = "The Unit Price must be greater than 0.")]
-        [Display(Name = "Unit Price")]
+        [Display(Name = "Unit price")]
         public decimal UnitPrice { get; set; }
-
-        [ForeignKey("Order")]
-        [Required(ErrorMessage = "The Order ID field is required.")]
-        [Display(Name = "Order ID")]
-        public int IdOrder { get; set; }
-        public Order Orders { get; set; }
-
-        [ForeignKey("Product")]
-        [Required(ErrorMessage = "The Product ID field is required.")]
-        [Display(Name = "Product ID")]
-        public int IdProduct { get; set; }
-        public Product Products { get; set; }
     }
 }

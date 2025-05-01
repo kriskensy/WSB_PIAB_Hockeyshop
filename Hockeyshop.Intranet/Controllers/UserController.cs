@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Data.Data.Management;
 using Hockeyshop.Data.Data;
+using Hockeyshop.Data.Data.Core;
 
 namespace Hockeyshop.Intranet.Controllers
 {
