@@ -9,11 +9,26 @@
   <ItemGroup>
     <PackageReference Include="Font.Awesome" Version="5.15.4" />
     <PackageReference Include="FontAwesome" Version="4.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Hockeyshop.Data\Hockeyshop.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Cart\" />
+    <Folder Include="Controllers\Core\" />
+    <Folder Include="Controllers\Inventory\" />
+    <Folder Include="Controllers\Marketing\" />
+    <Folder Include="Views\Cart\" />
+    <Folder Include="Views\Core\" />
+    <Folder Include="Views\Inventory\" />
+    <Folder Include="Views\Marketing\" />
   </ItemGroup>
 
 </Project>

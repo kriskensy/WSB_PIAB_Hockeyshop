@@ -54,5 +54,12 @@ namespace Hockeyshop.Data.Data
         public DbSet<ProductCategory> ProductCategories { get; set; } = default!;
         public DbSet<ProductImage> ProductImages { get; set; } = default!;
         public DbSet<Supplier> Suppliers { get; set; } = default!;
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProductPromotionConfiguration).Assembly);
+        }
     }
 }

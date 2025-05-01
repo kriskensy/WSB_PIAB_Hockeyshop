@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ErPP1H/zYtBvx1i0BxYUZhAufPtlMv9sXudnkCzL6/w=",
+  "Hash": "nHZot+dMfH6r4mzBOqve5/lcNLLz+MB1ltf9gsGsn20=",
   "Source": "Hockeyshop.Intranet",
   "BasePath": "_content/Hockeyshop.Intranet",
   "Mode": "Default",
@@ -1343,7 +1343,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 12:31:33 GMT"
+          "Value": "Mon, 28 Apr 2025 17:37:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1380,7 +1380,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 12:31:33 GMT"
+          "Value": "Mon, 28 Apr 2025 17:37:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1507,7 +1507,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 10:45:54 GMT"
+          "Value": "Thu, 01 May 2025 09:50:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1544,7 +1544,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 10:45:54 GMT"
+          "Value": "Thu, 01 May 2025 09:50:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1589,7 +1589,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 10:45:54 GMT"
+          "Value": "Thu, 01 May 2025 09:50:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1634,7 +1634,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 05 Apr 2025 10:45:54 GMT"
+          "Value": "Thu, 01 May 2025 09:50:58 GMT"
         },
         {
           "Name": "Cache-Control",
