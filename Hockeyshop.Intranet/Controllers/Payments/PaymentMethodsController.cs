@@ -17,7 +17,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
         // GET: PaymentMethods
         public async Task<IActionResult> Index()
         {
-            return View(await _context.PaymentMethods.ToListAsync());
+            return View("~/Views/Payments/PaymentMethods/Index.cshtml", await _context.PaymentMethods.ToListAsync());
         }
 
         // GET: PaymentMethods/Details/5
@@ -35,13 +35,13 @@ namespace Hockeyshop.Intranet.Controllers.Payments
                 return NotFound();
             }
 
-            return View(paymentMethod);
+            return View("~/Views/Payments/PaymentMethods/Details.cshtml", paymentMethod);
         }
 
         // GET: PaymentMethods/Create
         public IActionResult Create()
         {
-            return View();
+            return View("~/Views/Payments/PaymentMethods/Create.cshtml");
         }
 
         // POST: PaymentMethods/Create
@@ -57,7 +57,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(paymentMethod);
+            return View("~/Views/Payments/PaymentMethods/Create.cshtml", paymentMethod);
         }
 
         // GET: PaymentMethods/Edit/5
@@ -73,7 +73,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
             {
                 return NotFound();
             }
-            return View(paymentMethod);
+            return View("~/Views/Payments/PaymentMethods/Edit.cshtml", paymentMethod);
         }
 
         // POST: PaymentMethods/Edit/5
@@ -108,7 +108,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(paymentMethod);
+            return View("~/Views/Payments/PaymentMethods/Edit.cshtml", paymentMethod);
         }
 
         // GET: PaymentMethods/Delete/5
@@ -126,7 +126,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
                 return NotFound();
             }
 
-            return View(paymentMethod);
+            return View("~/Views/Payments/PaymentMethods/Delete.cshtml", paymentMethod);
         }
 
         // POST: PaymentMethods/Delete/5

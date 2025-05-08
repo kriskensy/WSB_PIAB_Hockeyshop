@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.OrderItems.Include(o => o.Order).Include(o => o.Product);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/Orders/OrderItems/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: OrderItems/Details/5
@@ -39,7 +39,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return NotFound();
             }
 
-            return View(orderItem);
+            return View("~/Views/Orders/OrderItems/Details.cshtml", orderItem);
         }
 
         // GET: OrderItems/Create
@@ -47,7 +47,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         {
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder");
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description");
-            return View();
+            return View("~/Views/Orders/OrderItems/Create.cshtml");
         }
 
         // POST: OrderItems/Create
@@ -65,7 +65,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
             }
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder", orderItem.IdOrder);
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", orderItem.IdProduct);
-            return View(orderItem);
+            return View("~/Views/Orders/OrderItems/Create.cshtml", orderItem);
         }
 
         // GET: OrderItems/Edit/5
@@ -83,7 +83,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
             }
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder", orderItem.IdOrder);
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", orderItem.IdProduct);
-            return View(orderItem);
+            return View("~/Views/Orders/OrderItems/Edit.cshtml", orderItem);
         }
 
         // POST: OrderItems/Edit/5
@@ -120,7 +120,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
             }
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder", orderItem.IdOrder);
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", orderItem.IdProduct);
-            return View(orderItem);
+            return View("~/Views/Orders/OrderItems/Edit.cshtml", orderItem);
         }
 
         // GET: OrderItems/Delete/5
@@ -140,7 +140,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return NotFound();
             }
 
-            return View(orderItem);
+            return View("~/Views/Orders/OrderItems/Delete.cshtml", orderItem);
         }
 
         // POST: OrderItems/Delete/5

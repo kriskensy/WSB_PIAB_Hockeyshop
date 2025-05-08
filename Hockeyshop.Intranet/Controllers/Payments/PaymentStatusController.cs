@@ -17,7 +17,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
         // GET: PaymentStatus
         public async Task<IActionResult> Index()
         {
-            return View(await _context.PaymentStatuses.ToListAsync());
+            return View("~/Views/Payments/PaymentStatus/Index.cshtml", await _context.PaymentStatuses.ToListAsync());
         }
 
         // GET: PaymentStatus/Details/5
@@ -35,13 +35,13 @@ namespace Hockeyshop.Intranet.Controllers.Payments
                 return NotFound();
             }
 
-            return View(paymentStatus);
+            return View("~/Views/Payments/PaymentStatus/Details.cshtml", paymentStatus);
         }
 
         // GET: PaymentStatus/Create
         public IActionResult Create()
         {
-            return View();
+            return View("~/Views/Payments/PaymentStatus/Create.cshtml");
         }
 
         // POST: PaymentStatus/Create
@@ -57,7 +57,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(paymentStatus);
+            return View("~/Views/Payments/PaymentStatus/Create.cshtml", paymentStatus);
         }
 
         // GET: PaymentStatus/Edit/5
@@ -73,7 +73,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
             {
                 return NotFound();
             }
-            return View(paymentStatus);
+            return View("~/Views/Payments/PaymentStatus/Edit.cshtml", paymentStatus);
         }
 
         // POST: PaymentStatus/Edit/5
@@ -108,7 +108,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(paymentStatus);
+            return View("~/Views/Payments/PaymentStatus/Edit.cshtml", paymentStatus);
         }
 
         // GET: PaymentStatus/Delete/5
@@ -126,7 +126,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
                 return NotFound();
             }
 
-            return View(paymentStatus);
+            return View("~/Views/Payments/PaymentStatus/Delete.cshtml", paymentStatus);
         }
 
         // POST: PaymentStatus/Delete/5

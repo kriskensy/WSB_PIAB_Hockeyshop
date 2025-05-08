@@ -17,7 +17,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
         // GET: DiscountTypes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.DiscountTypes.ToListAsync());
+            return View("~/Views/Marketing/DiscountTypes/Index.cshtml", await _context.DiscountTypes.ToListAsync());
         }
 
         // GET: DiscountTypes/Details/5
@@ -35,13 +35,13 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 return NotFound();
             }
 
-            return View(discountType);
+            return View("~/Views/Marketing/DiscountTypes/Details.cshtml", discountType);
         }
 
         // GET: DiscountTypes/Create
         public IActionResult Create()
         {
-            return View();
+            return View("~/Views/Marketing/DiscountTypes/Create.cshtml");
         }
 
         // POST: DiscountTypes/Create
@@ -57,7 +57,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(discountType);
+            return View("~/Views/Marketing/DiscountTypes/Create.cshtml", discountType);
         }
 
         // GET: DiscountTypes/Edit/5
@@ -73,7 +73,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
             {
                 return NotFound();
             }
-            return View(discountType);
+            return View("~/Views/Marketing/DiscountTypes/Edit.cshtml", discountType);
         }
 
         // POST: DiscountTypes/Edit/5
@@ -108,7 +108,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(discountType);
+            return View("~/Views/Marketing/DiscountTypes/Edit.cshtml", discountType);
         }
 
         // GET: DiscountTypes/Delete/5
@@ -126,7 +126,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 return NotFound();
             }
 
-            return View(discountType);
+            return View("~/Views/Marketing/DiscountTypes/Delete.cshtml", discountType);
         }
 
         // POST: DiscountTypes/Delete/5

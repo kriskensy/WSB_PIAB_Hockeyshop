@@ -17,7 +17,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
         // GET: UserRoles
         public async Task<IActionResult> Index()
         {
-            return View(await _context.UserRoles.ToListAsync());
+            return View("~/Views/Core/UserRoles/Index.cshtml", await _context.UserRoles.ToListAsync());
         }
 
         // GET: UserRoles/Details/5
@@ -35,13 +35,13 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 return NotFound();
             }
 
-            return View(userRole);
+            return View("~/Views/Core/UserRoles/Details.cshtml", userRole);
         }
 
         // GET: UserRoles/Create
         public IActionResult Create()
         {
-            return View();
+            return View("~/Views/Core/UserRoles/Create.cshtml");
         }
 
         // POST: UserRoles/Create
@@ -57,7 +57,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(userRole);
+            return View("~/Views/Core/UserRoles/Create.cshtml", userRole);
         }
 
         // GET: UserRoles/Edit/5
@@ -73,7 +73,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
             {
                 return NotFound();
             }
-            return View(userRole);
+            return View("~/Views/Core/UserRoles/Edit.cshtml", userRole);
         }
 
         // POST: UserRoles/Edit/5
@@ -108,7 +108,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(userRole);
+            return View("~/Views/Core/UserRoles/Edit.cshtml", userRole);
         }
 
         // GET: UserRoles/Delete/5
@@ -126,7 +126,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 return NotFound();
             }
 
-            return View(userRole);
+            return View("~/Views/Core/UserRoles/Delete.cshtml", userRole);
         }
 
         // POST: UserRoles/Delete/5

@@ -17,7 +17,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // GET: ProductCategories
         public async Task<IActionResult> Index()
         {
-            return View(await _context.ProductCategories.ToListAsync());
+            return View("~/Views/Products/ProductCategories/Index.cshtml", await _context.ProductCategories.ToListAsync());
         }
 
         // GET: ProductCategories/Details/5
@@ -35,13 +35,13 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
 
-            return View(productCategory);
+            return View("~/Views/Products/ProductCategories/Details.cshtml", productCategory);
         }
 
         // GET: ProductCategories/Create
         public IActionResult Create()
         {
-            return View();
+            return View("~/Views/Products/ProductCategories/Create.cshtml");
         }
 
         // POST: ProductCategories/Create
@@ -57,7 +57,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(productCategory);
+            return View("~/Views/Products/ProductCategories/Create.cshtml", productCategory);
         }
 
         // GET: ProductCategories/Edit/5
@@ -73,7 +73,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
             {
                 return NotFound();
             }
-            return View(productCategory);
+            return View("~/Views/Products/ProductCategories/Edit.cshtml", productCategory);
         }
 
         // POST: ProductCategories/Edit/5
@@ -108,7 +108,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(productCategory);
+            return View("~/Views/Products/ProductCategories/Edit.cshtml", productCategory);
         }
 
         // GET: ProductCategories/Delete/5
@@ -126,7 +126,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
 
-            return View(productCategory);
+            return View("~/Views/Products/ProductCategories/Delete.cshtml", productCategory);
         }
 
         // POST: ProductCategories/Delete/5

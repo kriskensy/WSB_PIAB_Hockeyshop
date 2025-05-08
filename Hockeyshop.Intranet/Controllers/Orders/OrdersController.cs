@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.Orders.Include(o => o.OrderStatus).Include(o => o.User);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/Orders/Orders/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: Orders/Details/5
@@ -39,7 +39,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return NotFound();
             }
 
-            return View(order);
+            return View("~/Views/Orders/Orders/Details.cshtml", order);
         }
 
         // GET: Orders/Create
@@ -47,7 +47,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         {
             ViewData["IdOrderStatus"] = new SelectList(_context.OrderStatuses, "IdOrderStatus", "Name");
             ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City");
-            return View();
+            return View("~/Views/Orders/Orders/Create.cshtml");
         }
 
         // POST: Orders/Create
@@ -65,7 +65,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
             }
             ViewData["IdOrderStatus"] = new SelectList(_context.OrderStatuses, "IdOrderStatus", "Name", order.IdOrderStatus);
             ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", order.IdUser);
-            return View(order);
+            return View("~/Views/Orders/Orders/Create.cshtml", order);
         }
 
         // GET: Orders/Edit/5
@@ -83,7 +83,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
             }
             ViewData["IdOrderStatus"] = new SelectList(_context.OrderStatuses, "IdOrderStatus", "Name", order.IdOrderStatus);
             ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", order.IdUser);
-            return View(order);
+            return View("~/Views/Orders/Orders/Edit.cshtml", order);
         }
 
         // POST: Orders/Edit/5
@@ -120,7 +120,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
             }
             ViewData["IdOrderStatus"] = new SelectList(_context.OrderStatuses, "IdOrderStatus", "Name", order.IdOrderStatus);
             ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", order.IdUser);
-            return View(order);
+            return View("~/Views/Orders/Orders/Edit.cshtml", order);
         }
 
         // GET: Orders/Delete/5
@@ -140,7 +140,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return NotFound();
             }
 
-            return View(order);
+            return View("~/Views/Orders/Orders/Delete.cshtml", order);
         }
 
         // POST: Orders/Delete/5

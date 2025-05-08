@@ -59,6 +59,13 @@ namespace Hockeyshop.Data.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            //dla cykli kaskadowych
+            modelBuilder.Entity<Invoice>()
+                .HasOne(i => i.User)
+                .WithMany()
+                .HasForeignKey(i => i.IdUser)
+                .OnDelete(DeleteBehavior.NoAction);
+
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProductPromotionConfiguration).Assembly);
         }
     }

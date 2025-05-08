@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Hockeyshop.Data.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<HockeyshopContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("HockeyshopIntranetContext") ?? throw new InvalidOperationException("Connection string 'HockeyshopIntranetContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("HockeyshopContext") ?? throw new InvalidOperationException("Connection string 'HockeyshopContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

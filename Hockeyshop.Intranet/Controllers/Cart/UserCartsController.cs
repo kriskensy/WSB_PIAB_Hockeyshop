@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.UserCarts.Include(u => u.User);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/Cart/UserCarts/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: UserCarts/Details/5
@@ -38,14 +38,14 @@ namespace Hockeyshop.Intranet.Controllers.Cart
                 return NotFound();
             }
 
-            return View(userCart);
+            return View("~/Views/Cart/UserCarts/Details.cshtml", userCart);
         }
 
         // GET: UserCarts/Create
         public IActionResult Create()
         {
             ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City");
-            return View();
+            return View("~/Views/Cart/UserCarts/Create.cshtml");
         }
 
         // POST: UserCarts/Create
@@ -62,7 +62,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", userCart.IdUser);
-            return View(userCart);
+            return View("~/Views/Cart/UserCarts/Create.cshtml", userCart);
         }
 
         // GET: UserCarts/Edit/5
@@ -79,7 +79,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
                 return NotFound();
             }
             ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", userCart.IdUser);
-            return View(userCart);
+            return View("~/Views/Cart/UserCarts/Edit.cshtml", userCart);
         }
 
         // POST: UserCarts/Edit/5
@@ -115,7 +115,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", userCart.IdUser);
-            return View(userCart);
+            return View("~/Views/Cart/UserCarts/Edit.cshtml", userCart);
         }
 
         // GET: UserCarts/Delete/5
@@ -134,7 +134,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
                 return NotFound();
             }
 
-            return View(userCart);
+            return View("~/Views/Cart/UserCarts/Delete.cshtml", userCart);
         }
 
         // POST: UserCarts/Delete/5

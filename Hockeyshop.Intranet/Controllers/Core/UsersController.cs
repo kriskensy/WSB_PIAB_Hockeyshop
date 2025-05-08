@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.Users.Include(u => u.UserRole);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/Core/Users/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: Users/Details/5
@@ -38,14 +38,14 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 return NotFound();
             }
 
-            return View(user);
+            return View("~/Views/Core/Users/Details.cshtml", user);
         }
 
         // GET: Users/Create
         public IActionResult Create()
         {
             ViewData["IdUserRole"] = new SelectList(_context.UserRoles, "IdUserRole", "Role");
-            return View();
+            return View("~/Views/Core/Users/Create.cshtml");
         }
 
         // POST: Users/Create
@@ -62,7 +62,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdUserRole"] = new SelectList(_context.UserRoles, "IdUserRole", "Role", user.IdUserRole);
-            return View(user);
+            return View("~/Views/Core/Users/Create.cshtml", user);
         }
 
         // GET: Users/Edit/5
@@ -79,7 +79,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 return NotFound();
             }
             ViewData["IdUserRole"] = new SelectList(_context.UserRoles, "IdUserRole", "Role", user.IdUserRole);
-            return View(user);
+            return View("~/Views/Core/Users/Edit.cshtml", user);
         }
 
         // POST: Users/Edit/5
@@ -115,7 +115,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdUserRole"] = new SelectList(_context.UserRoles, "IdUserRole", "Role", user.IdUserRole);
-            return View(user);
+            return View("~/Views/Core/Users/Edit.cshtml", user);
         }
 
         // GET: Users/Delete/5
@@ -134,7 +134,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 return NotFound();
             }
 
-            return View(user);
+            return View("~/Views/Core/Users/Delete.cshtml", user);
         }
 
         // POST: Users/Delete/5

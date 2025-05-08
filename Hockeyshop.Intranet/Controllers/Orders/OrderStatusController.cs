@@ -17,7 +17,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         // GET: OrderStatus
         public async Task<IActionResult> Index()
         {
-            return View(await _context.OrderStatuses.ToListAsync());
+            return View("~/Views/Orders/OrderStatus/Index.cshtml", await _context.OrderStatuses.ToListAsync());
         }
 
         // GET: OrderStatus/Details/5
@@ -35,13 +35,13 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return NotFound();
             }
 
-            return View(orderStatus);
+            return View("~/Views/Orders/OrderStatus/Details.cshtml", orderStatus);
         }
 
         // GET: OrderStatus/Create
         public IActionResult Create()
         {
-            return View();
+            return View("~/Views/Orders/OrderStatus/Create.cshtml");
         }
 
         // POST: OrderStatus/Create
@@ -57,7 +57,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(orderStatus);
+            return View("~/Views/Orders/OrderStatus/Create.cshtml", orderStatus);
         }
 
         // GET: OrderStatus/Edit/5
@@ -73,7 +73,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
             {
                 return NotFound();
             }
-            return View(orderStatus);
+            return View("~/Views/Orders/OrderStatus/Edit.cshtml", orderStatus);
         }
 
         // POST: OrderStatus/Edit/5
@@ -108,7 +108,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(orderStatus);
+            return View("~/Views/Orders/OrderStatus/Edit.cshtml", orderStatus);
         }
 
         // GET: OrderStatus/Delete/5
@@ -126,7 +126,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return NotFound();
             }
 
-            return View(orderStatus);
+            return View("~/Views/Orders/OrderStatus/Delete.cshtml", orderStatus);
         }
 
         // POST: OrderStatus/Delete/5

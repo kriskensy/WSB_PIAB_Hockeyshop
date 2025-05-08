@@ -30,6 +30,7 @@ C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hoc
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
@@ -264,4 +265,3 @@ C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hoc
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.pdb
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.genruntimeconfig.cache
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\ref\Hockeyshop.PortalWWW.dll
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll

@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.CMS
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.HockeyNews.Include(h => h.Author);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/CMS/HockeyNews/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: HockeyNews/Details/5
@@ -38,14 +38,14 @@ namespace Hockeyshop.Intranet.Controllers.CMS
                 return NotFound();
             }
 
-            return View(hockeyNews);
+            return View("~/Views/CMS/HockeyNews/Details.cshtml", hockeyNews);
         }
 
         // GET: HockeyNews/Create
         public IActionResult Create()
         {
             ViewData["IdAuthor"] = new SelectList(_context.Users, "IdUser", "City");
-            return View();
+            return View("~/Views/CMS/HockeyNews/Create.cshtml");
         }
 
         // POST: HockeyNews/Create
@@ -62,7 +62,7 @@ namespace Hockeyshop.Intranet.Controllers.CMS
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdAuthor"] = new SelectList(_context.Users, "IdUser", "City", hockeyNews.IdAuthor);
-            return View(hockeyNews);
+            return View("~/Views/CMS/HockeyNews/Create.cshtml", hockeyNews);
         }
 
         // GET: HockeyNews/Edit/5
@@ -79,7 +79,7 @@ namespace Hockeyshop.Intranet.Controllers.CMS
                 return NotFound();
             }
             ViewData["IdAuthor"] = new SelectList(_context.Users, "IdUser", "City", hockeyNews.IdAuthor);
-            return View(hockeyNews);
+            return View("~/Views/CMS/HockeyNews/Edit.cshtml", hockeyNews);
         }
 
         // POST: HockeyNews/Edit/5
@@ -115,7 +115,7 @@ namespace Hockeyshop.Intranet.Controllers.CMS
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdAuthor"] = new SelectList(_context.Users, "IdUser", "City", hockeyNews.IdAuthor);
-            return View(hockeyNews);
+            return View("~/Views/CMS/HockeyNews/Edit.cshtml", hockeyNews);
         }
 
         // GET: HockeyNews/Delete/5
@@ -134,7 +134,7 @@ namespace Hockeyshop.Intranet.Controllers.CMS
                 return NotFound();
             }
 
-            return View(hockeyNews);
+            return View("~/Views/CMS/HockeyNews/Delete.cshtml", hockeyNews);
         }
 
         // POST: HockeyNews/Delete/5

@@ -17,7 +17,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // GET: Suppliers
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Suppliers.ToListAsync());
+            return View("~/Views/Products/Suppliers/Index.cshtml", await _context.Suppliers.ToListAsync());
         }
 
         // GET: Suppliers/Details/5
@@ -35,13 +35,13 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
 
-            return View(supplier);
+            return View("~/Views/Products/Suppliers/Details.cshtml", supplier);
         }
 
         // GET: Suppliers/Create
         public IActionResult Create()
         {
-            return View();
+            return View("~/Views/Products/Suppliers/Create.cshtml");
         }
 
         // POST: Suppliers/Create
@@ -57,7 +57,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(supplier);
+            return View("~/Views/Products/Suppliers/Create.cshtml", supplier);
         }
 
         // GET: Suppliers/Edit/5
@@ -73,7 +73,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
             {
                 return NotFound();
             }
-            return View(supplier);
+            return View("~/Views/Products/Suppliers/Edit.cshtml", supplier);
         }
 
         // POST: Suppliers/Edit/5
@@ -108,7 +108,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(supplier);
+            return View("~/Views/Products/Suppliers/Edit.cshtml", supplier);
         }
 
         // GET: Suppliers/Delete/5
@@ -126,7 +126,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
 
-            return View(supplier);
+            return View("~/Views/Products/Suppliers/Delete.cshtml", supplier);
         }
 
         // POST: Suppliers/Delete/5

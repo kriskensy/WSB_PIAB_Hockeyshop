@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.CartItems.Include(c => c.Product).Include(c => c.UserCart);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/Cart/CartItems/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: CartItems/Details/5
@@ -39,7 +39,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
                 return NotFound();
             }
 
-            return View(cartItem);
+            return View("~/Views/Cart/CartItems/Details.cshtml", cartItem);
         }
 
         // GET: CartItems/Create
@@ -47,7 +47,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
         {
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description");
             ViewData["IdUserCart"] = new SelectList(_context.UserCarts, "IdUserCart", "IdUserCart");
-            return View();
+            return View("~/Views/Cart/CartItems/Create.cshtml");
         }
 
         // POST: CartItems/Create
@@ -65,7 +65,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", cartItem.IdProduct);
             ViewData["IdUserCart"] = new SelectList(_context.UserCarts, "IdUserCart", "IdUserCart", cartItem.IdUserCart);
-            return View(cartItem);
+            return View("~/Views/Cart/CartItems/Create.cshtml", cartItem);
         }
 
         // GET: CartItems/Edit/5
@@ -83,7 +83,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", cartItem.IdProduct);
             ViewData["IdUserCart"] = new SelectList(_context.UserCarts, "IdUserCart", "IdUserCart", cartItem.IdUserCart);
-            return View(cartItem);
+            return View("~/Views/Cart/CartItems/Edit.cshtml", cartItem);
         }
 
         // POST: CartItems/Edit/5
@@ -120,7 +120,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", cartItem.IdProduct);
             ViewData["IdUserCart"] = new SelectList(_context.UserCarts, "IdUserCart", "IdUserCart", cartItem.IdUserCart);
-            return View(cartItem);
+            return View("~/Views/Cart/CartItems/Edit.cshtml", cartItem);
         }
 
         // GET: CartItems/Delete/5
@@ -140,7 +140,7 @@ namespace Hockeyshop.Intranet.Controllers.Cart
                 return NotFound();
             }
 
-            return View(cartItem);
+            return View("~/Views/Cart/CartItems/Delete.cshtml", cartItem);
         }
 
         // POST: CartItems/Delete/5

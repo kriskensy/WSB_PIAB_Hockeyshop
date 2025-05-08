@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.Promotions.Include(p => p.DiscountType);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/Marketing/Promotions/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: Promotions/Details/5
@@ -38,14 +38,14 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 return NotFound();
             }
 
-            return View(promotion);
+            return View("~/Views/Marketing/Promotions/Details.cshtml", promotion);
         }
 
         // GET: Promotions/Create
         public IActionResult Create()
         {
             ViewData["IdDiscountType"] = new SelectList(_context.DiscountTypes, "IdDiscountType", "DiscountTypeName");
-            return View();
+            return View("~/Views/Marketing/Promotions/Create.cshtml");
         }
 
         // POST: Promotions/Create
@@ -62,7 +62,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdDiscountType"] = new SelectList(_context.DiscountTypes, "IdDiscountType", "DiscountTypeName", promotion.IdDiscountType);
-            return View(promotion);
+            return View("~/Views/Marketing/Promotions/Create.cshtml", promotion);
         }
 
         // GET: Promotions/Edit/5
@@ -79,7 +79,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 return NotFound();
             }
             ViewData["IdDiscountType"] = new SelectList(_context.DiscountTypes, "IdDiscountType", "DiscountTypeName", promotion.IdDiscountType);
-            return View(promotion);
+            return View("~/Views/Marketing/Promotions/Edit.cshtml", promotion);
         }
 
         // POST: Promotions/Edit/5
@@ -115,7 +115,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdDiscountType"] = new SelectList(_context.DiscountTypes, "IdDiscountType", "DiscountTypeName", promotion.IdDiscountType);
-            return View(promotion);
+            return View("~/Views/Marketing/Promotions/Edit.cshtml", promotion);
         }
 
         // GET: Promotions/Delete/5
@@ -134,7 +134,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 return NotFound();
             }
 
-            return View(promotion);
+            return View("~/Views/Marketing/Promotions/Delete.cshtml", promotion);
         }
 
         // POST: Promotions/Delete/5

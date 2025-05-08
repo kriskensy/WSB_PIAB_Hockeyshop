@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.Inventory
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.Stocks.Include(s => s.Product);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/Inventory/Stocks/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: Stocks/Details/5
@@ -38,14 +38,14 @@ namespace Hockeyshop.Intranet.Controllers.Inventory
                 return NotFound();
             }
 
-            return View(stock);
+            return View("~/Views/Inventory/Stocks/Detials.cshtml", stock);
         }
 
         // GET: Stocks/Create
         public IActionResult Create()
         {
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description");
-            return View();
+            return View("~/Views/Inventory/Stocks/Create.cshtml");
         }
 
         // POST: Stocks/Create
@@ -62,7 +62,7 @@ namespace Hockeyshop.Intranet.Controllers.Inventory
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", stock.IdProduct);
-            return View(stock);
+            return View("~/Views/Inventory/Stocks/Create.cshtml", stock);
         }
 
         // GET: Stocks/Edit/5
@@ -79,7 +79,7 @@ namespace Hockeyshop.Intranet.Controllers.Inventory
                 return NotFound();
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", stock.IdProduct);
-            return View(stock);
+            return View("~/Views/Inventory/Stocks/Edit.cshtml", stock);
         }
 
         // POST: Stocks/Edit/5
@@ -115,7 +115,7 @@ namespace Hockeyshop.Intranet.Controllers.Inventory
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", stock.IdProduct);
-            return View(stock);
+            return View("~/Views/Inventory/Stocks/Edit.cshtml", stock);
         }
 
         // GET: Stocks/Delete/5
@@ -134,7 +134,7 @@ namespace Hockeyshop.Intranet.Controllers.Inventory
                 return NotFound();
             }
 
-            return View(stock);
+            return View("~/Views/Inventory/Stocks/Delete.cshtml", stock);
         }
 
         // POST: Stocks/Delete/5

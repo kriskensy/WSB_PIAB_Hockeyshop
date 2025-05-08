@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.ProductPromotions.Include(p => p.Product).Include(p => p.Promotion);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/Marketing/ProductPromotions/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: ProductPromotions/Details/5
@@ -39,7 +39,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 return NotFound();
             }
 
-            return View(productPromotion);
+            return View("~/Views/Marketing/ProductPromotions/Details.cshtml", productPromotion);
         }
 
         // GET: ProductPromotions/Create
@@ -47,7 +47,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
         {
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description");
             ViewData["IdPromotion"] = new SelectList(_context.Promotions, "IdPromotion", "Name");
-            return View();
+            return View("~/Views/Marketing/ProductPromotions/Create.cshtml");
         }
 
         // POST: ProductPromotions/Create
@@ -65,7 +65,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", productPromotion.IdProduct);
             ViewData["IdPromotion"] = new SelectList(_context.Promotions, "IdPromotion", "Name", productPromotion.IdPromotion);
-            return View(productPromotion);
+            return View("~/Views/Marketing/ProductPromotions/Create.cshtml", productPromotion);
         }
 
         // GET: ProductPromotions/Edit/5
@@ -83,7 +83,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", productPromotion.IdProduct);
             ViewData["IdPromotion"] = new SelectList(_context.Promotions, "IdPromotion", "Name", productPromotion.IdPromotion);
-            return View(productPromotion);
+            return View("~/Views/Marketing/ProductPromotions/Edit.cshtml", productPromotion);
         }
 
         // POST: ProductPromotions/Edit/5
@@ -120,7 +120,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", productPromotion.IdProduct);
             ViewData["IdPromotion"] = new SelectList(_context.Promotions, "IdPromotion", "Name", productPromotion.IdPromotion);
-            return View(productPromotion);
+            return View("~/Views/Marketing/ProductPromotions/Edit.cshtml", productPromotion);
         }
 
         // GET: ProductPromotions/Delete/5
@@ -140,7 +140,7 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
                 return NotFound();
             }
 
-            return View(productPromotion);
+            return View("~/Views/Marketing/ProductPromotions/Delete.cshtml", productPromotion);
         }
 
         // POST: ProductPromotions/Delete/5

@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.Payments.Include(p => p.Order).Include(p => p.PaymentMethod).Include(p => p.PaymentStatus);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/Payments/Payments/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: Payments/Details/5
@@ -40,7 +40,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
                 return NotFound();
             }
 
-            return View(payment);
+            return View("~/Views/Payments/Payments/Details.cshtml", payment);
         }
 
         // GET: Payments/Create
@@ -49,7 +49,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder");
             ViewData["IdPaymentMethod"] = new SelectList(_context.PaymentMethods, "IdPaymentMethod", "Name");
             ViewData["IdPaymentStatus"] = new SelectList(_context.PaymentStatuses, "IdPaymentStatus", "Name");
-            return View();
+            return View("~/Views/Payments/Payments/Create.cshtml");
         }
 
         // POST: Payments/Create
@@ -68,7 +68,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder", payment.IdOrder);
             ViewData["IdPaymentMethod"] = new SelectList(_context.PaymentMethods, "IdPaymentMethod", "Name", payment.IdPaymentMethod);
             ViewData["IdPaymentStatus"] = new SelectList(_context.PaymentStatuses, "IdPaymentStatus", "Name", payment.IdPaymentStatus);
-            return View(payment);
+            return View("~/Views/Payments/Payments/Create.cshtml", payment);
         }
 
         // GET: Payments/Edit/5
@@ -87,7 +87,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder", payment.IdOrder);
             ViewData["IdPaymentMethod"] = new SelectList(_context.PaymentMethods, "IdPaymentMethod", "Name", payment.IdPaymentMethod);
             ViewData["IdPaymentStatus"] = new SelectList(_context.PaymentStatuses, "IdPaymentStatus", "Name", payment.IdPaymentStatus);
-            return View(payment);
+            return View("~/Views/Payments/Payments/Edit.cshtml", payment);
         }
 
         // POST: Payments/Edit/5
@@ -125,7 +125,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder", payment.IdOrder);
             ViewData["IdPaymentMethod"] = new SelectList(_context.PaymentMethods, "IdPaymentMethod", "Name", payment.IdPaymentMethod);
             ViewData["IdPaymentStatus"] = new SelectList(_context.PaymentStatuses, "IdPaymentStatus", "Name", payment.IdPaymentStatus);
-            return View(payment);
+            return View("~/Views/Payments/Payments/Edit.cshtml", payment);
         }
 
         // GET: Payments/Delete/5
@@ -146,7 +146,7 @@ namespace Hockeyshop.Intranet.Controllers.Payments
                 return NotFound();
             }
 
-            return View(payment);
+            return View("~/Views/Payments/Payments/Delete.cshtml", payment);
         }
 
         // POST: Payments/Delete/5

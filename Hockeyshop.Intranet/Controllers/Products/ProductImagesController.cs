@@ -19,7 +19,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
         public async Task<IActionResult> Index()
         {
             var hockeyshopContext = _context.ProductImages.Include(p => p.Product);
-            return View(await hockeyshopContext.ToListAsync());
+            return View("~/Views/Products/ProductImages/Index.cshtml", await hockeyshopContext.ToListAsync());
         }
 
         // GET: ProductImages/Details/5
@@ -38,14 +38,14 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
 
-            return View(productImage);
+            return View("~/Views/Products/ProductImages/Details.cshtml", productImage);
         }
 
         // GET: ProductImages/Create
         public IActionResult Create()
         {
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description");
-            return View();
+            return View("~/Views/Products/ProductImages/Create.cshtml");
         }
 
         // POST: ProductImages/Create
@@ -62,7 +62,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", productImage.IdProduct);
-            return View(productImage);
+            return View("~/Views/Products/ProductImages/Create.cshtml", productImage);
         }
 
         // GET: ProductImages/Edit/5
@@ -79,7 +79,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", productImage.IdProduct);
-            return View(productImage);
+            return View("~/Views/Products/ProductImages/Edit.cshtml", productImage);
         }
 
         // POST: ProductImages/Edit/5
@@ -115,7 +115,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", productImage.IdProduct);
-            return View(productImage);
+            return View("~/Views/Products/ProductImages/Edit.cshtml", productImage);
         }
 
         // GET: ProductImages/Delete/5
@@ -134,7 +134,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
 
-            return View(productImage);
+            return View("~/Views/Products/ProductImages/Delete.cshtml", productImage);
         }
 
         // POST: ProductImages/Delete/5
