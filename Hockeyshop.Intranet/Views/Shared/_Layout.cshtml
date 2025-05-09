@@ -12,18 +12,16 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header>
-        <nav class="navbar navbar-expand-md fixed-top navbar-dark admin-navbar">
+        @* <nav class="navbar navbar-expand-md fixed-top navbar-dark admin-navbar">
             <div class="container-fluid">
 
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-user-shield me-2"></i>Besthockey Employee Dashboard</a>
 
                 <ul class="nav nav-pills me-auto">
-                    <a class="btn btn-success" asp-area="" asp-controller="HockeyNewsController" asp-action="Index"><i class="fas fa-newspaper me-1"></i>Hockeynews</a>
-                    <a class="btn btn-success" asp-area="" asp-controller="ProductsController" asp-action="Index"><i class="fas fa-shop me-1"></i>Products</a>
-                    <a class="btn btn-success" asp-area="" asp-controller="OrdersController" asp-action="Index"><i class="fas fa-chart-line me-1"></i>Orders</a>
-                    <a class="btn btn-success" asp-area="" asp-controller="UserCartsController" asp-action="Index"><i class="fas fa-cart-shopping me-1"></i>Cart</a>
-                    <a class="btn btn-success" asp-area="" asp-controller="PaymentMethodsController" asp-action="Index"><i class="fas fa-credit-card me-1"></i>Payments</a>
-                    <a class="btn btn-success" asp-area="" asp-controller="UsersController" asp-action="Index"><i class="fas fa-user me-1"></i>Profile</a>
+                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="SticksTechnology"><i class="fas fa-award me-1"></i>Sticks technology</a>
+                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="OurTeam"><i class="fas fa-user-group me-1"></i>Our team</a>
+                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="HockeyNews"><i class="fas fa-newspaper me-1"></i>News</a>
+                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="HockeyNews"><i class="fas fa-store me-1"></i>Shop</a>
                 </ul>
 
                 <div class="btn-group ms-auto">
@@ -41,11 +39,26 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> *@
+
+        @await Html.PartialAsync("Links")
     </header>
 
     <div class="container-fluid mt-5 pt-3">
         <div class="row">
+
+            <!-- dynamiczne określanie rozwinięcia sekcji na podstawie wyświetlanej strony -->
+            @{
+                var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+                var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+
+                bool isOrdersSection = currentController == "Orders" || currentController == "OrderItems" || currentController == "Invoices" || currentController == "OrderStatus";
+                bool isProductsSection = currentController == "Products" || currentController == "ProductCategories" || currentController == "ProductImages" || currentController == "Suppliers";
+                bool isMarketingSection = currentController == "Promotions" || currentController == "ProductPromotions" || currentController == "DiscountTypes";
+                bool isPaymentsSection = currentController == "Payments" || currentController == "PaymentMethods" || currentController == "PaymentStatus";
+                bool isUsersSection = currentController == "Users" || currentController == "UserRoles";
+                bool isCartSection = currentController == "UserCarts" || currentController == "CartItems";
+            }
 
             <nav id="sidebar" class="bg-light border-end vh-100 position-fixed">
                 <div class="sidebar-header p-3">
@@ -62,15 +75,15 @@
                             <i class="fas fa-newspaper me-2"></i>Hockey news
                         </a>
                     </li>
-                    <!-- orders -->
+                    <!-- odrers -->
                     <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#ordersSubmenu" role="button" aria-expanded="false" aria-controls="ordersSubmenu">
+                        <a class="nav-link @(isOrdersSection ? "" : "collapsed")" data-bs-toggle="collapse" href="#ordersSubmenu" role="button" aria-expanded="@(isOrdersSection.ToString().ToLower())" aria-controls="ordersSubmenu">
                             <i class="fas fa-box-open me-2"></i>Orders
                         </a>
-                        <div class="collapse" id="ordersSubmenu">
+                        <div class="collapse @(isOrdersSection ? "show" : "")" id="ordersSubmenu">
                             <ul class="nav flex-column ms-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Orders" asp-action="Index">Orders</a>
+                                    <a class="nav-link" asp-controller="Orders" asp-action="Index">Orders list</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="OrderItems" asp-action="Index">Order items</a>
@@ -86,10 +99,10 @@
                     </li>
                     <!-- products -->
                     <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#productsSubmenu" role="button" aria-expanded="false" aria-controls="productsSubmenu">
+                        <a class="nav-link @(isProductsSection ? "" : "collapsed")" data-bs-toggle="collapse" href="#productsSubmenu" role="button" aria-expanded="@(isProductsSection.ToString().ToLower())" aria-controls="productsSubmenu">
                             <i class="fas fa-shop me-2"></i>Products
                         </a>
-                        <div class="collapse" id="productsSubmenu">
+                        <div class="collapse @(isProductsSection ? "show" : "")" id="productsSubmenu">
                             <ul class="nav flex-column ms-3">
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="Products" asp-action="Index">Product list</a>
@@ -108,10 +121,10 @@
                     </li>
                     <!-- marketing -->
                     <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#marketingSubmenu" role="button" aria-expanded="false" aria-controls="marketingSubmenu">
+                        <a class="nav-link @(isMarketingSection ? "" : "collapsed")" data-bs-toggle="collapse" href="#marketingSubmenu" role="button" aria-expanded="@(isMarketingSection.ToString().ToLower())" aria-controls="marketingSubmenu">
                             <i class="fas fa-bullhorn me-2"></i>Marketing
                         </a>
-                        <div class="collapse" id="marketingSubmenu">
+                        <div class="collapse @(isMarketingSection ? "show" : "")" id="marketingSubmenu">
                             <ul class="nav flex-column ms-3">
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="Promotions" asp-action="Index">Promotions</a>
@@ -131,12 +144,12 @@
                             <i class="fas fa-warehouse me-2"></i>Stock
                         </a>
                     </li>
-                    <!-- payments -->
+                    <!-- paymewnts -->
                     <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#paymentsSubmenu" role="button" aria-expanded="false" aria-controls="paymentsSubmenu">
+                        <a class="nav-link @(isPaymentsSection ? "" : "collapsed")" data-bs-toggle="collapse" href="#paymentsSubmenu" role="button" aria-expanded="@(isPaymentsSection.ToString().ToLower())" aria-controls="paymentsSubmenu">
                             <i class="fas fa-credit-card me-2"></i>Payments
                         </a>
-                        <div class="collapse" id="paymentsSubmenu">
+                        <div class="collapse @(isPaymentsSection ? "show" : "")" id="paymentsSubmenu">
                             <ul class="nav flex-column ms-3">
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="Payments" asp-action="Index">Payments</a>
@@ -152,10 +165,10 @@
                     </li>
                     <!-- users -->
                     <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#usersSubmenu" role="button" aria-expanded="false" aria-controls="usersSubmenu">
+                        <a class="nav-link @(isUsersSection ? "" : "collapsed")" data-bs-toggle="collapse" href="#usersSubmenu" role="button" aria-expanded="@(isUsersSection.ToString().ToLower())" aria-controls="usersSubmenu">
                             <i class="fas fa-users me-2"></i>Users
                         </a>
-                        <div class="collapse" id="usersSubmenu">
+                        <div class="collapse @(isUsersSection ? "show" : "")" id="usersSubmenu">
                             <ul class="nav flex-column ms-3">
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="Users" asp-action="Index">Users list</a>
@@ -168,10 +181,10 @@
                     </li>
                     <!-- carts -->
                     <li class="nav-item">
-                        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#cartSubmenu" role="button" aria-expanded="false" aria-controls="cartSubmenu">
+                        <a class="nav-link @(isCartSection ? "" : "collapsed")" data-bs-toggle="collapse" href="#cartSubmenu" role="button" aria-expanded="@(isCartSection.ToString().ToLower())" aria-controls="cartSubmenu">
                             <i class="fas fa-cart-shopping me-2"></i>Carts
                         </a>
-                        <div class="collapse" id="cartSubmenu">
+                        <div class="collapse @(isCartSection ? "show" : "")" id="cartSubmenu">
                             <ul class="nav flex-column ms-3">
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="UserCarts" asp-action="Index">User carts</a>
@@ -184,6 +197,7 @@
                     </li>
                 </ul>
             </nav>
+
 
              <div class="content" style="margin-left: 280px;"> 
                  @RenderBody() 

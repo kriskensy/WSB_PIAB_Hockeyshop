@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hockeyshop.Intranet", "Hock
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hockeyshop.Data", "Hockeyshop.Data\Hockeyshop.Data.csproj", "{82252C9C-0327-45AF-8355-6BDB71605775}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hockeyshop.SharedViews", "Hockeyshop.SharedViews\Hockeyshop.SharedViews.csproj", "{52BC436F-0D85-4E09-9A66-E48B027F87B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{82252C9C-0327-45AF-8355-6BDB71605775}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82252C9C-0327-45AF-8355-6BDB71605775}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82252C9C-0327-45AF-8355-6BDB71605775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52BC436F-0D85-4E09-9A66-E48B027F87B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52BC436F-0D85-4E09-9A66-E48B027F87B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52BC436F-0D85-4E09-9A66-E48B027F87B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52BC436F-0D85-4E09-9A66-E48B027F87B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

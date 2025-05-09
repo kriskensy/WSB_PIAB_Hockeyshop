@@ -12,40 +12,8 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header>
-        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-            <div class="container-fluid">
-
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Besthockey</a>
-
-                <ul class="nav nav-pills me-auto">
-                    @* <li class="nav-item dropdown"> *@
-                    @*     <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-store me-1"></i>Shop</button> *@
-                    @*     <ul class="dropdown-menu"> *@
-                    @*         <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Sticks">Sticks</a></li> *@
-                    @*         <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Protection">Protection</a></li> *@
-                    @*         <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Bags">Bags</a></li> *@
-                    @*         <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Shoes">Shoes</a></li> *@
-                    @*         <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Balls">Balls</a></li> *@
-                    @*         <li><a class="dropdown-item" asp-area="" asp-controller="Shop" asp-action="Accessories">Accessories</a></li> *@
-                    @*     </ul> *@
-                    @* </li> *@
-
-                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="SticksTechnology"><i class="fas fa-award me-1"></i>Sticks technology</a>
-                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="OurTeam"><i class="fas fa-user-group me-1"></i>Our team</a>
-                    <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="HockeyNews"><i class="fas fa-newspaper me-1"></i>News</a>
-
-                </ul>
-
-                <div class="btn-group ms-auto" role="group">
-                    <a asp-area="" asp-controller="Cart" asp-action="CartIndex" class="btn btn-success">
-                        <i class="fa-solid fa-cart-shopping"></i> Cart
-                    </a>
-                    <a asp-area="" asp-controller="Account" asp-action="AccountIndex" class="btn btn-success">
-                        <i class="fa-solid fa-user"></i> Account
-                    </a>
-                </div>
-            </div>
-        </nav>
+        @await Html.PartialAsync("Links")
+        @* @await Html.PartialAsync("Links", (IEnumerable<Hockeyshop.Data.Data.CMS.HockeyNews>)ViewBag.ModelPage) *@
     </header>
 
     <div class="container">
@@ -61,20 +29,6 @@
             <div class="container">
                 <div class="row">
 
-                    @* <div class="col-3"> *@
-                    @*     <h2>Brands</h2> *@
-                    @*     <div class="list-group flex-sm-row flex-md-column"> *@
-                    @*         <a class="list-group-item list-group-item-action" href="#">Adidas</a> *@
-                    @*         <a class="list-group-item list-group-item-action" href="#">JDH</a> *@
-                    @*         <a class="list-group-item list-group-item-action" href="#">Grays</a> *@
-                    @*         <a class="list-group-item list-group-item-action" href="#">Malik</a> *@
-                    @*         <a class="list-group-item list-group-item-action" href="#">Osaka</a> *@
-                    @*         <a class="list-group-item list-group-item-action" href="#">Reece</a> *@
-                    @*         <a class="list-group-item list-group-item-action" href="#">TK</a> *@
-                    @*     </div> *@
-                    @* </div> *@
-
-
                     <div class="col-12">
                         <h4>New arrivals</h4>
                         <div id="newArrivalsCarousel" class="carousel slide new-arrivals-carousel" data-bs-ride="carousel">
@@ -82,7 +36,7 @@
 
                                 <div class="carousel-item active">
                                     <div class="carousel-slide-content d-flex align-items-center justify-content-center">
-                                        <img src="~/content/grays stick.webp" alt="GTI 10000 Probow Stick" class="img-fluid carousel-product-img">
+                                        <img src="/_content/Hockeyshop.SharedViews/content/grays stick.webp" alt="GTI 10000 Probow Stick" class="img-fluid carousel-product-img">
                                         <div class="ms-4">
                                             <h5 class="mb-1">GTI 10000 Probow Stick</h5>
                                             <p class="mb-0 text-muted">New in our collection! Professional hockey stick.</p>
@@ -92,7 +46,7 @@
 
                                 <div class="carousel-item">
                                     <div class="carousel-slide-content d-flex align-items-center justify-content-center">
-                                        <img src="~/content/grays hoodie.webp" alt="Performance Hoodie" class="img-fluid carousel-product-img">
+                                        <img src="/_content/Hockeyshop.SharedViews/content/grays hoodie.webp" alt="Performance Hoodie" class="img-fluid carousel-product-img">
                                         <div class="ms-4">
                                             <h5 class="mb-1">Performance Hoodie</h5>
                                             <p class="mb-0 text-muted">Comfortable sports sweatshirt for training and after the match.</p>
@@ -102,7 +56,7 @@
 
                                 <div class="carousel-item">
                                     <div class="carousel-slide-content d-flex align-items-center justify-content-center">
-                                        <img src="~/content/grays shinguards.webp" alt="G800 Shinguards" class="img-fluid carousel-product-img">
+                                        <img src="/_content/Hockeyshop.SharedViews/content/grays shinguards.webp" alt="G800 Shinguards" class="img-fluid carousel-product-img">
                                         <div class="ms-4">
                                             <h5 class="mb-1">G800 Shinguards</h5>
                                             <p class="mb-0 text-muted">Lightweight and durable shin protection.</p>
@@ -112,7 +66,7 @@
 
                                 <div class="carousel-item">
                                     <div class="carousel-slide-content d-flex align-items-center justify-content-center">
-                                        <img src="~/content/grays emoji ball.webp" alt="Emoji Ball - Geeky" class="img-fluid carousel-product-img">
+                                        <img src="/_content/Hockeyshop.SharedViews/content/grays emoji ball.webp" alt="Emoji Ball - Geeky" class="img-fluid carousel-product-img">
                                         <div class="ms-4">
                                             <h5 class="mb-1">Emoji Ball - Geeky</h5>
                                             <p class="mb-0 text-muted">Funny ball with emoji motif.</p>
@@ -145,7 +99,7 @@
                         <h5 class="card-title">Our highlights</h5>
                         <div class="card mb-3 position-relative">
                             <a class="stretched-link" asp-area="" asp-controller="Home" asp-action="OurHighlights">
-                                <img src="~/content/grays highlights.webp" alt="Best hockeysticks" class="card-img-top">
+                                <img src="/_content/Hockeyshop.SharedViews/content/grays highlights.webp" alt="Best hockeysticks" class="card-img-top">
                             </a>
                         </div>
                     </div>
@@ -154,7 +108,7 @@
                         <h5 class="card-title">Gift cards</h5>
                         <div class="card mb-3 position-relative">
                             <a class="stretched-link" asp-area="" asp-controller="Home" asp-action="GiftCards">
-                                <img src="~/content/gift card.jpg" alt="Gift card" class="card-img-top">
+                                <img src="/_content/Hockeyshop.SharedViews/content/gift card.jpg" alt="Gift card" class="card-img-top">
                             </a>
                         </div>
                     </div>
@@ -163,7 +117,7 @@
                         <h5 class="card-title">Hockey news</h5>
                         <div class="card mb-3 position-relative">
                             <a class="stretched-link" asp-area="" asp-controller="Home" asp-action="HockeyNews">
-                                <img src="~/content/hockey news.jpg" alt="Hockey news" class="card-img-top">
+                                <img src="/_content/Hockeyshop.SharedViews/content/hockey news.jpg" alt="Hockey news" class="card-img-top">
                             </a>
                         </div>
                     </div>

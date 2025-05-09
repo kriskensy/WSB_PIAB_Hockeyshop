@@ -61,6 +61,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["IdUserRole"] = new SelectList(_context.UserRoles, "IdUserRole", "Role", user.IdUserRole);
             return View("~/Views/Core/Users/Create.cshtml", user);
         }

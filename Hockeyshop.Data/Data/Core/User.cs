@@ -38,7 +38,8 @@ namespace Hockeyshop.Data.Data.Core
         public string StreetAndNumber { get; set; }
 
         [Required(ErrorMessage = "The User Role field is required.")]
-        [ForeignKey("UserRole")]
+        //[ForeignKey("UserRole")]
+        [ForeignKey(nameof(UserRole))]
         [Display(Name = "User role")]
         public int IdUserRole { get; set; }
         public UserRole UserRole { get; set; }
