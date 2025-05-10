@@ -15,7 +15,8 @@
             <h3 class="mb-3">@title</h3>
             <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
-            @await Html.PartialAsync(partialFields, Model)
+            <!-- konieczne rzutowanie na objekt bo PartialAsync nie może być wywoływane z dynamicznymi argumentami -->
+            @await Html.PartialAsync(partialFields, (object)Model)
 
             <div class="form-group mt-3">
                 <button type="submit" class="btn btn-primary">

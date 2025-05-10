@@ -28,13 +28,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Hockeyshop.Intranet.eg9dlosj3i.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HoZyp7ZD4cFgcfGga6OWYXX1Q/bf\u002BMh1W23RhY92HE0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HoZyp7ZD4cFgcfGga6OWYXX1Q/bf\u002BMh1W23RhY92HE0=\u0022"},{"Name":"Last-Modified","Value":"Fri, 09 May 2025 11:56:08 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HoZyp7ZD4cFgcfGga6OWYXX1Q/bf\u002BMh1W23RhY92HE0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 10 May 2025 20:56:06 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Hockeyshop.Intranet/Hockeyshop.Intranet.eg9dlosj3i.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Hockeyshop.Intranet.eg9dlosj3i.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"eg9dlosj3i"},{"Name":"integrity","Value":"sha256-HoZyp7ZD4cFgcfGga6OWYXX1Q/bf\u002BMh1W23RhY92HE0="},{"Name":"label","Value":"_content/Hockeyshop.Intranet/Hockeyshop.Intranet.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HoZyp7ZD4cFgcfGga6OWYXX1Q/bf\u002BMh1W23RhY92HE0=\u0022"},{"Name":"Last-Modified","Value":"Fri, 09 May 2025 11:56:08 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HoZyp7ZD4cFgcfGga6OWYXX1Q/bf\u002BMh1W23RhY92HE0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 10 May 2025 20:56:06 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Hockeyshop.Intranet/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>

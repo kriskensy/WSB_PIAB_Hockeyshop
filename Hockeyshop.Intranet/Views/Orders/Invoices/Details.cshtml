@@ -1,6 +1,18 @@
 ﻿@model Hockeyshop.Data.Data.Orders.Invoice
 
 @{
+    ViewData["Title"] = "Invoice Details";
+    ViewData["PartialDetails"] = "~/Views/Orders/Invoices/_InvoiceDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+@* @model Hockeyshop.Data.Data.Orders.Invoice
+
+@{
     ViewData["Title"] = "Details";
 }
 
@@ -46,3 +58,4 @@
     <a asp-action="Edit" asp-route-id="@Model?.IdInvoice">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+ *@
