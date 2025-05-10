@@ -1,0 +1,30 @@
+﻿@model dynamic
+@{
+    string formAction = ViewData["FormAction"] as string ?? "Create";
+    string partialFields = ViewData["PartialFields"] as string;
+    string title = ViewData["Title"] as string ?? "Form";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="@formAction" method="post">
+            @Html.AntiForgeryToken()
+
+            @await Html.PartialAsync("_ValidationCreateAlert")
+
+            <h3 class="mb-3">@title</h3>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            @await Html.PartialAsync(partialFields, Model)
+
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-primary">
+                    @formAction
+                </button>
+                <a asp-action="Index" class="btn btn-secondary ml-2">
+                    Back to list
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

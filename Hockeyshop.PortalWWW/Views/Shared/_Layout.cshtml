@@ -16,15 +16,15 @@
         @* @await Html.PartialAsync("Links", (IEnumerable<Hockeyshop.Data.Data.CMS.HockeyNews>)ViewBag.ModelPage) *@
     </header>
 
-    <div class="container">
+    <div class="container mt-5 pt-3">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    @* Layout container *@
+    <!-- Layout container -->
     <div class="container align-content-center">
-        @* Products section *@
+        <!-- Products section -->
         <div class="products-section py-5">
             <div class="container">
                 <div class="row">
@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        @* Highlights section *@
+        <!-- Highlights section -->
         <div class="highlights-section py-5">
             <div class="container">
                 <div class="row">
@@ -125,7 +125,7 @@
             </div>
         </div>
 
-        @* Shop rules section *@
+        <!-- Shop rules section -->
         <div class="shop-section">
             <div class="container">
                 <div class="row">
@@ -176,7 +176,7 @@
             </div>
         </div>
 
-        @* Contact section *@
+        <!-- Contact section -->
         <div class="contact-section p-3">
             <div class="container">
                 <div class="row">
@@ -231,6 +231,7 @@
             </div>
         </div>
     </div>
+
 
     <footer class="page-footer py-3">
         <div class="container">

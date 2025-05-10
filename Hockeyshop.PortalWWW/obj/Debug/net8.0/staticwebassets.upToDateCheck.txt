@@ -1,3 +1,24 @@
+wwwroot\content\gift card.jpg
+wwwroot\content\grays emoji ball.webp
+wwwroot\content\grays highlights.webp
+wwwroot\content\grays hoodie.webp
+wwwroot\content\grays shinguards.webp
+wwwroot\content\grays stick.webp
+wwwroot\content\hockey news.jpg
+wwwroot\content\hockey1.jpg
+wwwroot\content\hockey2.jpg
+wwwroot\content\hockey3.jpg
+wwwroot\content\hockey4.jpg
+wwwroot\content\img_ourTeam\anna-nowak.jpg
+wwwroot\content\img_ourTeam\jan-kowalski.jpg
+wwwroot\content\img_ourTeam\piotr-wisniewski.jpg
+wwwroot\content\img_ourTeam\team-introduction-poland.jpg
+wwwroot\content\img_sticksTechnology\aramid.webp
+wwwroot\content\img_sticksTechnology\carbon-fiber.webp
+wwwroot\content\img_sticksTechnology\evolution-of-hockey-sticks.jpg
+wwwroot\content\img_sticksTechnology\fiberglass.webp
+wwwroot\content\img_sticksTechnology\manufacturing-process.webp
+wwwroot\content\img_sticksTechnology\stick-comparison.jpg
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
