@@ -1,6 +1,25 @@
 ﻿@model Hockeyshop.Data.Data.Inventory.Stock
 
 @{
+    ViewData["Title"] = "Create Stock";
+    ViewData["FormAction"] = "Create";
+    ViewData["PartialFields"] = "~/Views/Inventory/Stocks/_StockFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+@* @model Hockeyshop.Data.Data.Inventory.Stock
+
+@{
     ViewData["Title"] = "Create";
 }
 
@@ -44,3 +63,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+ *@

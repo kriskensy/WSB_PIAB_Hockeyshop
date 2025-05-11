@@ -1,6 +1,25 @@
 ﻿@model Hockeyshop.Data.Data.Core.User
 
 @{
+    ViewData["Title"] = "Create User";
+    ViewData["FormAction"] = "Create";
+    ViewData["PartialFields"] = "~/Views/Core/Users/_UserFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+@* @model Hockeyshop.Data.Data.Core.User
+
+@{
     ViewData["Title"] = "Create";
 }
 
@@ -70,3 +89,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+ *@

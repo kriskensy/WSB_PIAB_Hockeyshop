@@ -1,0 +1,24 @@
+﻿@model Hockeyshop.Data.Data.Payments.Payment
+
+<div class="form-group">
+    <label asp-for="IdOrder" class="control-label"></label>
+    <select asp-for="IdOrder" class="form-control" asp-items="ViewBag.IdOrder"></select>
+</div>
+<div class="form-group">
+    <label asp-for="PaymentDate" class="control-label"></label>
+    <input asp-for="PaymentDate" class="form-control" />
+    <span asp-validation-for="PaymentDate" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="IdPaymentMethod" class="control-label"></label>
+    <select asp-for="IdPaymentMethod" class="form-control" asp-items="ViewBag.IdPaymentMethod"></select>
+</div>
+<div class="form-group">
+    <label asp-for="Amount" class="control-label"></label>
+    <input asp-for="Amount" class="form-control" />
+    <span asp-validation-for="Amount" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="IdPaymentStatus" class="control-label"></label>
+    <select asp-for="IdPaymentStatus" class="form-control" asp-items="ViewBag.IdPaymentStatus"></select>
+</div>
