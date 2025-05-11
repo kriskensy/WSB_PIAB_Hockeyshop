@@ -15,10 +15,25 @@ namespace Hockeyshop.Intranet.Controllers.Core
         }
 
         // GET: UserRoles
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchTerm)
         {
-            return View("~/Views/Core/UserRoles/Index.cshtml", await _context.UserRoles.ToListAsync());
+            var query = _context.UserRoles.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                query = query.Where(pm => pm.Role.Contains(searchTerm));
+            }
+
+            var model = await query.ToListAsync();
+            ViewBag.SearchTerm = searchTerm;
+
+            return View("~/Views/Core/UserRoles/Index.cshtml", model);
         }
+
+        //public async Task<IActionResult> Index()
+        //{
+        //    return View("~/Views/Core/UserRoles/Index.cshtml", await _context.UserRoles.ToListAsync());
+        //}
 
         // GET: UserRoles/Details/5
         public async Task<IActionResult> Details(int? id)

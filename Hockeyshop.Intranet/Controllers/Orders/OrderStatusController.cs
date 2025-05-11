@@ -15,10 +15,25 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         }
 
         // GET: OrderStatus
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchTerm)
         {
-            return View("~/Views/Orders/OrderStatus/Index.cshtml", await _context.OrderStatuses.ToListAsync());
+            var query = _context.OrderStatuses.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                query = query.Where(pm => pm.Name.Contains(searchTerm));
+            }
+
+            var model = await query.ToListAsync();
+            ViewBag.SearchTerm = searchTerm;
+
+            return View("~/Views/Orders/OrderStatus/Index.cshtml", model);
         }
+
+        //public async Task<IActionResult> Index()
+        //{
+        //    return View("~/Views/Orders/OrderStatus/Index.cshtml", await _context.OrderStatuses.ToListAsync());
+        //}
 
         // GET: OrderStatus/Details/5
         public async Task<IActionResult> Details(int? id)

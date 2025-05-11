@@ -16,11 +16,26 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
         }
 
         // GET: ProductPromotions
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchTerm)
         {
-            var hockeyshopContext = _context.ProductPromotions.Include(p => p.Product).Include(p => p.Promotion);
-            return View("~/Views/Marketing/ProductPromotions/Index.cshtml", await hockeyshopContext.ToListAsync());
+            var query = _context.ProductPromotions.Include(p => p.Product).Include(p => p.Promotion).AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                query = query.Where(item => item.Promotion.Name.Contains(searchTerm));
+            }
+
+            var model = await query.ToListAsync();
+            ViewBag.SearchTerm = searchTerm;
+
+            return View("~/Views/Marketing/ProductPromotions/Index.cshtml", model);
         }
+
+        //public async Task<IActionResult> Index()
+        //{
+        //    var hockeyshopContext = _context.ProductPromotions.Include(p => p.Product).Include(p => p.Promotion);
+        //    return View("~/Views/Marketing/ProductPromotions/Index.cshtml", await hockeyshopContext.ToListAsync());
+        //}
 
         // GET: ProductPromotions/Details/5
         public async Task<IActionResult> Details(int? id)

@@ -16,11 +16,26 @@ namespace Hockeyshop.Intranet.Controllers.Products
         }
 
         // GET: ProductImages
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchTerm)
         {
-            var hockeyshopContext = _context.ProductImages.Include(p => p.Product);
-            return View("~/Views/Products/ProductImages/Index.cshtml", await hockeyshopContext.ToListAsync());
+            var query = _context.ProductImages.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                query = query.Where(pm => pm.ImageUrl.Contains(searchTerm));
+            }
+
+            var model = await query.ToListAsync();
+            ViewBag.SearchTerm = searchTerm;
+
+            return View("~/Views/Products/ProductImages/Index.cshtml", model);
         }
+
+        //public async Task<IActionResult> Index()
+        //{
+        //    var hockeyshopContext = _context.ProductImages.Include(p => p.Product);
+        //    return View("~/Views/Products/ProductImages/Index.cshtml", await hockeyshopContext.ToListAsync());
+        //}
 
         // GET: ProductImages/Details/5
         public async Task<IActionResult> Details(int? id)

@@ -15,10 +15,25 @@ namespace Hockeyshop.Intranet.Controllers.Payments
         }
 
         // GET: PaymentStatus
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchTerm)
         {
-            return View("~/Views/Payments/PaymentStatus/Index.cshtml", await _context.PaymentStatuses.ToListAsync());
+            var query = _context.PaymentStatuses.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                query = query.Where(pm => pm.Name.Contains(searchTerm));
+            }
+
+            var model = await query.ToListAsync();
+            ViewBag.SearchTerm = searchTerm;
+
+            return View("~/Views/Payments/PaymentStatus/Index.cshtml", model);
         }
+
+        //public async Task<IActionResult> Index()
+        //{
+        //    return View("~/Views/Payments/PaymentStatus/Index.cshtml", await _context.PaymentStatuses.ToListAsync());
+        //}
 
         // GET: PaymentStatus/Details/5
         public async Task<IActionResult> Details(int? id)

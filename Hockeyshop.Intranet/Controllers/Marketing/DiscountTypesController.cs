@@ -15,10 +15,25 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
         }
 
         // GET: DiscountTypes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchTerm)
         {
-            return View("~/Views/Marketing/DiscountTypes/Index.cshtml", await _context.DiscountTypes.ToListAsync());
+            var query = _context.DiscountTypes.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                query = query.Where(pm => pm.DiscountTypeName.Contains(searchTerm));
+            }
+
+            var model = await query.ToListAsync();
+            ViewBag.SearchTerm = searchTerm;
+
+            return View("~/Views/Marketing/DiscountTypes/Index.cshtml", model);
         }
+
+        //public async Task<IActionResult> Index()
+        //{
+        //    return View("~/Views/Marketing/DiscountTypes/Index.cshtml", await _context.DiscountTypes.ToListAsync());
+        //}
 
         // GET: DiscountTypes/Details/5
         public async Task<IActionResult> Details(int? id)

@@ -16,11 +16,26 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         }
 
         // GET: Invoices
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchTerm)
         {
-            var hockeyshopContext = _context.Invoices.Include(i => i.Order).Include(i => i.User);
-            return View("~/Views/Orders/Invoices/Index.cshtml", await hockeyshopContext.ToListAsync());
+            var query = _context.Invoices.Include(i => i.Order).Include(i => i.User).AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                query = query.Where(item => item.InvoiceNumber.Contains(searchTerm));
+            }
+
+            var model = await query.ToListAsync();
+            ViewBag.SearchTerm = searchTerm;
+
+            return View("~/Views/Orders/Invoices/Index.cshtml", model);
         }
+
+        //public async Task<IActionResult> Index()
+        //{
+        //    var hockeyshopContext = _context.Invoices.Include(i => i.Order).Include(i => i.User);
+        //    return View("~/Views/Orders/Invoices/Index.cshtml", await hockeyshopContext.ToListAsync());
+        //}
 
         // GET: Invoices/Details/5
         public async Task<IActionResult> Details(int? id)

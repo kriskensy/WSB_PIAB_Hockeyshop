@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-imCdEQ4TqjyWtr6phiQXe1EM7bJOyg1a0M3tawUymXc="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3184"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022imCdEQ4TqjyWtr6phiQXe1EM7bJOyg1a0M3tawUymXc=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 11:36:54 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3184"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022imCdEQ4TqjyWtr6phiQXe1EM7bJOyg1a0M3tawUymXc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 May 2025 08:34:25 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Hockeyshop.Intranet/css/site.qny4z9lw6p.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qny4z9lw6p"},{"Name":"integrity","Value":"sha256-imCdEQ4TqjyWtr6phiQXe1EM7bJOyg1a0M3tawUymXc="},{"Name":"label","Value":"_content/Hockeyshop.Intranet/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3184"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022imCdEQ4TqjyWtr6phiQXe1EM7bJOyg1a0M3tawUymXc=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 11:36:54 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3184"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022imCdEQ4TqjyWtr6phiQXe1EM7bJOyg1a0M3tawUymXc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 May 2025 08:34:25 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Hockeyshop.Intranet/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
