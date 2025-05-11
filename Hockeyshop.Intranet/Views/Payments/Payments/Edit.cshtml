@@ -1,6 +1,28 @@
 ﻿@model Hockeyshop.Data.Data.Payments.Payment
 
 @{
+    ViewData["Title"] = "Edit Payment";
+    ViewData["FormAction"] = "Edit";
+    ViewData["PartialFields"] = "~/Views/Payments/Payments/_PaymentFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Payments.Payment
+
+@{
     ViewData["Title"] = "Edit";
 }
 
@@ -52,3 +74,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+ *@

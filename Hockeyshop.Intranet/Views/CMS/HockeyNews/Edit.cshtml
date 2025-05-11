@@ -1,6 +1,26 @@
 ﻿@model Hockeyshop.Data.Data.CMS.HockeyNews
 
 @{
+    ViewData["Title"] = "Edit Hockey News";
+    ViewData["FormAction"] = "Edit";
+    ViewData["PartialFields"] = "~/Views/CMS/HockeyNews/_HockeyNewsFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
+@* @model Hockeyshop.Data.Data.CMS.HockeyNews
+
+@{
     ViewData["Title"] = "Edit";
 }
 
@@ -57,3 +77,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+ *@

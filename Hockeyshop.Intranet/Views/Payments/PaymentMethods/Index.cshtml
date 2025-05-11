@@ -32,9 +32,9 @@
                 {
                     var paymentMethod = (Hockeyshop.Data.Data.Payments.PaymentMethod)row;
                     return $@"
-                        <a href=""/PaymentMethod/Edit/{paymentMethod.IdPaymentMethod}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
-                        <a href=""/PaymentMethod/Details/{paymentMethod.IdPaymentMethod}"" class=""btn btn-sm btn-outline-info"">Details</a>
-                        <a href=""/PaymentMethod/Delete/{paymentMethod.IdPaymentMethod}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                        <a href=""/PaymentMethods/Edit/{paymentMethod.IdPaymentMethod}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/PaymentMethods/Details/{paymentMethod.IdPaymentMethod}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/PaymentMethods/Delete/{paymentMethod.IdPaymentMethod}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
                     ";
                 }
             };

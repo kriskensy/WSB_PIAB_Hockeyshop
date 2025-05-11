@@ -1,6 +1,27 @@
 ﻿@model Hockeyshop.Data.Data.Marketing.ProductPromotion
 
 @{
+    ViewData["Title"] = "Edit Product Promotion";
+    ViewData["FormAction"] = "Edit";
+    ViewData["PartialFields"] = "~/Views/Marketing/ProductPromotions/_ProductPromotionFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Marketing.ProductPromotion
+
+@{
     ViewData["Title"] = "Edit";
 }
 
@@ -28,3 +49,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+ *@

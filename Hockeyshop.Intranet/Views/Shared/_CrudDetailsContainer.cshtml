@@ -2,6 +2,12 @@
 @{
     string partialDetails = ViewData["PartialDetails"] as string;
     string title = ViewData["Title"] as string ?? "Details";
+    string editButtonText = ViewData["EditButtonText"] as string ?? "Edit";
+    string backButtonText = ViewData["BackButtonText"] as string ?? "Back to list";
+}
+
+@if (!ViewData.ContainsKey("HideEditButton")){
+    <a asp-asp-action="Edit" ...>@editButtonText</a>
 }
 
 <div class="row">
@@ -13,10 +19,9 @@
                 @await Html.PartialAsync(partialDetails, (object)Model)
             </dl>
             <div class="mt-3">
-                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
-                <a asp-action="Index" class="btn btn-secondary ml-2">Back to list</a>
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">@editButtonText</a>
+                <a asp-action="Index" class="btn btn-secondary ml-2">@backButtonText</a>
             </div>
         </div>
-       
     </div>
 </div>

@@ -1,6 +1,30 @@
 ﻿@model Hockeyshop.Data.Data.Products.Supplier
 
 @{
+    ViewData["Title"] = "Edit Supplier";
+    ViewData["FormAction"] = "Edit";
+    ViewData["PartialFields"] = "~/Views/Products/Suppliers/_SupplierFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Products.Supplier
+
+@{
     ViewData["Title"] = "Edit";
 }
 
@@ -52,3 +76,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+ *@

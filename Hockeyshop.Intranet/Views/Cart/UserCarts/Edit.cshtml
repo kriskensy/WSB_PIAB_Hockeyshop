@@ -1,6 +1,27 @@
 ﻿@model Hockeyshop.Data.Data.Cart.UserCart
 
 @{
+    ViewData["Title"] = "Edit User Cart";
+    ViewData["FormAction"] = "Edit";
+    ViewData["PartialFields"] = "~/Views/Cart/UserCarts/_UserCartFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Cart.UserCart
+
+@{
     ViewData["Title"] = "Edit";
 }
 
@@ -37,3 +58,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+ *@

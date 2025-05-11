@@ -3,6 +3,13 @@
     string formAction = ViewData["FormAction"] as string ?? "Create";
     string partialFields = ViewData["PartialFields"] as string;
     string title = ViewData["Title"] as string ?? "Form";
+    string buttonText = formAction switch
+    {
+        "Create" => "Create",
+        "Edit" => "Save",
+        "Delete" => "Delete",
+        _ => "Error"
+    };
 }
 
 <div class="row">
@@ -20,7 +27,7 @@
 
             <div class="form-group mt-3">
                 <button type="submit" class="btn btn-primary">
-                    @formAction
+                    @buttonText
                 </button>
                 <a asp-action="Index" class="btn btn-secondary ml-2">
                     Back to list

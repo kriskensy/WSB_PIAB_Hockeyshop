@@ -1,6 +1,28 @@
 ﻿@model Hockeyshop.Data.Data.Orders.OrderStatus
 
 @{
+    ViewData["Title"] = "Edit Order Status";
+    ViewData["FormAction"] = "Edit";
+    ViewData["PartialFields"] = "~/Views/Orders/OrderStatus/_OrderStatusFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Orders.OrderStatus
+
+@{
     ViewData["Title"] = "Edit";
 }
 
@@ -32,3 +54,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+ *@
