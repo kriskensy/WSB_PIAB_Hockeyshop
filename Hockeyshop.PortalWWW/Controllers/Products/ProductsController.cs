@@ -46,7 +46,7 @@ namespace Hockeyshop.PortalWWW.Controllers.Products
         public IActionResult Create()
         {
             ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name");
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City");
+            ViewData["IdSupplier"] = new SelectList(_context.Suppliers, "IdSupplier", "City");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace Hockeyshop.PortalWWW.Controllers.Products
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.SupplierId);
+            ViewData["IdSupplier"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.IdSupplier);
             return View(product);
         }
 
@@ -82,7 +82,7 @@ namespace Hockeyshop.PortalWWW.Controllers.Products
                 return NotFound();
             }
             ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.SupplierId);
+            ViewData["IdSupplier"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.IdSupplier);
             return View(product);
         }
 
@@ -119,7 +119,7 @@ namespace Hockeyshop.PortalWWW.Controllers.Products
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.SupplierId);
+            ViewData["IdSupplier"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.IdSupplier);
             return View(product);
         }
 

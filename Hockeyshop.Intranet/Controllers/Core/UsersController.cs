@@ -59,7 +59,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
         // GET: Users/Create
         public IActionResult Create()
         {
-            ViewData["IdUserRole"] = new SelectList(_context.UserRoles, "IdUserRole", "Role");
+            ViewBag.IdUserRole = new SelectList(_context.UserRoles, "IdUserRole", "Role");
             return View("~/Views/Core/Users/Create.cshtml");
         }
 
@@ -77,7 +77,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewData["IdUserRole"] = new SelectList(_context.UserRoles, "IdUserRole", "Role", user.IdUserRole);
+            ViewBag.IdUserRole = new SelectList(_context.UserRoles, "IdUserRole", "Role", user.IdUserRole);
             return View("~/Views/Core/Users/Create.cshtml", user);
         }
 

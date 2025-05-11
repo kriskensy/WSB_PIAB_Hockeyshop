@@ -1,5 +1,10 @@
 ﻿@model Hockeyshop.Data.Data.Marketing.ProductPromotion
 
+@if (ViewData["FormAction"]?.ToString() == "Edit")
+{
+    <input type="hidden" asp-for="IdProduct" />
+}
+
 <div class="form-group">
     <label asp-for="IdProduct" class="control-label"></label>
     <select asp-for="IdProduct" class="form-control" asp-items="ViewBag.IdProduct"></select>

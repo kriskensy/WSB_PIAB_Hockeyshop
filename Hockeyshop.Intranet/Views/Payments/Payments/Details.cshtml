@@ -1,6 +1,24 @@
 ﻿@model Hockeyshop.Data.Data.Payments.Payment
 
 @{
+    ViewData["IdField"] = "IdPayment";
+    ViewData["Title"] = "Payment Details";
+    ViewData["HideDeleteButton"] = true;
+    ViewData["HideEditButton"] = true;
+    ViewData["PartialDetails"] = "~/Views/Payments/Payments/_PaymentDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Payments.Payment
+
+@{
     ViewData["Title"] = "Details";
 }
 
@@ -46,3 +64,4 @@
     <a asp-action="Edit" asp-route-id="@Model?.IdPayment">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+ *@

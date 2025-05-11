@@ -1,8 +1,10 @@
 ﻿@model Hockeyshop.Data.Data.Orders.Invoice
 
 @{
+    ViewData["IdField"] = "IdInvoice";
     ViewData["Title"] = "Invoice Details";
     ViewData["HideEditButton"] = true;
+    ViewData["DeleteButtonText"] = "Confirm deletion!";
     ViewData["PartialDetails"] = "~/Views/Orders/Invoices/_InvoiceDetails.cshtml";
     Layout = "_Layout";
 }

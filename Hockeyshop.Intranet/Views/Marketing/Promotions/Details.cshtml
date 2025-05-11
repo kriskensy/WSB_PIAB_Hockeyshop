@@ -1,6 +1,26 @@
 ﻿@model Hockeyshop.Data.Data.Marketing.Promotion
 
 @{
+    ViewData["IdField"] = "IdPromotion";
+    ViewData["Title"] = "Promotion Details";
+    ViewData["HideDeleteButton"] = true;
+    ViewData["HideEditButton"] = true;
+    ViewData["PartialDetails"] = "~/Views/Marketing/Promotions/_PromotionDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Marketing.Promotion
+
+@{
     ViewData["Title"] = "Details";
 }
 
@@ -52,3 +72,4 @@
     <a asp-action="Edit" asp-route-id="@Model?.IdPromotion">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+ *@

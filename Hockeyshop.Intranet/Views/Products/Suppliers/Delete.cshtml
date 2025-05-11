@@ -1,6 +1,25 @@
 ﻿@model Hockeyshop.Data.Data.Products.Supplier
 
 @{
+    ViewData["IdField"] = "IdSupplier";
+    ViewData["Title"] = "Supplier Details";
+    ViewData["HideEditButton"] = true;
+    ViewData["DeleteButtonText"] = "Confirm deletion!";
+    ViewData["PartialDetails"] = "~/Views/Products/Suppliers/_SupplierDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Products.Supplier
+
+@{
     ViewData["Title"] = "Delete";
 }
 
@@ -49,3 +68,4 @@
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
+ *@

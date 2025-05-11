@@ -27,7 +27,7 @@ namespace Hockeyshop.Data.Data.Products
         [Required(ErrorMessage = "The Supplier field is required.")]
         [ForeignKey("Supplier")]
         [Display(Name = "Supplier ID")]
-        public int SupplierId { get; set; }
+        public int IdSupplier { get; set; }
         public Supplier Supplier { get; set; }
 
         [Required(ErrorMessage = "The Description field is required.")]

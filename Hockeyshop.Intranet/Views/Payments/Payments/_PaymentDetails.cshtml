@@ -1,0 +1,12 @@
+﻿@model Hockeyshop.Data.Data.Payments.Payment
+
+<dt class="col-sm-4">Order</dt>
+<dd class="col-sm-8">@Model.IdOrder</dd>
+<dt class="col-sm-4">Payment Date</dt>
+<dd class="col-sm-8">@Model.PaymentDate.ToShortDateString()</dd>
+<dt class="col-sm-4">Payment Method</dt>
+<dd class="col-sm-8">@Model.IdPaymentMethod</dd>
+<dt class="col-sm-4">Amount</dt>
+<dd class="col-sm-8">@Model.Amount</dd>
+<dt class="col-sm-4">Payment Status</dt>
+<dd class="col-sm-8">@Model.IdPaymentStatus</dd>

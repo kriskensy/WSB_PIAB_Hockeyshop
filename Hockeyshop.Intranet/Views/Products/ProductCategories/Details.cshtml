@@ -1,6 +1,22 @@
 ﻿@model Hockeyshop.Data.Data.Products.ProductCategory
 
 @{
+    ViewData["IdField"] = "IdProductCategory";
+    ViewData["Title"] = "Product Category Details";
+    ViewData["HideDeleteButton"] = true;
+    ViewData["HideEditButton"] = true;
+    ViewData["PartialDetails"] = "~/Views/Products/ProductCategories/_ProductCategoryDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+
+@* @model Hockeyshop.Data.Data.Products.ProductCategory
+
+@{
     ViewData["Title"] = "Details";
 }
 
@@ -22,3 +38,4 @@
     <a asp-action="Edit" asp-route-id="@Model?.IdProductCategory">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+ *@

@@ -1,6 +1,26 @@
 ﻿@model Hockeyshop.Data.Data.Cart.CartItem
 
 @{
+    ViewData["IdField"] = "IdCartItem";
+    ViewData["Title"] = "Cart Item Details";
+    ViewData["HideDeleteButton"] = true;
+    ViewData["HideEditButton"] = true;
+    ViewData["PartialDetails"] = "~/Views/Cart/CartItems/_CartItemDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Cart.CartItem
+
+@{
     ViewData["Title"] = "Details";
 }
 
@@ -40,3 +60,4 @@
     <a asp-action="Edit" asp-route-id="@Model?.IdCartItem">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+ *@

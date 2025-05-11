@@ -1,6 +1,25 @@
 ﻿@model Hockeyshop.Data.Data.Core.UserRole
 
 @{
+    ViewData["IdField"] = "IdUserRole";
+    ViewData["Title"] = "User Role Details";
+    ViewData["HideDeleteButton"] = true;
+    ViewData["HideEditButton"] = true;
+    ViewData["PartialDetails"] = "~/Views/Core/UserRoles/_UserRoleDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Core.UserRole
+
+@{
     ViewData["Title"] = "Details";
 }
 
@@ -22,3 +41,4 @@
     <a asp-action="Edit" asp-route-id="@Model?.IdUserRole">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+ *@

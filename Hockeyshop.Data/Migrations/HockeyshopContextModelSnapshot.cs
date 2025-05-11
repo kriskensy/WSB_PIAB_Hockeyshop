@@ -456,6 +456,9 @@ namespace Hockeyshop.Data.Migrations
                     b.Property<int>("IdProductCategory")
                         .HasColumnType("int");
 
+                    b.Property<int>("IdSupplier")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -463,14 +466,11 @@ namespace Hockeyshop.Data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("SupplierId")
-                        .HasColumnType("int");
-
                     b.HasKey("IdProduct");
 
                     b.HasIndex("IdProductCategory");
 
-                    b.HasIndex("SupplierId");
+                    b.HasIndex("IdSupplier");
 
                     b.ToTable("Products");
                 });
@@ -736,7 +736,7 @@ namespace Hockeyshop.Data.Migrations
 
                     b.HasOne("Hockeyshop.Data.Data.Products.Supplier", "Supplier")
                         .WithMany("Products")
-                        .HasForeignKey("SupplierId")
+                        .HasForeignKey("IdSupplier")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

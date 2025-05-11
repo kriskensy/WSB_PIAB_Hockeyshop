@@ -79,7 +79,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.SupplierId);
+            ViewData["IdSupplier"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.IdSupplier);
             return View("~/Views/Products/Products/Create.cshtml", product);
         }
 
@@ -97,7 +97,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
             ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.SupplierId);
+            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.IdSupplier);
             return View("~/Views/Products/Products/Edit.cshtml", product);
         }
 
@@ -134,7 +134,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.SupplierId);
+            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.IdSupplier);
             return View("~/Views/Products/Products/Edit.cshtml", product);
         }
 

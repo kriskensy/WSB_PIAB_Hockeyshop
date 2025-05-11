@@ -3,11 +3,21 @@
     string partialDetails = ViewData["PartialDetails"] as string;
     string title = ViewData["Title"] as string ?? "Details";
     string editButtonText = ViewData["EditButtonText"] as string ?? "Edit";
+    string deleteButtonText = ViewData["DeleteButtonText"] as string ?? "Delete";
     string backButtonText = ViewData["BackButtonText"] as string ?? "Back to list";
-}
 
-@if (!ViewData.ContainsKey("HideEditButton")){
-    <a asp-asp-action="Edit" ...>@editButtonText</a>
+
+    object idValue = null;
+    if(Model != null)
+    {
+        string idField = ViewData["IdField"] as string ?? "Id";
+        var propInfo = Model.GetType().GetProperty(idField);
+
+        if(propInfo != null)
+        {
+            idValue = propInfo.GetValue(Model, null);
+        }
+    }
 }
 
 <div class="row">
@@ -19,7 +29,23 @@
                 @await Html.PartialAsync(partialDetails, (object)Model)
             </dl>
             <div class="mt-3">
-                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">@editButtonText</a>
+                @if (!ViewData.ContainsKey("HideEditButton") && idValue != null)
+                {
+                    <a asp-action="Edit" asp-route-id="@idValue" class="btn btn-primary">@editButtonText</a>
+                    Console.WriteLine("jestem w IF gdzie wyświetlam Edit");
+                }
+
+                @if (!ViewData.ContainsKey("HideDeleteButton") && idValue != null)
+                {
+                    <form asp-action="Delete" method="post" class="d-inline">
+                        <input type="hidden" name="id" value="@idValue"/>
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-danger">@deleteButtonText</button>
+                    </form>
+                    Console.WriteLine("jestem w IF gdzie wyświetlam Delete");
+
+                }
+
                 <a asp-action="Index" class="btn btn-secondary ml-2">@backButtonText</a>
             </div>
         </div>

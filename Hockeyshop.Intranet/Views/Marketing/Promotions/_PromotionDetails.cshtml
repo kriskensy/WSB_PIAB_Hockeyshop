@@ -1,0 +1,14 @@
+﻿@model Hockeyshop.Data.Data.Marketing.Promotion
+
+<dt class="col-sm-4">Name</dt>
+<dd class="col-sm-8">@Model.Name</dd>
+<dt class="col-sm-4">Discount Type</dt>
+<dd class="col-sm-8">@Model.IdDiscountType</dd>
+<dt class="col-sm-4">Discount Value</dt>
+<dd class="col-sm-8">@Model.DiscountValue</dd>
+<dt class="col-sm-4">Start Date</dt>
+<dd class="col-sm-8">@Model.StartDate.ToShortDateString()</dd>
+<dt class="col-sm-4">End Date</dt>
+<dd class="col-sm-8">@Model.EndDate.ToShortDateString()</dd>
+<dt class="col-sm-4">Active</dt>
+<dd class="col-sm-8">@Model.Active</dd>

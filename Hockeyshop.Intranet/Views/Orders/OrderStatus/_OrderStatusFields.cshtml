@@ -1,5 +1,10 @@
 ﻿@model Hockeyshop.Data.Data.Orders.OrderStatus
 
+@if (ViewData["FormAction"]?.ToString() == "Edit")
+{
+    <input type="hidden" asp-for="IdOrderStatus" />
+}
+
 <div class="form-group">
     <label asp-for="Name" class="control-label"></label>
     <input asp-for="Name" class="form-control" />
