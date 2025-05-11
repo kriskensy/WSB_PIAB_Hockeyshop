@@ -1,6 +1,54 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Marketing.DiscountType>
 
 @{
+    ViewData["Title"] = "DiscountType";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Discount Type Name"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "Discount Type",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var discountType = (Hockeyshop.Data.Data.Marketing.DiscountType)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => discountType.IdDiscountType,
+                        "Discount Type Name" => discountType.DiscountTypeName,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var discountType = (Hockeyshop.Data.Data.Marketing.DiscountType)row;
+                    return $@"
+                        <a href=""/DiscountType/Edit/{discountType.IdDiscountType}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/DiscountType/Details/{discountType.IdDiscountType}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/DiscountType/Delete/{discountType.IdDiscountType}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Marketing.DiscountType>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -33,3 +81,4 @@
 }
     </tbody>
 </table>
+ *@

@@ -1,6 +1,61 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Orders.OrderItem>
 
 @{
+    ViewData["Title"] = "OrderItem";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Order",
+        "Product",
+        "Quantity",
+        "UnitPrice"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "OrderItem",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var orderItem = (Hockeyshop.Data.Data.Orders.OrderItem)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => orderItem.IdOrderItem,
+                        "Order" => orderItem.Order?.IdOrder,
+                        "Product" => orderItem.Product?.IdProduct,
+                        "Quantity" => orderItem.Quantity,
+                        "UnitPrice" => orderItem.UnitPrice.ToString("C"), //formatowanie do waluty
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var orderItem = (Hockeyshop.Data.Data.Orders.OrderItem)row;
+                    return $@"
+                        <a href=""/OrderItem/Edit/{orderItem.IdOrderItem}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/OrderItem/Details/{orderItem.IdOrderItem}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/OrderItem/Delete/{orderItem.IdOrderItem}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Orders.OrderItem>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -51,3 +106,4 @@
 }
     </tbody>
 </table>
+ *@

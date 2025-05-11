@@ -1,6 +1,54 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Products.ProductCategory>
 
 @{
+    ViewData["Title"] = "ProductCategory";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Name",
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "Product Category",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var productCategory = (Hockeyshop.Data.Data.Products.ProductCategory)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => productCategory.IdProductCategory,
+                        "Name" => productCategory.Name,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var productCategory = (Hockeyshop.Data.Data.Products.ProductCategory)row;
+                    return $@"
+                        <a href=""/Products/Edit/{productCategory.IdProductCategory}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/Products/Details/{productCategory.IdProductCategory}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/Products/Delete/{productCategory.IdProductCategory}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Products.ProductCategory>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -33,3 +81,4 @@
 }
     </tbody>
 </table>
+ *@

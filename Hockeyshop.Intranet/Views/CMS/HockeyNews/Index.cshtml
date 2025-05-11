@@ -1,6 +1,63 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.CMS.HockeyNews>
 
 @{
+    ViewData["Title"] = "HockeyNews";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Title",
+        "Content",
+        "Author",
+        "Created At",
+        "Published?",
+        "Image Url"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "HockeyNews",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var hockeyNews = (Hockeyshop.Data.Data.CMS.HockeyNews)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => hockeyNews.IdHockeyNews,
+                        "Title" => hockeyNews.Title,
+                        "Content" => hockeyNews.Content,
+                        "Author" => hockeyNews.Author.IdUser,
+                        "CreatedAt" => hockeyNews.CreatedAt.ToShortDateString(),
+                        "Published?" => hockeyNews.Published,
+                        "Image Url" => hockeyNews.ImageUrl,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var hockeyNews = (Hockeyshop.Data.Data.CMS.HockeyNews)row;
+                    return $@"
+                        <a href=""/HockeyNews/Edit/{hockeyNews.IdHockeyNews}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/HockeyNews/Details/{hockeyNews.IdHockeyNews}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/HockeyNews/Delete/{hockeyNews.IdHockeyNews}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.CMS.HockeyNews>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -63,3 +120,4 @@
 }
     </tbody>
 </table>
+ *@

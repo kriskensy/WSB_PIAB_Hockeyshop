@@ -1,6 +1,63 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Payments.Payment>
 
 @{
+    ViewData["Title"] = "Payment";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Order",
+        "Payment Date",
+        "Payment Method",
+        "Amount",
+        "Payment Status"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "Payment",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var payment = (Hockeyshop.Data.Data.Payments.Payment)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => payment.IdPayment,
+                        "Order" => payment.Order?.IdOrder,
+                        "Payment Date" => payment.PaymentDate,
+                        "Payment Method" => payment.PaymentMethod?.IdPaymentMethod,
+                        "Amount" => payment.Amount,
+                        "Payment Status" => payment.PaymentStatus?.IdPaymentStatus,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var payment = (Hockeyshop.Data.Data.Payments.Payment)row;
+                    return $@"
+                        <a href=""/Payment/Edit/{payment.IdPayment}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/Payment/Details/{payment.IdPayment}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/Payment/Delete/{payment.IdPayment}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Payments.Payment>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -57,3 +114,4 @@
 }
     </tbody>
 </table>
+ *@

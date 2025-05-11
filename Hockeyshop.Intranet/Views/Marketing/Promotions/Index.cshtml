@@ -1,6 +1,65 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Marketing.Promotion>
 
 @{
+    ViewData["Title"] = "Promotion";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Name",
+        "Discount Type",
+        "Discount Value",
+        "Start Date",
+        "End Date",
+        "Active"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "Promotion",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var promotion = (Hockeyshop.Data.Data.Marketing.Promotion)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => promotion.IdPromotion,
+                        "Name" => promotion.Name,
+                        "Discount Type" => promotion.DiscountType?.IdDiscountType,
+                        "Discount Value" => promotion.DiscountValue,
+                        "Start Date" => promotion.StartDate.ToShortDateString(),
+                        "End Date" => promotion.EndDate.ToShortDateString(),
+                        "Active" => promotion.Active,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var promotion = (Hockeyshop.Data.Data.Marketing.Promotion)row;
+                    return $@"
+                        <a href=""/Promotion/Edit/{promotion.IdPromotion}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/Promotion/Details/{promotion.IdPromotion}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/Promotion/Delete/{promotion.IdPromotion}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Marketing.Promotion>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -63,3 +122,4 @@
 }
     </tbody>
 </table>
+ *@

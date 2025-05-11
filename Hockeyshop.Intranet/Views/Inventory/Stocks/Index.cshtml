@@ -1,6 +1,58 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Inventory.Stock>
 
 @{
+    ViewData["Title"] = "Stock";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Product",
+        "Quantity",
+        "Updated At"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "Stock",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var stock = (Hockeyshop.Data.Data.Inventory.Stock)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => stock.IdStock,
+                        "Product" => stock.Product?.IdProduct,
+                        "Quantity" => stock.Quantity,
+                        "Updated At" => stock.UpdatedAt.ToShortDateString(),
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var stock = (Hockeyshop.Data.Data.Inventory.Stock)row;
+                    return $@"
+                        <a href=""/Stock/Edit/{stock.IdStock}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/Stock/Details/{stock.IdStock}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/Stock/Delete/{stock.IdStock}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Inventory.Stock>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -45,3 +97,4 @@
 }
     </tbody>
 </table>
+ *@

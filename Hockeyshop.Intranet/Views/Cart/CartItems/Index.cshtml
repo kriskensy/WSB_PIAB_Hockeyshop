@@ -1,6 +1,60 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Cart.CartItem>
 
 @{
+    ViewData["Title"] = "CartItem";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "User Cart",
+        "Product",
+        "Quantity",
+        "UnitPrice"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "Cart Item",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var cartItem = (Hockeyshop.Data.Data.Cart.CartItem)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => cartItem.IdCartItem,
+                        "User Cart" => cartItem.UserCart?.IdUserCart,
+                        "Product" => cartItem.Product?.IdProduct,
+                        "Quantity" => cartItem.Quantity,
+                        "UnitPrice" => cartItem.UnitPrice.ToString("C"),
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var cartItem = (Hockeyshop.Data.Data.Cart.CartItem)row;
+                    return $@"
+                        <a href=""/CartItem/Edit/{cartItem.IdCartItem}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/CartItem/Details/{cartItem.IdCartItem}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/CartItem/Delete/{cartItem.IdCartItem}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Cart.CartItem>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -51,3 +105,4 @@
 }
     </tbody>
 </table>
+ *@

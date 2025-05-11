@@ -1,6 +1,68 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Core.User>
 
 @{
+    ViewData["Title"] = "User";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "First Name",
+        "Last Name",
+        "Email",
+        "PasswordHash",
+        "PostCode",
+        "City",
+        "Street And Number",
+        "User Role"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "User",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var user = (Hockeyshop.Data.Data.Core.User)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => user.IdUser,
+                        "First Name" => user.FirstName,
+                        "Last Name" => user.LastName,
+                        "Email" => user.Email,
+                        "PasswordHash" => user.PasswordHash,
+                        "PostCode" => user.PostCode,
+                        "City" => user.City,
+                        "Street And Number" => user.StreetAndNumber,
+                        "User Role" => user.UserRole?.IdUserRole,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var user = (Hockeyshop.Data.Data.Core.User)row;
+                    return $@"
+                        <a href=""/User/Edit/{user.IdUser}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/User/Details/{user.IdUser}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/User/Delete/{user.IdUser}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Core.User>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -75,3 +137,4 @@
 }
     </tbody>
 </table>
+ *@

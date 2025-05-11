@@ -1,6 +1,57 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Orders.Order>
 
 @{
+    ViewData["Title"] = "Order";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "OrderDate",
+        "User",
+        "OrderStatus",
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "Order",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var order = (Hockeyshop.Data.Data.Orders.Order)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => order.IdOrder,
+                        "Order Date" => order.OrderDate.ToShortDateString(),
+                        "User" => order.User.City,
+                        "Order Status" => order.OrderStatus?.IdOrderStatus,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var order = (Hockeyshop.Data.Data.Orders.Order)row;
+                    return $@"
+                        <a href=""/Order/Edit/{order.IdOrder}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/Order/Details/{order.IdOrder}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/Order/Delete/{order.IdOrder}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Orders.Order>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -45,3 +96,4 @@
 }
     </tbody>
 </table>
+ *@

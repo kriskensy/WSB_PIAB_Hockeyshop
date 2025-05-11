@@ -6,7 +6,8 @@
 
     var columns = new List<string>
     {
-        "Order",
+        "ID",
+        "Id Order",
         "Invoice Number",
         "Issue Date",
         "Total Amount",
@@ -26,6 +27,7 @@
             var invoice = (Hockeyshop.Data.Data.Orders.Invoice)row; //rzutowanie wiersza na typ...
             return col switch
             {
+                "ID" => invoice.IdInvoice,
                 "Order" => invoice.Order?.IdOrder,
                 "Invoice Number" => invoice.InvoiceNumber,
                 "Issue Date" => invoice.IssueDate.ToShortDateString(),

@@ -1,6 +1,60 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Products.Supplier>
 
 @{
+    ViewData["Title"] = "Supplier";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Name",
+        "Contact Email",
+        "Post Code",
+        "City",
+        "Street and number"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "Supplier",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var supplier = (Hockeyshop.Data.Data.Products.Supplier)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => supplier.IdSupplier,
+                        "Name" => supplier.Name,
+                        "Contact Email" => supplier.ContactEmail,
+                        "Post Code" => supplier.PostCode,
+                        "City" => supplier.City,
+                        "Street and number" => supplier.StreetAndNumber,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var supplier = (Hockeyshop.Data.Data.Products.Supplier)row;
+                    return $@"
+                        <a href=""/Products/Edit/{supplier.IdSupplier}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/Products/Details/{supplier.IdSupplier}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/Products/Delete/{supplier.IdSupplier}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Products.Supplier>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -57,3 +111,4 @@
 }
     </tbody>
 </table>
+ *@

@@ -1,6 +1,56 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Cart.UserCart>
 
 @{
+    ViewData["Title"] = "UserCart";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "User",
+        "Created At"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "User Cart",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var userCart = (Hockeyshop.Data.Data.Cart.UserCart)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => userCart.IdUserCart,
+                        "User" => userCart.User?.IdUser,
+                        "Created At" => userCart.CreatedAt.ToShortDateString(),
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var userCart = (Hockeyshop.Data.Data.Cart.UserCart)row;
+                    return $@"
+                        <a href=""/UserCart/Edit/{userCart.IdUserCart}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/UserCart/Details/{userCart.IdUserCart}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/UserCart/Delete/{userCart.IdUserCart}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Cart.UserCart>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -39,3 +89,4 @@
 }
     </tbody>
 </table>
+ *@

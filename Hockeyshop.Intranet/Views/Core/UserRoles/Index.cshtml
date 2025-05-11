@@ -1,6 +1,54 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Core.UserRole>
 
 @{
+    ViewData["Title"] = "UserRole";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Role"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "User Role",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var userRole = (Hockeyshop.Data.Data.Core.UserRole)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => userRole.IdUserRole,
+                        "Role" => userRole.Role,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var userRole = (Hockeyshop.Data.Data.Core.UserRole)row;
+                    return $@"
+                        <a href=""/UserRole/Edit/{userRole.IdUserRole}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/UserRole/Details/{userRole.IdUserRole}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/UserRole/Delete/{userRole.IdUserRole}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Core.UserRole>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -33,3 +81,4 @@
 }
     </tbody>
 </table>
+ *@

@@ -1,6 +1,62 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Products.Product>
 
 @{
+    ViewData["Title"] = "Product";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Name",
+        "Product Category",
+        "Price",
+        "Supplier",
+        "Description"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "Products",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var product = (Hockeyshop.Data.Data.Products.Product)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => product.IdProduct,
+                        "Name" => product.Name,
+                        "Product Category" => product.ProductCategory?.IdProductCategory,
+                        "Price" => product.Price.ToString("C"),
+                        "Supplier" => product.Supplier?.IdSupplier,
+                        "Description" => product.Description,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var product = (Hockeyshop.Data.Data.Products.Product)row;
+                    return $@"
+                        <a href=""/Products/Edit/{product.IdProduct}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/Products/Details/{product.IdProduct}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/Products/Delete/{product.IdProduct}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Products.Product>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -57,3 +113,4 @@
 }
     </tbody>
 </table>
+ *@

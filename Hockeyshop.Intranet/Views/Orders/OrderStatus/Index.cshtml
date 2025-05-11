@@ -1,6 +1,52 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Orders.OrderStatus>
 
 @{
+    ViewData["Title"] = "OrderStatus";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Name"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+            {
+                Title = "Order status",
+                CreateAction = "Create",
+                EnableSearch = true,
+                SearchTerm = ViewBag.SearchTerm as string,
+                Columns = columns,
+                Rows = Model.Cast<object>(),
+                GetValue = (row, col) =>
+                {
+                    var orderStatus = (Hockeyshop.Data.Data.Orders.OrderStatus)row; //rzutowanie wiersza na typ...
+                    return col switch
+                    {
+                        "ID" => orderStatus.IdOrderStatus,
+                        "Name" => orderStatus.Name,
+                        _ => ""
+                    };
+                },
+                ActionLinks = row =>
+                {
+                    var orderStatus = (Hockeyshop.Data.Data.Orders.OrderStatus)row;
+                    return $@"
+                        <a href=""/OrderStatus/Edit/{orderStatus.IdOrderStatus}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/OrderStatus/Details/{orderStatus.IdOrderStatus}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/OrderStatus/Delete/{orderStatus.IdOrderStatus}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+                }
+            };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+
+
+@* <!---->
+@model IEnumerable<Hockeyshop.Data.Data.Orders.OrderStatus>
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -33,3 +79,4 @@
 }
     </tbody>
 </table>
+ *@
