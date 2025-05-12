@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Payments;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Payments
 {
@@ -169,14 +170,24 @@ namespace Hockeyshop.Intranet.Controllers.Payments
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var payment = await _context.Payments.FindAsync(id);
-            if (payment != null)
+            try
             {
-                _context.Payments.Remove(payment);
-            }
+                var payment = await _context.Payments.FindAsync(id);
+                if (payment != null)
+                {
+                    _context.Payments.Remove(payment);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool PaymentExists(int id)

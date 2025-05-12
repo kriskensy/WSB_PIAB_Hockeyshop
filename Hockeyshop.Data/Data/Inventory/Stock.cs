@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Hockeyshop.Data.Data.Products;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Hockeyshop.Data.Data.Inventory
 {
@@ -13,6 +14,7 @@ namespace Hockeyshop.Data.Data.Inventory
         [ForeignKey("Product")]
         [Display(Name = "Product ID")]
         public int IdProduct { get; set; }
+        [ValidateNever]
         public Product Product { get; set; }
 
         [Required(ErrorMessage = "The Quantity field is required.")]

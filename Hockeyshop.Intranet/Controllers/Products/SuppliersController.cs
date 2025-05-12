@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Products;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Products
 {
@@ -56,6 +58,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // GET: Suppliers/Create
         public IActionResult Create()
         {
+            ViewBag.IdSupplier = new SelectList(_context.Suppliers, "IdSupplier", "Name");
             return View("~/Views/Products/Suppliers/Create.cshtml");
         }
 
@@ -149,14 +152,25 @@ namespace Hockeyshop.Intranet.Controllers.Products
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var supplier = await _context.Suppliers.FindAsync(id);
-            if (supplier != null)
+            try
             {
-                _context.Suppliers.Remove(supplier);
+                var supplier = await _context.Suppliers.FindAsync(id);
+                if (supplier != null)
+                {
+                    _context.Suppliers.Remove(supplier);
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool SupplierExists(int id)

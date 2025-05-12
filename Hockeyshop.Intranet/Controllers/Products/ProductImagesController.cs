@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Products;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Products
 {
@@ -157,14 +158,24 @@ namespace Hockeyshop.Intranet.Controllers.Products
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var productImage = await _context.ProductImages.FindAsync(id);
-            if (productImage != null)
+            try
             {
-                _context.ProductImages.Remove(productImage);
-            }
+                var productImage = await _context.ProductImages.FindAsync(id);
+                if (productImage != null)
+                {
+                    _context.ProductImages.Remove(productImage);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool ProductImageExists(int id)

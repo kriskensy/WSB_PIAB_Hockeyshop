@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Cart;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Cart
 {
@@ -163,14 +164,24 @@ namespace Hockeyshop.Intranet.Controllers.Cart
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var cartItem = await _context.CartItems.FindAsync(id);
-            if (cartItem != null)
+            try
             {
-                _context.CartItems.Remove(cartItem);
-            }
+                var cartItem = await _context.CartItems.FindAsync(id);
+                if (cartItem != null)
+                {
+                    _context.CartItems.Remove(cartItem);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool CartItemExists(int id)

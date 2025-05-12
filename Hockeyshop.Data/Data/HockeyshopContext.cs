@@ -66,6 +66,102 @@ namespace Hockeyshop.Data.Data
                 .HasForeignKey(i => i.IdUser)
                 .OnDelete(DeleteBehavior.NoAction);
 
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.UserRole)
+                .WithMany()
+                .HasForeignKey(u => u.IdUserRole)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.ProductCategory)
+                .WithMany()
+                .HasForeignKey(p => p.IdProductCategory)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Supplier)
+                .WithMany()
+                .HasForeignKey(p => p.IdSupplier)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.User)
+                .WithMany()
+                .HasForeignKey(o => o.IdUser)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.OrderStatus)
+                .WithMany()
+                .HasForeignKey(o => o.IdOrderStatus)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<OrderItem>()
+                .HasOne(oi => oi.Order)
+                .WithMany()
+                .HasForeignKey(oi => oi.IdOrder)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<OrderItem>()
+                .HasOne(oi => oi.Product)
+                .WithMany()
+                .HasForeignKey(oi => oi.IdProduct)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Payment>()
+                .HasOne(p => p.Order)
+                .WithMany()
+                .HasForeignKey(p => p.IdOrder)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Payment>()
+                .HasOne(p => p.PaymentMethod)
+                .WithMany()
+                .HasForeignKey(p => p.IdPaymentMethod)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Payment>()
+                .HasOne(p => p.PaymentStatus)
+                .WithMany()
+                .HasForeignKey(p => p.IdPaymentStatus)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<CartItem>()
+                .HasOne(ci => ci.Product)
+                .WithMany()
+                .HasForeignKey(ci => ci.IdProduct)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<CartItem>()
+                .HasOne(ci => ci.UserCart)
+                .WithMany()
+                .HasForeignKey(ci => ci.IdUserCart)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<UserCart>()
+                .HasOne(uc => uc.User)
+                .WithMany()
+                .HasForeignKey(uc => uc.IdUser)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Stock>()
+                .HasOne(s => s.Product)
+                .WithMany()
+                .HasForeignKey(s => s.IdProduct)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<ProductPromotion>()
+                .HasOne(pp => pp.Product)
+                .WithMany()
+                .HasForeignKey(pp => pp.IdProduct)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<ProductPromotion>()
+                .HasOne(pp => pp.Promotion)
+                .WithMany()
+                .HasForeignKey(pp => pp.IdPromotion)
+                .OnDelete(DeleteBehavior.NoAction);
+
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProductPromotionConfiguration).Assembly);
         }
     }

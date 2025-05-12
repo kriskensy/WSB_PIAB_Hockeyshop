@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Core;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Core
 {
@@ -149,14 +150,24 @@ namespace Hockeyshop.Intranet.Controllers.Core
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var userRole = await _context.UserRoles.FindAsync(id);
-            if (userRole != null)
+            try
             {
-                _context.UserRoles.Remove(userRole);
-            }
+                var userRole = await _context.UserRoles.FindAsync(id);
+                if (userRole != null)
+                {
+                    _context.UserRoles.Remove(userRole);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool UserRoleExists(int id)

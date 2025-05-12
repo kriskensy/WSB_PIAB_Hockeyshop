@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Core;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Core
 {
@@ -59,7 +60,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
         // GET: Users/Create
         public IActionResult Create()
         {
-            ViewBag.IdUserRole = new SelectList(_context.UserRoles, "IdUserRole", "Role");
+            ViewData["IdUserRole"] = new SelectList(_context.UserRoles, "IdUserRole", "Role");
             return View("~/Views/Core/Users/Create.cshtml");
         }
 
@@ -77,7 +78,7 @@ namespace Hockeyshop.Intranet.Controllers.Core
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewBag.IdUserRole = new SelectList(_context.UserRoles, "IdUserRole", "Role", user.IdUserRole);
+            ViewData["IdUserRole"] = new SelectList(_context.UserRoles, "IdUserRole", "Role", user.IdUserRole);
             return View("~/Views/Core/Users/Create.cshtml", user);
         }
 
@@ -158,14 +159,24 @@ namespace Hockeyshop.Intranet.Controllers.Core
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user != null)
+            try
             {
-                _context.Users.Remove(user);
-            }
+                var user = await _context.Users.FindAsync(id);
+                if (user != null)
+                {
+                    _context.Users.Remove(user);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool UserExists(int id)

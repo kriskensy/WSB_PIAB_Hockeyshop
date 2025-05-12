@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using Hockeyshop.Data.Data.Inventory;
 using Hockeyshop.Data.Data.Cart;
 using Hockeyshop.Data.Data.Marketing;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Hockeyshop.Data.Data.Products
 {
@@ -19,6 +20,7 @@ namespace Hockeyshop.Data.Data.Products
         [ForeignKey("ProductCategory")]
         [Display(Name = "Product category ID")]
         public int IdProductCategory { get; set; }
+        [ValidateNever]
         public ProductCategory ProductCategory { get; set; }
 
         [Required(ErrorMessage = "The Price field is required.")]
@@ -28,6 +30,7 @@ namespace Hockeyshop.Data.Data.Products
         [ForeignKey("Supplier")]
         [Display(Name = "Supplier ID")]
         public int IdSupplier { get; set; }
+        [ValidateNever]
         public Supplier Supplier { get; set; }
 
         [Required(ErrorMessage = "The Description field is required.")]

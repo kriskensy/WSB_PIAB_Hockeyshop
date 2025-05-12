@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Inventory;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Inventory
 {
@@ -157,14 +158,24 @@ namespace Hockeyshop.Intranet.Controllers.Inventory
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var stock = await _context.Stocks.FindAsync(id);
-            if (stock != null)
+            try
             {
-                _context.Stocks.Remove(stock);
-            }
+                var stock = await _context.Stocks.FindAsync(id);
+                if (stock != null)
+                {
+                    _context.Stocks.Remove(stock);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool StockExists(int id)

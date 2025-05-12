@@ -1,4 +1,5 @@
 ﻿using Hockeyshop.Data.Data.Core;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -19,6 +20,7 @@ namespace Hockeyshop.Data.Data.CMS
         [ForeignKey("Author")]
         [Display(Name = "Author ID")]
         public int IdAuthor { get; set; }
+        [ValidateNever]
         public User Author { get; set; }
 
         [Required(ErrorMessage = "The Created At field is required.")]

@@ -1,6 +1,7 @@
 ﻿using Hockeyshop.Data.Data.Core;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Hockeyshop.Data.Data.Orders
 {
@@ -13,6 +14,7 @@ namespace Hockeyshop.Data.Data.Orders
         [ForeignKey("Order")]
         [Display(Name = "Order ID")]
         public int IdOrder { get; set; }
+        [ValidateNever]
         public Order Order { get; set; }
 
         [Required(ErrorMessage = "The Invoice Number field is required.")]
@@ -31,6 +33,7 @@ namespace Hockeyshop.Data.Data.Orders
         [ForeignKey("User")]
         [Display(Name = "User ID")]
         public int IdUser { get; set; }
+        [ValidateNever]
         public User User { get; set; }
     }
 }

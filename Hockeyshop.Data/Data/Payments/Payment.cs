@@ -1,6 +1,7 @@
 ﻿using Hockeyshop.Data.Data.Orders;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Hockeyshop.Data.Data.Payments
 {
@@ -13,6 +14,7 @@ namespace Hockeyshop.Data.Data.Payments
         [ForeignKey("Order")]
         [Display(Name = "Order ID")]
         public int IdOrder { get; set; }
+        [ValidateNever]
         public Order Order { get; set; }
 
         [Required(ErrorMessage = "The Payment Date field is required.")]
@@ -23,6 +25,7 @@ namespace Hockeyshop.Data.Data.Payments
         [ForeignKey("PaymentMethod")]
         [Display(Name = "Payment method")]
         public int IdPaymentMethod { get; set; }
+        [ValidateNever]
         public PaymentMethod PaymentMethod { get; set; }
 
         [Required(ErrorMessage = "The Amount field is required.")]
@@ -32,6 +35,7 @@ namespace Hockeyshop.Data.Data.Payments
         [ForeignKey("PaymentStatus")]
         [Display(Name = "Payment status ID")]
         public int IdPaymentStatus { get; set; }
+        [ValidateNever]
         public PaymentStatus PaymentStatus { get; set; }
     }
 }

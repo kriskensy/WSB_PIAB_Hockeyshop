@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Hockeyshop.Data.Data.Products
 {
@@ -12,6 +13,7 @@ namespace Hockeyshop.Data.Data.Products
         [ForeignKey("Product")]
         [Display(Name = "Product ID")]
         public int IdProduct { get; set; }
+        [ValidateNever]
         public Product Product { get; set; }
 
         [Required(ErrorMessage = "The Image URL field is required.")]

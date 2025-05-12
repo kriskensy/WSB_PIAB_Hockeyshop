@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Payments;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Payments
 {
@@ -149,14 +150,24 @@ namespace Hockeyshop.Intranet.Controllers.Payments
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var paymentMethod = await _context.PaymentMethods.FindAsync(id);
-            if (paymentMethod != null)
+            try
             {
-                _context.PaymentMethods.Remove(paymentMethod);
-            }
+                var paymentMethod = await _context.PaymentMethods.FindAsync(id);
+                if (paymentMethod != null)
+                {
+                    _context.PaymentMethods.Remove(paymentMethod);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool PaymentMethodExists(int id)

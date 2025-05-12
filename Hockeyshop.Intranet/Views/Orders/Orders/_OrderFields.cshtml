@@ -12,9 +12,13 @@
 </div>
 <div class="form-group">
     <label asp-for="IdUser" class="control-label"></label>
-    <select asp-for="IdUser" class="form-control" asp-items="ViewBag.IdUser"></select>
+    <select asp-for="IdUser" class="form-control" asp-items="ViewBag.IdUser">
+        <option value="">-- Select --</option>
+    </select>
 </div>
 <div class="form-group">
     <label asp-for="IdOrderStatus" class="control-label"></label>
-    <select asp-for="IdOrderStatus" class="form-control" asp-items="ViewBag.IdOrderStatus"></select>
+    <select asp-for="IdOrderStatus" class="form-control" asp-items="ViewBag.IdOrderStatus">
+        <option value="">-- Select --</option>
+    </select>
 </div>

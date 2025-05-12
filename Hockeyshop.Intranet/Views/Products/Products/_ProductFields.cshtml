@@ -12,7 +12,9 @@
 </div>
 <div class="form-group">
     <label asp-for="IdProductCategory" class="control-label"></label>
-    <select asp-for="IdProductCategory" class="form-control" asp-items="ViewBag.IdProductCategory"></select>
+    <select asp-for="IdProductCategory" class="form-control" asp-items="ViewBag.IdProductCategory">
+        <option value="">-- Select --</option>
+    </select>
 </div>
 <div class="form-group">
     <label asp-for="Price" class="control-label"></label>
@@ -21,7 +23,9 @@
 </div>
 <div class="form-group">
     <label asp-for="IdSupplier" class="control-label"></label>
-    <select asp-for="IdSupplier" class="form-control" asp-items="ViewBag.IdSupplier"></select>
+    <select asp-for="IdSupplier" class="form-control" asp-items="ViewBag.IdSupplier">
+        <option value="">-- Select --</option>
+    </select>
 </div>
 <div class="form-group">
     <label asp-for="Description" class="control-label"></label>

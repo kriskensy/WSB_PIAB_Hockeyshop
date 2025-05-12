@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Orders;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Orders
 {
@@ -149,14 +150,24 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var orderStatus = await _context.OrderStatuses.FindAsync(id);
-            if (orderStatus != null)
+            try
             {
-                _context.OrderStatuses.Remove(orderStatus);
-            }
+                var orderStatus = await _context.OrderStatuses.FindAsync(id);
+                if (orderStatus != null)
+                {
+                    _context.OrderStatuses.Remove(orderStatus);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool OrderStatusExists(int id)

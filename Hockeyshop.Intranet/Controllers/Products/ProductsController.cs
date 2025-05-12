@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Products;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Products
 {
@@ -60,8 +61,8 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // GET: Products/Create
         public IActionResult Create()
         {
-            ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name");
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City");
+            ViewBag.IdProductCategory = new SelectList(_context.ProductCategories, "IdProductCategory", "Name");
+            ViewBag.IdSupplier = new SelectList(_context.Suppliers, "IdSupplier", "Name");
             return View("~/Views/Products/Products/Create.cshtml");
         }
 
@@ -70,7 +71,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdProduct,Name,IdProductCategory,Price,SupplierId,Description")] Product product)
+        public async Task<IActionResult> Create([Bind("IdProduct,Name,IdProductCategory,Price,IdSupplier,Description")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -78,8 +79,8 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
-            ViewData["IdSupplier"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.IdSupplier);
+            ViewBag.IdProductCategory = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
+            ViewBag.IdSupplier = new SelectList(_context.Suppliers, "IdSupplier", "Name", product.IdSupplier);
             return View("~/Views/Products/Products/Create.cshtml", product);
         }
 
@@ -96,8 +97,8 @@ namespace Hockeyshop.Intranet.Controllers.Products
             {
                 return NotFound();
             }
-            ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.IdSupplier);
+            ViewBag.IdProductCategory = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
+            ViewBag.IdSupplier = new SelectList(_context.Suppliers, "IdSupplier", "Name", product.IdSupplier);
             return View("~/Views/Products/Products/Edit.cshtml", product);
         }
 
@@ -106,7 +107,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdProduct,Name,IdProductCategory,Price,SupplierId,Description")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("IdProduct,Name,IdProductCategory,Price,IdSupplier,Description")] Product product)
         {
             if (id != product.IdProduct)
             {
@@ -133,8 +134,8 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdProductCategory"] = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "IdSupplier", "City", product.IdSupplier);
+            ViewBag.IdProductCategory = new SelectList(_context.ProductCategories, "IdProductCategory", "Name", product.IdProductCategory);
+            ViewBag.IdSupplier = new SelectList(_context.Suppliers, "IdSupplier", "Name", product.IdSupplier);
             return View("~/Views/Products/Products/Edit.cshtml", product);
         }
 
@@ -163,14 +164,24 @@ namespace Hockeyshop.Intranet.Controllers.Products
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var product = await _context.Products.FindAsync(id);
-            if (product != null)
+            try
             {
-                _context.Products.Remove(product);
-            }
+                var product = await _context.Products.FindAsync(id);
+                if (product != null)
+                {
+                    _context.Products.Remove(product);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool ProductExists(int id)

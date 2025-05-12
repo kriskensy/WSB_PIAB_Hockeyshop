@@ -1,6 +1,7 @@
 ﻿using Hockeyshop.Data.Data.Cart;
 using Hockeyshop.Data.Data.CMS;
 using Hockeyshop.Data.Data.Orders;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -42,6 +43,7 @@ namespace Hockeyshop.Data.Data.Core
         [ForeignKey(nameof(UserRole))]
         [Display(Name = "User role")]
         public int IdUserRole { get; set; }
+        [ValidateNever]
         public UserRole UserRole { get; set; }
 
         public ICollection<Order> Orders { get; } = new List<Order>();

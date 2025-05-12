@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Products;
+using Hockeyshop.Intranet.Models;
 
 namespace Hockeyshop.Intranet.Controllers.Products
 {
@@ -149,14 +150,24 @@ namespace Hockeyshop.Intranet.Controllers.Products
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var productCategory = await _context.ProductCategories.FindAsync(id);
-            if (productCategory != null)
+            try
             {
-                _context.ProductCategories.Remove(productCategory);
-            }
+                var productCategory = await _context.ProductCategories.FindAsync(id);
+                if (productCategory != null)
+                {
+                    _context.ProductCategories.Remove(productCategory);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateException ex)
+            {
+                return View("Error", new ErrorViewModel
+                {
+                    Message = "This record cannot be deleted because there are related records in other tables!"
+                });
+            }
         }
 
         private bool ProductCategoryExists(int id)

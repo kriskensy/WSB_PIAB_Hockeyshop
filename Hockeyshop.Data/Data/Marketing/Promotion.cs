@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Hockeyshop.Data.Data.Marketing
 {
@@ -15,6 +16,7 @@ namespace Hockeyshop.Data.Data.Marketing
         [ForeignKey("DiscountType")]
         [Display(Name = "Discount type ID")]
         public int IdDiscountType { get; set; }
+        [ValidateNever]
         public DiscountType DiscountType { get; set; }
 
         [Required(ErrorMessage = "The Discount Value field is required.")]

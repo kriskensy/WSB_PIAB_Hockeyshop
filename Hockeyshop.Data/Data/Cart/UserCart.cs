@@ -1,6 +1,7 @@
 ﻿using Hockeyshop.Data.Data.Core;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Hockeyshop.Data.Data.Cart
 {
@@ -13,6 +14,7 @@ namespace Hockeyshop.Data.Data.Cart
         [ForeignKey("User")]
         [Display(Name = "User ID")]
         public int IdUser { get; set; }
+        [ValidateNever]
         public User User { get; set; }
 
         [Required(ErrorMessage = "The Created At field is required.")]
