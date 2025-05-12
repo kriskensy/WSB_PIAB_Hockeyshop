@@ -8,6 +8,7 @@
     {
         "ID",
         "Product",
+        "Product Category",
         "Image Url"
     };
 
@@ -25,7 +26,8 @@
                     return col switch
                     {
                         "ID" => productImage.IdProductImage,
-                        "Product" => productImage.Product?.IdProduct,
+                        "Product" => productImage.Product?.Name,
+                        "Product Category" => productImage.Product?.ProductCategory?.Name,
                         "Image Url" => productImage.ImageUrl,
                         _ => ""
                     };

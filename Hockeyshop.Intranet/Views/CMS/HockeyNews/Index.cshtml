@@ -9,7 +9,8 @@
         "ID",
         "Title",
         "Content",
-        "Author",
+        "Author Firstname",
+        "Author Lastname",
         "Created At",
         "Published?",
         "Image Url"
@@ -31,8 +32,9 @@
                         "ID" => hockeyNews.IdHockeyNews,
                         "Title" => hockeyNews.Title,
                         "Content" => hockeyNews.Content,
-                        "Author" => hockeyNews.Author.IdUser,
-                        "CreatedAt" => hockeyNews.CreatedAt.ToShortDateString(),
+                        "Author Firstname" => hockeyNews.Author.FirstName,
+                        "Author Lastname" => hockeyNews.Author.LastName,
+                        "Created At" => hockeyNews.CreatedAt.ToShortDateString(),
                         "Published?" => hockeyNews.Published,
                         "Image Url" => hockeyNews.ImageUrl,
                         _ => ""

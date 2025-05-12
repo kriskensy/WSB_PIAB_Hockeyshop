@@ -7,9 +7,11 @@
     var columns = new List<string>
     {
         "ID",
-        "OrderDate",
-        "User",
-        "OrderStatus",
+        "User Firstname",
+        "User Lastname",
+        "Order Date",
+        "Total Amount",
+        "Order Status",
     };
 
     CrudIndexContainerModel containerModel = new CrudIndexContainerModel
@@ -26,9 +28,11 @@
                     return col switch
                     {
                         "ID" => order.IdOrder,
+                        "User Firstname" => order.User?.FirstName,
+                        "User Lastname" => order.User?.LastName,
+                        "Total Amount" => order.TotalAmount.ToString("C"), //formatowanie do waluty
                         "Order Date" => order.OrderDate.ToShortDateString(),
-                        "User" => order.User.City,
-                        "Order Status" => order.OrderStatus?.IdOrderStatus,
+                        "Order Status" => order.OrderStatus?.Name,
                         _ => ""
                     };
                 },

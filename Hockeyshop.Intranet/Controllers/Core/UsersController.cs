@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Core;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Core
 {
@@ -21,22 +22,27 @@ namespace Hockeyshop.Intranet.Controllers.Core
         {
             var query = _context.Users.Include(u => u.UserRole).AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(item => item.LastName.Contains(searchTerm));
+                query = query.Where(item =>
+                    item.FirstName.Contains(searchTerm) ||
+                    item.LastName.Contains(searchTerm) ||
+                    item.Email.Contains(searchTerm) ||
+                    item.PostCode.Contains(searchTerm) ||
+                    item.City.Contains(searchTerm) ||
+                    item.StreetAndNumber.Contains(searchTerm) ||
+                    item.UserRole.Role.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Core/Users/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    var hockeyshopContext = _context.Users.Include(u => u.UserRole);
-        //    return View("~/Views/Core/Users/Index.cshtml", await hockeyshopContext.ToListAsync());
-        //}
 
         // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)

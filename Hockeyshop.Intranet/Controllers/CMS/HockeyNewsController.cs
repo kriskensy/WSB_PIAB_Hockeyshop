@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.CMS;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.CMS
 {
@@ -21,22 +22,23 @@ namespace Hockeyshop.Intranet.Controllers.CMS
         {
             var query = _context.HockeyNews.Include(h => h.Author).AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(item => item.Title.Contains(searchTerm));
+                query = query.Where(item => 
+                    item.Title.Contains(searchTerm) ||
+                    item.Content.Contains(searchTerm) ||
+                    item.Author.LastName.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/CMS/HockeyNews/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    var hockeyshopContext = _context.HockeyNews.Include(h => h.Author);
-        //    return View("~/Views/CMS/HockeyNews/Index.cshtml", await hockeyshopContext.ToListAsync());
-        //}
 
         // GET: HockeyNews/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -60,7 +62,7 @@ namespace Hockeyshop.Intranet.Controllers.CMS
         // GET: HockeyNews/Create
         public IActionResult Create()
         {
-            ViewData["IdAuthor"] = new SelectList(_context.Users, "IdUser", "City");
+            ViewData["IdAuthor"] = new SelectList(_context.Users.Select(item => new {item.IdUser, Fullname = item.FirstName + " " + item.LastName}), "IdUser", "Fullname");
             return View("~/Views/CMS/HockeyNews/Create.cshtml");
         }
 
@@ -77,7 +79,7 @@ namespace Hockeyshop.Intranet.Controllers.CMS
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdAuthor"] = new SelectList(_context.Users, "IdUser", "City", hockeyNews.IdAuthor);
+            ViewData["IdAuthor"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname", hockeyNews.IdAuthor);
             return View("~/Views/CMS/HockeyNews/Create.cshtml", hockeyNews);
         }
 
@@ -94,7 +96,7 @@ namespace Hockeyshop.Intranet.Controllers.CMS
             {
                 return NotFound();
             }
-            ViewData["IdAuthor"] = new SelectList(_context.Users, "IdUser", "City", hockeyNews.IdAuthor);
+            ViewData["IdAuthor"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname", hockeyNews.IdAuthor);
             return View("~/Views/CMS/HockeyNews/Edit.cshtml", hockeyNews);
         }
 
@@ -130,7 +132,7 @@ namespace Hockeyshop.Intranet.Controllers.CMS
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdAuthor"] = new SelectList(_context.Users, "IdUser", "City", hockeyNews.IdAuthor);
+            ViewData["IdAuthor"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname", hockeyNews.IdAuthor);
             return View("~/Views/CMS/HockeyNews/Edit.cshtml", hockeyNews);
         }
 

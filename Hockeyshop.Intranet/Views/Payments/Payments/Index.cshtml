@@ -8,6 +8,8 @@
     {
         "ID",
         "Order",
+        "User Firstname",
+        "User Lastname",
         "Payment Date",
         "Payment Method",
         "Amount",
@@ -29,10 +31,12 @@
                     {
                         "ID" => payment.IdPayment,
                         "Order" => payment.Order?.IdOrder,
-                        "Payment Date" => payment.PaymentDate,
-                        "Payment Method" => payment.PaymentMethod?.IdPaymentMethod,
+                        "User Firstname" => payment.Order?.User?.FirstName,
+                        "User Lastname" => payment.Order?.User?.LastName,
+                        "Payment Date" => payment.PaymentDate.ToShortDateString(),
+                        "Payment Method" => payment.PaymentMethod?.Name,
                         "Amount" => payment.Amount,
-                        "Payment Status" => payment.PaymentStatus?.IdPaymentStatus,
+                        "Payment Status" => payment.PaymentStatus?.Name,
                         _ => ""
                     };
                 },

@@ -28,6 +28,10 @@ namespace Hockeyshop.Data.Data.Orders
         [ValidateNever]
         public OrderStatus OrderStatus { get; set; }
 
+        [Required(ErrorMessage = "The Total Amount field is required.")]
+        [Display(Name = "Total amount")]
+        public decimal TotalAmount { get; set; }
+
         public ICollection<OrderItem> OrderItems { get; } = new List<OrderItem>();
         public ICollection<Invoice> Invoices { get; } = new List<Invoice>();
         public ICollection<Payment> Payments { get; } = new List<Payment>();

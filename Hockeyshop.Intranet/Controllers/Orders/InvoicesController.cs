@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Orders;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Orders
 {
@@ -21,22 +22,22 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         {
             var query = _context.Invoices.Include(i => i.Order).Include(i => i.User).AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(item => item.InvoiceNumber.Contains(searchTerm));
+                query = query.Where(item =>
+                    item.User.LastName.Contains(searchTerm) ||
+                    item.InvoiceNumber.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Orders/Invoices/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    var hockeyshopContext = _context.Invoices.Include(i => i.Order).Include(i => i.User);
-        //    return View("~/Views/Orders/Invoices/Index.cshtml", await hockeyshopContext.ToListAsync());
-        //}
 
         // GET: Invoices/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -62,13 +63,14 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         public IActionResult Create()
         {
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder");
-            ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City");
+            ViewData["IdUser"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname");
             return View("~/Views/Orders/Invoices/Create.cshtml");
         }
 
         // POST: Invoices/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdInvoice,IdOrder,InvoiceNumber,IssueDate,TotalAmount,IdUser")] Invoice invoice)
@@ -80,7 +82,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder", invoice.IdOrder);
-            ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", invoice.IdUser);
+            ViewData["IdUser"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname", invoice.IdUser);
             return View("~/Views/Orders/Invoices/Create.cshtml", invoice);
         }
 
@@ -98,13 +100,14 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return NotFound();
             }
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder", invoice.IdOrder);
-            ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", invoice.IdUser);
+            ViewData["IdUser"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname", invoice.IdUser);
             return View("~/Views/Orders/Invoices/Edit.cshtml", invoice);
         }
 
         // POST: Invoices/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdInvoice,IdOrder,InvoiceNumber,IssueDate,TotalAmount,IdUser")] Invoice invoice)
@@ -135,7 +138,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder", invoice.IdOrder);
-            ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", invoice.IdUser);
+            ViewData["IdUser"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname", invoice.IdUser);
             return View("~/Views/Orders/Invoices/Edit.cshtml", invoice);
         }
 

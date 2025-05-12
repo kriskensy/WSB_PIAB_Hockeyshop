@@ -25,10 +25,6 @@ namespace Hockeyshop.Data.Data.Orders
         [Display(Name = "Issue date")]
         public DateTime IssueDate { get; set; }
 
-        [Required(ErrorMessage = "The Total Amount field is required.")]
-        [Display(Name = "Total amount")]
-        public decimal TotalAmount { get; set; }
-
         [Required(ErrorMessage = "The User field is required.")]
         [ForeignKey("User")]
         [Display(Name = "User ID")]

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Inventory;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Inventory
 {
@@ -19,24 +20,24 @@ namespace Hockeyshop.Intranet.Controllers.Inventory
         // GET: Stocks
         public async Task<IActionResult> Index(string searchTerm)
         {
-            var query = _context.Stocks.Include(s => s.Product).AsQueryable();
+            var query = _context.Stocks.Include(s => s.Product).ThenInclude(item => item.ProductCategory).AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(item => item.Product.Name.Contains(searchTerm));
+                query = query.Where(item =>
+                    item.Product.ProductCategory.Name.Contains(searchTerm) ||
+                    item.Product.Name.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Inventory/Stocks/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    var hockeyshopContext = _context.Stocks.Include(s => s.Product);
-        //    return View("~/Views/Inventory/Stocks/Index.cshtml", await hockeyshopContext.ToListAsync());
-        //}
 
         // GET: Stocks/Details/5
         public async Task<IActionResult> Details(int? id)

@@ -8,7 +8,10 @@
     {
         "ID",
         "Product",
+        "Product Category",
         "Quantity",
+        "Unit Price",
+        "Total Value",
         "Updated At"
     };
 
@@ -26,8 +29,11 @@
                     return col switch
                     {
                         "ID" => stock.IdStock,
-                        "Product" => stock.Product?.IdProduct,
+                        "Product" => stock.Product?.Name,
+                        "Product Category" => stock.Product?.ProductCategory?.Name,
                         "Quantity" => stock.Quantity,
+                        "Unit Price" => stock.Product?.Price.ToString("C"),
+                        "Total Value" => ((stock.Quantity) * (stock.Product?.Price?? 0m)).ToString("C"),
                         "Updated At" => stock.UpdatedAt.ToShortDateString(),
                         _ => ""
                     };

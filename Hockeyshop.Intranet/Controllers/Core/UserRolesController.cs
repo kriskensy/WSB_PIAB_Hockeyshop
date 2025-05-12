@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Core;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Core
 {
@@ -20,21 +21,20 @@ namespace Hockeyshop.Intranet.Controllers.Core
         {
             var query = _context.UserRoles.AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(pm => pm.Role.Contains(searchTerm));
+                query = query.Where(item => item.Role.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Core/UserRoles/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    return View("~/Views/Core/UserRoles/Index.cshtml", await _context.UserRoles.ToListAsync());
-        //}
 
         // GET: UserRoles/Details/5
         public async Task<IActionResult> Details(int? id)

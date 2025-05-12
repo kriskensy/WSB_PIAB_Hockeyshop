@@ -9,8 +9,10 @@
         "ID",
         "User Cart",
         "Product",
+        "Product Category",
         "Quantity",
-        "UnitPrice"
+        "Unit Price",
+        "Total Price"
     };
 
     CrudIndexContainerModel containerModel = new CrudIndexContainerModel
@@ -28,9 +30,11 @@
                     {
                         "ID" => cartItem.IdCartItem,
                         "User Cart" => cartItem.UserCart?.IdUserCart,
-                        "Product" => cartItem.Product?.IdProduct,
+                        "Product" => cartItem.Product?.Name,
+                        "Product Category" => cartItem.Product?.ProductCategory?.Name,
                         "Quantity" => cartItem.Quantity,
-                        "UnitPrice" => cartItem.UnitPrice.ToString("C"),
+                        "Unit Price" => cartItem.UnitPrice.ToString("C"),
+                        "Total Price" => (cartItem.Quantity * cartItem.UnitPrice).ToString("C"),
                         _ => ""
                     };
                 },

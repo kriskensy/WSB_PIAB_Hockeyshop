@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Orders;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Orders
 {
@@ -21,22 +22,22 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         {
             var query = _context.Orders.Include(o => o.OrderStatus).Include(o => o.User).AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(item => item.User.LastName.Contains(searchTerm));
+                query = query.Where(item =>
+                    item.OrderStatus.Name.Contains(searchTerm) ||
+                    item.User.LastName.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Orders/Orders/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    var hockeyshopContext = _context.Orders.Include(o => o.OrderStatus).Include(o => o.User);
-        //    return View("~/Views/Orders/Orders/Index.cshtml", await hockeyshopContext.ToListAsync());
-        //}
 
         // GET: Orders/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -62,7 +63,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
         public IActionResult Create()
         {
             ViewData["IdOrderStatus"] = new SelectList(_context.OrderStatuses, "IdOrderStatus", "Name");
-            ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City");
+            ViewData["IdUser"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname");
             return View("~/Views/Orders/Orders/Create.cshtml");
         }
 
@@ -80,7 +81,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdOrderStatus"] = new SelectList(_context.OrderStatuses, "IdOrderStatus", "Name", order.IdOrderStatus);
-            ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", order.IdUser);
+            ViewData["IdUser"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname", order.IdUser);
             return View("~/Views/Orders/Orders/Create.cshtml", order);
         }
 
@@ -98,7 +99,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return NotFound();
             }
             ViewData["IdOrderStatus"] = new SelectList(_context.OrderStatuses, "IdOrderStatus", "Name", order.IdOrderStatus);
-            ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", order.IdUser);
+            ViewData["IdUser"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname", order.IdUser);
             return View("~/Views/Orders/Orders/Edit.cshtml", order);
         }
 
@@ -135,7 +136,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdOrderStatus"] = new SelectList(_context.OrderStatuses, "IdOrderStatus", "Name", order.IdOrderStatus);
-            ViewData["IdUser"] = new SelectList(_context.Users, "IdUser", "City", order.IdUser);
+            ViewData["IdUser"] = new SelectList(_context.Users.Select(item => new { item.IdUser, Fullname = item.FirstName + " " + item.LastName }), "IdUser", "Fullname", order.IdUser);
             return View("~/Views/Orders/Orders/Edit.cshtml", order);
         }
 

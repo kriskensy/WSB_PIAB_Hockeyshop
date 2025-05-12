@@ -29,9 +29,9 @@
                     {
                         "ID" => product.IdProduct,
                         "Name" => product.Name,
-                        "Product Category" => product.ProductCategory?.IdProductCategory,
+                        "Product Category" => product.ProductCategory?.Name,
                         "Price" => product.Price.ToString("C"),
-                        "Supplier" => product.Supplier?.IdSupplier,
+                        "Supplier" => product.Supplier?.Name,
                         "Description" => product.Description,
                         _ => ""
                     };

@@ -8,6 +8,7 @@
     {
         "ID",
         "Product",
+        "Product Category",
         "Promotion"
     };
 
@@ -25,8 +26,9 @@
                     return col switch
                     {
                         "ID" => productPromotion.IdProduct,
-                        "Product" => productPromotion.Product?.IdProduct,
-                        "Promotion" => productPromotion.Promotion?.IdPromotion,
+                        "Product" => productPromotion.Product?.Name,
+                        "Product Category" => productPromotion.Product?.ProductCategory?.Name,
+                        "Promotion" => productPromotion.Promotion?.Name,
                         _ => ""
                     };
                 },

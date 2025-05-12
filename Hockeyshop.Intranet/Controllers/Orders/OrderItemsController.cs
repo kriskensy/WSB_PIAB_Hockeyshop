@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Orders;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Orders
 {
@@ -16,27 +17,41 @@ namespace Hockeyshop.Intranet.Controllers.Orders
             _context = context;
         }
 
+        //obliczanie TotalAmount
+        private async Task UpdateOrderTotal(int orderId)
+        {
+            var order = await _context.Orders.Include(item => item.OrderItems).FirstOrDefaultAsync(item => item.IdOrder == orderId);
+
+            if (order != null)
+            {
+                var trackedOrder = await _context.Orders.FindAsync(order.IdOrder);
+                trackedOrder.TotalAmount = order.OrderItems.Sum(item => item.Quantity * item.UnitPrice);
+
+                await _context.SaveChangesAsync();
+            }
+        }
+
         // GET: OrderItems
         public async Task<IActionResult> Index(string searchTerm)
         {
-            var query = _context.OrderItems.Include(o => o.Order).Include(o => o.Product).AsQueryable();
+            var query = _context.OrderItems.Include(o => o.Order).Include(o => o.Product).ThenInclude(item => item.ProductCategory).AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(item => item.Product.Name.Contains(searchTerm));
+                query = query.Where(item =>
+                    item.Product.ProductCategory.Name.Contains(searchTerm) ||
+                    item.Product.Name.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Orders/OrderItems/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    var hockeyshopContext = _context.OrderItems.Include(o => o.Order).Include(o => o.Product);
-        //    return View("~/Views/Orders/OrderItems/Index.cshtml", await hockeyshopContext.ToListAsync());
-        //}
 
         // GET: OrderItems/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -77,6 +92,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
             {
                 _context.Add(orderItem);
                 await _context.SaveChangesAsync();
+                await UpdateOrderTotal(orderItem.IdOrder);
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdOrder"] = new SelectList(_context.Orders, "IdOrder", "IdOrder", orderItem.IdOrder);
@@ -120,6 +136,8 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 {
                     _context.Update(orderItem);
                     await _context.SaveChangesAsync();
+
+                    await UpdateOrderTotal(orderItem.IdOrder);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -173,6 +191,7 @@ namespace Hockeyshop.Intranet.Controllers.Orders
                 }
 
                 await _context.SaveChangesAsync();
+                await UpdateOrderTotal(orderItem.IdOrder);
                 return RedirectToAction(nameof(Index));
             }
             catch (DbUpdateException ex)

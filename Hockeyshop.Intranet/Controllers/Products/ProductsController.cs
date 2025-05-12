@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Products;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Products
 {
@@ -21,22 +22,24 @@ namespace Hockeyshop.Intranet.Controllers.Products
         {
             var query = _context.Products.Include(p => p.ProductCategory).Include(p => p.Supplier).AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(item => item.Name.Contains(searchTerm));
+                query = query.Where(item =>
+                    item.ProductCategory.Name.Contains(searchTerm) ||
+                    item.Supplier.Name.Contains(searchTerm) ||
+                    item.Description.Contains(searchTerm) ||
+                    item.Name.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Products/Products/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    var hockeyshopContext = _context.Products.Include(p => p.ProductCategory).Include(p => p.Supplier);
-        //    return View("~/Views/Products/Products/Index.cshtml", await hockeyshopContext.ToListAsync());
-        //}
 
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)

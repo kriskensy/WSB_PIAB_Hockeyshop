@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Payments;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Payments
 {
@@ -19,24 +20,25 @@ namespace Hockeyshop.Intranet.Controllers.Payments
         // GET: Payments
         public async Task<IActionResult> Index(string searchTerm)
         {
-            var query = _context.Payments.Include(p => p.Order).Include(p => p.PaymentMethod).Include(p => p.PaymentStatus).AsQueryable();
+            var query = _context.Payments.Include(p => p.Order).ThenInclude(item => item.User).Include(p => p.PaymentMethod).Include(p => p.PaymentStatus).AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(item => item.Order.User.LastName.Contains(searchTerm));
+                query = query.Where(item =>
+                    item.PaymentMethod.Name.Contains(searchTerm) ||
+                    item.PaymentStatus.Name.Contains(searchTerm) ||
+                    item.Order.User.LastName.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Payments/Payments/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    var hockeyshopContext = _context.Payments.Include(p => p.Order).Include(p => p.PaymentMethod).Include(p => p.PaymentStatus);
-        //    return View("~/Views/Payments/Payments/Index.cshtml", await hockeyshopContext.ToListAsync());
-        //}
 
         // GET: Payments/Details/5
         public async Task<IActionResult> Details(int? id)

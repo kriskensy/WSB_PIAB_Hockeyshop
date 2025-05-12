@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Products;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Products
 {
@@ -19,24 +20,25 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // GET: ProductImages
         public async Task<IActionResult> Index(string searchTerm)
         {
-            var query = _context.ProductImages.AsQueryable();
+            var query = _context.ProductImages.Include(item => item.Product).ThenInclude(item => item.ProductCategory).AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(pm => pm.ImageUrl.Contains(searchTerm));
+                query = query.Where(item =>
+                    item.Product.Name.Contains(searchTerm) ||
+                    item.Product.ProductCategory.Name.Contains(searchTerm) ||
+                    item.ImageUrl.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Products/ProductImages/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    var hockeyshopContext = _context.ProductImages.Include(p => p.Product);
-        //    return View("~/Views/Products/ProductImages/Index.cshtml", await hockeyshopContext.ToListAsync());
-        //}
 
         // GET: ProductImages/Details/5
         public async Task<IActionResult> Details(int? id)

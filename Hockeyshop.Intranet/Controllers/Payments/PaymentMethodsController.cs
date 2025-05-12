@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Payments;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Payments
 {
@@ -20,21 +21,20 @@ namespace Hockeyshop.Intranet.Controllers.Payments
         {
             var query = _context.PaymentMethods.AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(pm => pm.Name.Contains(searchTerm));
+                query = query.Where(item => item.Name.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Payments/PaymentMethods/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    return View("~/Views/Payments/PaymentMethods/Index.cshtml", await _context.PaymentMethods.ToListAsync());
-        //}
 
         // GET: PaymentMethods/Details/5
         public async Task<IActionResult> Details(int? id)

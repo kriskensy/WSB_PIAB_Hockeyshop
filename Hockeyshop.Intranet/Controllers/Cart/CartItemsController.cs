@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hockeyshop.Data.Data;
 using Hockeyshop.Data.Data.Cart;
 using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Cart
 {
@@ -19,24 +20,24 @@ namespace Hockeyshop.Intranet.Controllers.Cart
         // GET: CartItems
         public async Task<IActionResult> Index(string searchTerm)
         {
-            var query = _context.CartItems.Include(c => c.Product).Include(c => c.UserCart).AsQueryable();
+            var query = _context.CartItems.Include(c => c.Product).ThenInclude(item => item.ProductCategory).Include(c => c.UserCart).AsQueryable();
 
+            //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                query = query.Where(item => item.Product.Name.Contains(searchTerm));
+                query = query.Where(item =>
+                    item.Product.ProductCategory.Name.Contains(searchTerm) ||
+                    item.Product.Name.Contains(searchTerm));
             }
+
+            //użycie extension do sortowania tabel po id desc
+            query = query.OrderByIdDescending();
 
             var model = await query.ToListAsync();
             ViewBag.SearchTerm = searchTerm;
 
             return View("~/Views/Cart/CartItems/Index.cshtml", model);
         }
-
-        //public async Task<IActionResult> Index()
-        //{
-        //    var hockeyshopContext = _context.CartItems.Include(c => c.Product).Include(c => c.UserCart);
-        //    return View("~/Views/Cart/CartItems/Index.cshtml", await hockeyshopContext.ToListAsync());
-        //}
 
         // GET: CartItems/Details/5
         public async Task<IActionResult> Details(int? id)

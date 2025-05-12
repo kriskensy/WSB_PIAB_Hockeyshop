@@ -9,6 +9,7 @@
         "ID",
         "Order",
         "Product",
+        "Product Category",
         "Quantity",
         "UnitPrice"
     };
@@ -28,7 +29,8 @@
                     {
                         "ID" => orderItem.IdOrderItem,
                         "Order" => orderItem.Order?.IdOrder,
-                        "Product" => orderItem.Product?.IdProduct,
+                        "Product" => orderItem.Product?.Name,
+                        "Product Category" => orderItem.Product?.ProductCategory?.Name,
                         "Quantity" => orderItem.Quantity,
                         "UnitPrice" => orderItem.UnitPrice.ToString("C"), //formatowanie do waluty
                         _ => ""
