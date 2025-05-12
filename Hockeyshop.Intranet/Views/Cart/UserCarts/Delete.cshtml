@@ -1,6 +1,23 @@
 ﻿@model Hockeyshop.Data.Data.Cart.UserCart
 
 @{
+    ViewData["IdField"] = "IdUserCart";
+    ViewData["Title"] = "User Cart Details";
+    ViewData["HideEditButton"] = true;
+    ViewData["DeleteButtonText"] = "Confirm deletion!";
+    ViewData["PartialDetails"] = "~/Views/Cart/UserCarts/_UserCartDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Cart.UserCart
+
+@{
     ViewData["Title"] = "Delete";
 }
 
@@ -31,3 +48,4 @@
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
+ *@

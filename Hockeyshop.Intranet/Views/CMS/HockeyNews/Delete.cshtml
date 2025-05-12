@@ -1,6 +1,23 @@
 ﻿@model Hockeyshop.Data.Data.CMS.HockeyNews
 
 @{
+    ViewData["IdField"] = "IdHockeyNews";
+    ViewData["Title"] = "Hockey News Details";
+    ViewData["HideEditButton"] = true;
+    ViewData["DeleteButtonText"] = "Confirm deletion!";
+    ViewData["PartialDetails"] = "~/Views/CMS/HockeyNews/_HockeyNewsDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.CMS.HockeyNews
+
+@{
     ViewData["Title"] = "Delete";
 }
 
@@ -55,3 +72,4 @@
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
+ *@

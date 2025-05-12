@@ -1,6 +1,24 @@
 ﻿@model Hockeyshop.Data.Data.Core.User
 
 @{
+    ViewData["IdField"] = "IdUser";
+    ViewData["Title"] = "User Details";
+    ViewData["HideEditButton"] = true;
+    ViewData["DeleteButtonText"] = "Confirm deletion!";
+    ViewData["PartialDetails"] = "~/Views/Core/Users/_UserDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Core.User
+
+@{
     ViewData["Title"] = "Delete";
 }
 
@@ -67,3 +85,4 @@
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
+ *@

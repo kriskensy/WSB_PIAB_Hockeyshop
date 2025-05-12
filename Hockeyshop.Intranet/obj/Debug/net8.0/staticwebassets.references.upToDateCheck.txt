@@ -121,3 +121,6 @@ C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hoc
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.SharedViews\obj\Debug\net8.0\staticwebassets.build.json
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.SharedViews\obj\Debug\net8.0\staticwebassets.build.json
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.SharedViews\obj\Debug\net8.0\staticwebassets.build.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.SharedViews\obj\Debug\net8.0\staticwebassets.build.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.SharedViews\obj\Debug\net8.0\staticwebassets.build.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.SharedViews\obj\Debug\net8.0\staticwebassets.build.json

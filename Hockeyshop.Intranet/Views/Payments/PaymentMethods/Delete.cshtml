@@ -1,6 +1,24 @@
 ﻿@model Hockeyshop.Data.Data.Payments.PaymentMethod
 
 @{
+    ViewData["IdField"] = "IdPaymentMethod";
+    ViewData["Title"] = "Payment Method Details";
+    ViewData["HideEditButton"] = true;
+    ViewData["DeleteButtonText"] = "Confirm deletion!";
+    ViewData["PartialDetails"] = "~/Views/Payments/PaymentMethods/_PaymentMethodDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)
+
+
+
+
+
+
+@* @model Hockeyshop.Data.Data.Payments.PaymentMethod
+
+@{
     ViewData["Title"] = "Delete";
 }
 
@@ -25,3 +43,4 @@
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
+ *@
