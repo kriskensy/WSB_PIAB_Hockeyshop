@@ -36,11 +36,22 @@
                 {
                     var productPromotion = (Hockeyshop.Data.Data.Marketing.ProductPromotion)row;
                     return $@"
-                        <a href=""/ProductPromotions/Edit/{productPromotion.IdProduct}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
-                        <a href=""/ProductPromotions/Details/{productPromotion.IdProduct}"" class=""btn btn-sm btn-outline-info"">Details</a>
-                        <a href=""/ProductPromotions/Delete/{productPromotion.IdProduct}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                        <a href=""/ProductPromotions/Edit/{productPromotion.IdProduct}?idPromotion={productPromotion.IdPromotion}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/ProductPromotions/Details/@productPromotion.IdProduct/@productPromotion.IdPromotion"" class=""btn btn-sm btn-outline-info"">Details</a>
+
+                        <a href=""/ProductPromotions/Delete/{productPromotion.IdProduct}?idPromotion={productPromotion.IdPromotion}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
                     ";
                 }
+
+                // ActionLinks = row =>
+                // {
+                //     var productPromotion = (Hockeyshop.Data.Data.Marketing.ProductPromotion)row;
+                //     return $@"
+                //         <a href=""/ProductPromotions/Edit/{productPromotion.IdProduct}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                //         <a href=""/ProductPromotions/Details/{productPromotion.IdProduct}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                //         <a href=""/ProductPromotions/Delete/{productPromotion.IdProduct}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                //     ";
+                // }
             };
 }
 

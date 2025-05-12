@@ -1,59 +1,52 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Orders.Invoice>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Invoice";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Invoice Number",
+        "invoice Date",
+        "User Firstname",
+        "User Lastname",
+        "Issue Date",
+        "Total Amount"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+        {
+            Title = "Invoice",
+            CreateAction = "Create",
+            EnableSearch = true,
+            SearchTerm = ViewBag.SearchTerm as string,
+            Columns = columns,
+            Rows = Model.Cast<object>(),
+            GetValue = (row, col) =>
+            {
+                var invoice = (Hockeyshop.Data.Data.Orders.Invoice)row; //rzutowanie wiersza na typ...
+                return col switch
+                {
+                    "ID" => invoice.IdInvoice,
+                    "invoice Date" => invoice.invoiceDate.ToShortDateString(),
+                    "User Firstname" => invoice.User?.FirstName,
+                    "User Lastname" => invoice.User?.LastName,
+                    "Issue Date" => invoice.IssueDate,
+                    "Total Amount" => invoice.invoice?.TotalAmount.ToString("C"), //formatowanie do waluty
+                    _ => ""
+                };
+            },
+            ActionLinks = row =>
+            {
+                var invoice = (Hockeyshop.Data.Data.invoices.invoice)row;
+                return $@"
+                    <a href=""/Invoices/Edit/{invoice.IdInvoice}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                    <a href=""/Invoices/Details/{invoice.IdInvoice}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                    <a href=""/Invoices/Delete/{invoice.IdInvoice}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                ";
+            }
+        };
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Order)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InvoiceNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IssueDate)
-            </th>
-@*             <th>
-                @Html.DisplayNameFor(model => model.TotalAmount)
-            </th> *@
-            <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Order.IdOrder)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InvoiceNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IssueDate)
-            </td>
-@*             <td>
-                @Html.DisplayFor(modelItem => item.TotalAmount)
-            </td> *@
-            <td>
-                @Html.DisplayFor(modelItem => item.User.City)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdInvoice">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdInvoice">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdInvoice">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)

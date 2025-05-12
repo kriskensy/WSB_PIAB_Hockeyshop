@@ -1,12 +1,12 @@
 ﻿@model Hockeyshop.Data.Data.Orders.Invoice
 
-<dt class="col-sm-4">Order</dt>
-<dd class="col-sm-8">@Model.IdOrder</dd>
+<dt class="col-sm-4">User</dt>
+<dd class="col-sm-8">@(Model.User != null ? Model.User.FirstName + " " + Model.User.LastName : "no data")</dd>
 <dt class="col-sm-4">Invoice Number</dt>
 <dd class="col-sm-8">@Model.InvoiceNumber</dd>
+<dt class="col-sm-4">Order</dt>
+<dd class="col-sm-8">@Model.IdOrder</dd>
 <dt class="col-sm-4">Issue Date</dt>
 <dd class="col-sm-8">@Model.IssueDate.ToShortDateString()</dd>
 <dt class="col-sm-4">Total Amount</dt>
-@* <dd class="col-sm-8">@Model.TotalAmount</dd> *@
-<dt class="col-sm-4">User</dt>
-<dd class="col-sm-8">@Model.IdUser</dd>
+<dd class="col-sm-8">@Model.Order?.TotalAmount</dd>

@@ -1,7 +1,7 @@
 ﻿@model Hockeyshop.Data.Data.Inventory.Stock
 
 <dt class="col-sm-4">Product</dt>
-<dd class="col-sm-8">@Model.IdProduct</dd>
+<dd class="col-sm-8">@Model.Product?.Name</dd>
 <dt class="col-sm-4">Quantity</dt>
 <dd class="col-sm-8">@Model.Quantity</dd>
 <dt class="col-sm-4">Updated At</dt>

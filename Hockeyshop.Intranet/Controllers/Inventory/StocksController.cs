@@ -55,7 +55,7 @@ namespace Hockeyshop.Intranet.Controllers.Inventory
                 return NotFound();
             }
 
-            return View("~/Views/Inventory/Stocks/Detials.cshtml", stock);
+            return View("~/Views/Inventory/Stocks/Details.cshtml", stock);
         }
 
         // GET: Stocks/Create

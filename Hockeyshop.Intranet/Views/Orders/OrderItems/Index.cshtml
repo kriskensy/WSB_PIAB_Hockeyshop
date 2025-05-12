@@ -11,7 +11,7 @@
         "Product",
         "Product Category",
         "Quantity",
-        "UnitPrice"
+        "Unit Price"
     };
 
     CrudIndexContainerModel containerModel = new CrudIndexContainerModel
@@ -32,7 +32,7 @@
                         "Product" => orderItem.Product?.Name,
                         "Product Category" => orderItem.Product?.ProductCategory?.Name,
                         "Quantity" => orderItem.Quantity,
-                        "UnitPrice" => orderItem.UnitPrice.ToString("C"), //formatowanie do waluty
+                        "Unit Price" => orderItem.UnitPrice.ToString("C"), //formatowanie do waluty
                         _ => ""
                     };
                 },

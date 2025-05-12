@@ -1,10 +1,10 @@
 ﻿@model Hockeyshop.Data.Data.Orders.Order
 
+<dt class="col-sm-4">User</dt>
+<dd class="col-sm-8">@(Model.User != null ? Model.User.FirstName + " " + Model.User.LastName : "no data")</dd>
 <dt class="col-sm-4">Order Date</dt>
 <dd class="col-sm-8">@Model.OrderDate.ToShortDateString()</dd>
-<dt class="col-sm-4">User</dt>
-<dd class="col-sm-8">@Model.IdUser</dd>
 <dt class="col-sm-4">Order Status</dt>
-<dd class="col-sm-8">@Model.IdOrderStatus</dd>
+<dd class="col-sm-8">@Model.OrderStatus.Name</dd>
 <dt class="col-sm-4">Total Amount</dt>
 <dd class="col-sm-8">@Model.TotalAmount</dd>

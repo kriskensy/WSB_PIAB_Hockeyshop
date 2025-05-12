@@ -3,8 +3,10 @@
 <dt class="col-sm-4">User Cart</dt>
 <dd class="col-sm-8">@Model.IdUserCart</dd>
 <dt class="col-sm-4">Product</dt>
-<dd class="col-sm-8">@Model.IdProduct</dd>
+<dd class="col-sm-8">@Model.Product?.Name</dd>
 <dt class="col-sm-4">Quantity</dt>
 <dd class="col-sm-8">@Model.Quantity</dd>
 <dt class="col-sm-4">Unit Price</dt>
 <dd class="col-sm-8">@Model.UnitPrice.ToString("C")</dd>
+<dt class="col-sm-4">Total Price</dt>
+<dd class="col-sm-8">@((Model.Quantity * Model.UnitPrice).ToString("C"))</dd>

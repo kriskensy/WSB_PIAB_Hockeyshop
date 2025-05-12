@@ -21,10 +21,6 @@
     <input asp-for="IssueDate" class="form-control" type="date" />
     <span asp-validation-for="IssueDate" class="text-danger"></span>
 </div>
-@* <div class="form-group">
-    <label class="control-label">Total Amount (auto-calculated)</label>
-    <input class="form-control" value="@(Model.TotalAmount.ToString("C"))" readonly />
-</div> *@
 <div class="form-group">
     <label asp-for="IdUser" class="control-label"></label>
     <select asp-for="IdUser" class="form-control" asp-items="ViewBag.IdUser">

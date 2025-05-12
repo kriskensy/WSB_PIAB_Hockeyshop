@@ -9,7 +9,7 @@
         "ID",
         "Name",
         "Product Category",
-        "Price",
+        "Unit Price",
         "Supplier",
         "Description"
     };
@@ -30,7 +30,7 @@
                         "ID" => product.IdProduct,
                         "Name" => product.Name,
                         "Product Category" => product.ProductCategory?.Name,
-                        "Price" => product.Price.ToString("C"),
+                        "Unit Price" => product.Price.ToString("C"),
                         "Supplier" => product.Supplier?.Name,
                         "Description" => product.Description,
                         _ => ""

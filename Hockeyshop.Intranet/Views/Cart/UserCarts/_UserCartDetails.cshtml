@@ -1,6 +1,6 @@
 ﻿@model Hockeyshop.Data.Data.Cart.UserCart
 
 <dt class="col-sm-4">User</dt>
-<dd class="col-sm-8">@Model.IdUser</dd>
+<dd class="col-sm-8">@(Model.User != null ? Model.User.FirstName + " " + Model.User.LastName : "no data")</dd>
 <dt class="col-sm-4">Created At</dt>
 <dd class="col-sm-8">@Model.CreatedAt.ToShortDateString()</dd>

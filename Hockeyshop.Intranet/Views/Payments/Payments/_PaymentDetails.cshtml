@@ -5,8 +5,8 @@
 <dt class="col-sm-4">Payment Date</dt>
 <dd class="col-sm-8">@Model.PaymentDate.ToShortDateString()</dd>
 <dt class="col-sm-4">Payment Method</dt>
-<dd class="col-sm-8">@Model.IdPaymentMethod</dd>
+<dd class="col-sm-8">@Model.PaymentMethod?.Name</dd>
 <dt class="col-sm-4">Amount</dt>
 <dd class="col-sm-8">@Model.Amount</dd>
 <dt class="col-sm-4">Payment Status</dt>
-<dd class="col-sm-8">@Model.IdPaymentStatus</dd>
+<dd class="col-sm-8">@Model.PaymentStatus?.Name</dd>

@@ -5,7 +5,7 @@
 <dt class="col-sm-4">Content</dt>
 <dd class="col-sm-8">@Model.Content</dd>
 <dt class="col-sm-4">Author</dt>
-<dd class="col-sm-8">@Model.IdAuthor</dd>
+<dd class="col-sm-8">@(Model.Author != null ? Model.Author.FirstName + " " + Model.Author.LastName : "no data")</dd>
 <dt class="col-sm-4">Created At</dt>
 <dd class="col-sm-8">@Model.CreatedAt.ToShortDateString()</dd>
 <dt class="col-sm-4">Published</dt>
