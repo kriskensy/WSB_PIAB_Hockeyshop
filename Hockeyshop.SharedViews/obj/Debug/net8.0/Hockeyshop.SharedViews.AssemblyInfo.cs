@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hockeyshop.SharedViews")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe39aeba5a039806a7ae8ca6e636ecdd639d1524")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d63874a5bcf6bb39447f397250ad3f393c452c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hockeyshop.SharedViews")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hockeyshop.SharedViews")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

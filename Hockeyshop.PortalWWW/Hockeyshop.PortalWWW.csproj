@@ -24,12 +24,10 @@
   <ItemGroup>
     <Folder Include="Controllers\Cart\" />
     <Folder Include="Controllers\Core\" />
-    <Folder Include="Controllers\Inventory\" />
-    <Folder Include="Controllers\Marketing\" />
+    <Folder Include="Components\" />
+    <Folder Include="Services\" />
     <Folder Include="Views\Cart\" />
     <Folder Include="Views\Core\" />
-    <Folder Include="Views\Inventory\" />
-    <Folder Include="Views\Marketing\" />
   </ItemGroup>
 
 </Project>

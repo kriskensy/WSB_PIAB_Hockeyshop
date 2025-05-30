@@ -258,14 +258,9 @@ C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hoc
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\scopedcss\bundle\Hockeyshop.Intranet.styles.css
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\scopedcss\projectbundle\Hockeyshop.Intranet.bundle.scp.css
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets.build.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets.development.json
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets\msbuild.Hockeyshop.Intranet.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets\msbuild.Hockeyshop.Intranet.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets\msbuild.build.Hockeyshop.Intranet.props
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Hockeyshop.Intranet.props
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Hockeyshop.Intranet.props
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\Hockeysh.6E4F5040.Up2Date
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\Hockeyshop.Intranet.dll

@@ -6,12 +6,16 @@
         <ul class="nav nav-pills me-auto">
             <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="SticksTechnology"><i class="fas fa-award me-1"></i>Sticks technology</a>
             <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="OurTeam"><i class="fas fa-user-group me-1"></i>Our team</a>
-            <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="HockeyNews"><i class="fas fa-newspaper me-1"></i>News</a>
-            <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="HockeyNews"><i class="fas fa-store me-1"></i>Shop</a>
+            <a class="btn btn-success" asp-area="" asp-controller="HockeyNews" asp-action="Index"><i class="fas fa-newspaper me-1"></i>News</a>
+            <a class="btn btn-success" asp-area="" asp-controller="Shop" asp-action="Index"><i class="fas fa-store me-1"></i>Shop</a>
         </ul>
 
-        <div class="btn-group ms-auto" role="group">
-            <a asp-area="" asp-controller="Cart" asp-action="CartIndex" class="btn btn-success">
+        <div class="d-flex ms-auto align-items-center">
+            <form class="d-flex me-2" asp-controller="Shop" asp-action="Search" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" name="searchTerm" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <a asp-area="" asp-controller="Cart" asp-action="CartIndex" class="btn btn-success me-2">
                 <i class="fa-solid fa-cart-shopping"></i> Cart
             </a>
             <a asp-area="" asp-controller="Account" asp-action="AccountIndex" class="btn btn-success">

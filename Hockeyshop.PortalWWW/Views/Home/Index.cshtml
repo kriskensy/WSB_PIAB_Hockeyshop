@@ -1,11 +1,40 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@* @model List<Hockeyshop.Data.Data.CMS.HockeyNews>
+@{
+    ViewData["Title"] = "Hockeyshop – our news";
 }
 
-<br>
-<br>
-<br>
-<br>
-<hr />
-<h1>Content placeholder</h1>
-<hr />
+@if (Model.Any())
+{
+    <div id="newsCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                var news = Model[i];
+                <div class="carousel-item @(i == 0 ? "active" : "")">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">@news.Title</h3>
+                            <p class="card-text">@news.Content</p>
+                            <p class="text-muted">
+                                Author: @news.Author?.FirstName @news.Author?.LastName<br />
+                                Date: @news.CreatedAt.ToString("dd.MM.yyyy")
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+}
+else
+{
+    <div class="alert alert-info">There are no news yet.</div>
+} *@

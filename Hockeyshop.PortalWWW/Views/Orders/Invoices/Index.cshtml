@@ -1,6 +1,53 @@
-﻿@model IEnumerable<Hockeyshop.Data.Data.Orders.Invoice>
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+
+@model IEnumerable<Hockeyshop.Data.Data.Orders.Invoice>
 
 @{
+    ViewData["Title"] = "Index";
+    // Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+
+<h1>My invoices</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.InvoiceNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IssueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InvoiceNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IssueDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.FirstName) @Html.DisplayFor(modelItem => item.User.LastName)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.IdInvoice">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@* @{
     ViewData["Title"] = "Invoice";
     Layout = "_Layout";
 
@@ -14,7 +61,7 @@
         "Issue Date",
         "Total Amount"
     };
-
+    
     CrudIndexContainerModel containerModel = new CrudIndexContainerModel
         {
             Title = "Invoice",
@@ -39,7 +86,7 @@
             },
             ActionLinks = row =>
             {
-                var invoice = (Hockeyshop.Data.Data.invoices.invoice)row;
+                    var invoice = (Hockeyshop.Data.Data.Orders.Invoice)row;
                 return $@"
                     <a href=""/Invoices/Edit/{invoice.IdInvoice}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
                     <a href=""/Invoices/Details/{invoice.IdInvoice}"" class=""btn btn-sm btn-outline-info"">Details</a>
@@ -49,4 +96,4 @@
         };
 }
 
-@await Html.PartialAsync("_CrudIndexContainer", containerModel)
+@await Html.PartialAsync("_CrudIndexContainer", containerModel) *@

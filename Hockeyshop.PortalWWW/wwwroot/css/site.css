@@ -25,14 +25,23 @@ html {
 /*cards*/
 .card {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
+    height: auto;
 }
 
 .card img {
     width: 100%;
-    height: 300px;
-    -o-object-fit: cover;
+    height: 220px;
     object-fit: cover;
+    aspect-ratio: 4 / 3;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 260px;
+/*    aspect-ratio: 4 / 3;*/
+    object-fit: contain;
+    display: block;
 }
 
 .card a {

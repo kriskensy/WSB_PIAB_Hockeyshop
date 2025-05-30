@@ -1,7 +1,8 @@
-using System.Diagnostics;
-using Hockeyshop.Data.Data;
+﻿using Hockeyshop.Data.Data;
 using Hockeyshop.PortalWWW.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace Hockeyshop.PortalWWW.Controllers
 {
@@ -16,20 +17,16 @@ namespace Hockeyshop.PortalWWW.Controllers
             _context = context;
         }
 
-        //public async Task <IActionResult> Index()
-        //{
-        //    ViewBag.ModelPage =
-        //        (
-        //            from page in _context.Page
-        //            orderby page.Position
-        //            select page
-        //        ).ToList();
-        //    return View();
-        //}
-
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            //pobieram 3 najnowsze newsy
+            var latestNews = await _context.HockeyNews
+                .OrderByDescending(n => n.CreatedAt)
+                .Take(3)
+                .Include(n => n.Author)
+                .ToListAsync();
+
+            return View(latestNews);
         }
 
         public IActionResult SticksTechnology()

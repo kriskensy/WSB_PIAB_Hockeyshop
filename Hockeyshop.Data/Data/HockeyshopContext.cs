@@ -150,17 +150,17 @@ namespace Hockeyshop.Data.Data
                 .HasForeignKey(s => s.IdProduct)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<ProductPromotion>()
-                .HasOne(pp => pp.Product)
-                .WithMany()
-                .HasForeignKey(pp => pp.IdProduct)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<ProductPromotion>()
+            //    .HasOne(pp => pp.Product)
+            //    .WithMany()
+            //    .HasForeignKey(pp => pp.IdProduct)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<ProductPromotion>()
-                .HasOne(pp => pp.Promotion)
-                .WithMany()
-                .HasForeignKey(pp => pp.IdPromotion)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<ProductPromotion>()
+            //    .HasOne(pp => pp.Promotion)
+            //    .WithMany()
+            //    .HasForeignKey(pp => pp.IdPromotion)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProductPromotionConfiguration).Assembly);
         }

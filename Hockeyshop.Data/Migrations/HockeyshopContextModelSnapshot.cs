@@ -703,13 +703,13 @@ namespace Hockeyshop.Data.Migrations
                     b.HasOne("Hockeyshop.Data.Data.Products.Product", "Product")
                         .WithMany("ProductPromotions")
                         .HasForeignKey("IdProduct")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Hockeyshop.Data.Data.Marketing.Promotion", "Promotion")
                         .WithMany("ProductPromotions")
                         .HasForeignKey("IdPromotion")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Product");

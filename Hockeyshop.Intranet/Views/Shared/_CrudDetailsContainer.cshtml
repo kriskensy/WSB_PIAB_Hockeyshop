@@ -32,7 +32,6 @@
                 @if (!ViewData.ContainsKey("HideEditButton") && idValue != null)
                 {
                     <a asp-action="Edit" asp-route-id="@idValue" class="btn btn-primary">@editButtonText</a>
-                    Console.WriteLine("jestem w IF gdzie wyświetlam Edit");
                 }
 
                 @if (!ViewData.ContainsKey("HideDeleteButton") && idValue != null)
@@ -42,8 +41,6 @@
                         @Html.AntiForgeryToken()
                         <button type="submit" class="btn btn-danger">@deleteButtonText</button>
                     </form>
-                    Console.WriteLine("jestem w IF gdzie wyświetlam Delete");
-
                 }
 
                 <a asp-action="Index" class="btn btn-outline-secondary ml-2">@backButtonText</a>

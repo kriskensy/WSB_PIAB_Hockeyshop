@@ -4,14 +4,12 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Invoice</h1>
 
 <div>
-    <h4>Invoice</h4>
-    <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Order)
+            @Html.DisplayNameFor(model => model.Order.IdOrder)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Order.IdOrder)
@@ -28,21 +26,26 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.IssueDate)
         </dd>
-@*         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TotalAmount)
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.TotalAmount)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TotalAmount)
-        </dd> *@
+            @Html.DisplayFor(model => model.Order.TotalAmount)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.User)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.User.City)
+            @Html.DisplayFor(model => model.User.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.LastName)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdInvoice">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Back to invoices</a>
 </div>
