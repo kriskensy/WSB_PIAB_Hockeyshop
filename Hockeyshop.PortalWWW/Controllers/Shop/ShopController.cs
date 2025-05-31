@@ -47,5 +47,37 @@ namespace Hockeyshop.PortalWWW.Controllers.Shop
             return View("~/Views/Products/Products/Index.cshtml", products);
         }
 
+        // GET: Shop/Search
+        public async Task<IActionResult> Search(string searchTerm)
+        {
+            ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
+
+            var query = _context.Products
+                .Include(p => p.ProductCategory)
+                .Include(p => p.Supplier)
+                .Include(p => p.ProductImages)
+                .AsQueryable();
+
+            //szukiwanie w rekordach tabel
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                query = query.Where(item =>
+                    item.ProductCategory.Name.Contains(searchTerm) ||
+                    item.Supplier.Name.Contains(searchTerm) ||
+                    item.Description.Contains(searchTerm) ||
+                    item.Name.Contains(searchTerm));
+
+                ViewBag.CurrentCategoryName = $"Search results for: \"{searchTerm}\"";
+            }
+            else
+            {
+                ViewBag.CurrentCategoryName = "All products";
+            }
+
+            var products = await query.OrderBy(p => p.Name).ToListAsync();
+            ViewBag.SearchTerm = searchTerm;
+
+            return View("~/Views/Products/Products/Index.cshtml", products);
+        }
     }
 }

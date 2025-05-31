@@ -46,7 +46,9 @@ Model.ActionLinks -> HTML, renderuje akcje dla rekordu *@
                                 <tr>
                                     @foreach(var col in Model.Columns)
                                     {
-                                        <td>@Model.GetValue(row, col)</td> //pobiera wartość komórki
+                                        @* <td>@Model.GetValue(row, col)</td> //pobiera wartość komórki *@
+                                        <td>@Html.Raw(Model.GetValue(row, col))</td>
+                                        //pobiera wartość komórki
                                     }
                                     <td>@Html.Raw(Model.ActionLinks(row))</td> <!--renderowanie przycisków akcji-->
                                 </tr>

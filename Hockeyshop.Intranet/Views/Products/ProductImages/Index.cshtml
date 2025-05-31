@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Hockeyshop.Data.Data.Products.ProductImage>
+﻿@using Hockeyshop.Intranet.Extensions
+
+@model IEnumerable<Hockeyshop.Data.Data.Products.ProductImage>
 
 @{
     ViewData["Title"] = "ProductImage";
@@ -9,6 +11,7 @@
         "ID",
         "Product",
         "Product Category",
+        "Image",
         "Image Url"
     };
 
@@ -28,6 +31,7 @@
                         "ID" => productImage.IdProductImage,
                         "Product" => productImage.Product?.Name,
                         "Product Category" => productImage.Product?.ProductCategory?.Name,
+                        "Image" => productImage.GetImageHtml(),
                         "Image Url" => productImage.ImageUrl,
                         _ => ""
                     };

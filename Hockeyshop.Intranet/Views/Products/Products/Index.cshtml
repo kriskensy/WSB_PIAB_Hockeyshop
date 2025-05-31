@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Hockeyshop.Data.Data.Products.Product>
+﻿@using Hockeyshop.Intranet.Extensions
+
+@model IEnumerable<Hockeyshop.Data.Data.Products.Product>
 
 @{
     ViewData["Title"] = "Product";
@@ -7,6 +9,7 @@
     var columns = new List<string>
     {
         "ID",
+        "Image",
         "Name",
         "Product Category",
         "Unit Price",
@@ -28,6 +31,7 @@
                     return col switch
                     {
                         "ID" => product.IdProduct,
+                        "Image" => product.GetProductImageHtml(), //tutaj uzywam extension
                         "Name" => product.Name,
                         "Product Category" => product.ProductCategory?.Name,
                         "Unit Price" => product.Price.ToString("C"),

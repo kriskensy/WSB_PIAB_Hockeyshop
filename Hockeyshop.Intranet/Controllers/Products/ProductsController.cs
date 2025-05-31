@@ -20,7 +20,11 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // GET: Products
         public async Task<IActionResult> Index(string searchTerm)
         {
-            var query = _context.Products.Include(p => p.ProductCategory).Include(p => p.Supplier).AsQueryable();
+            var query = _context.Products
+                .Include(p => p.ProductCategory)
+                .Include(p => p.Supplier)
+                .Include(p => p.ProductImages)
+                .AsQueryable();
 
             //wyszukiwanie w rekordach tabeli
             if (!string.IsNullOrEmpty(searchTerm))
@@ -52,6 +56,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
             var product = await _context.Products
                 .Include(p => p.ProductCategory)
                 .Include(p => p.Supplier)
+                .Include(p => p.ProductImages)
                 .FirstOrDefaultAsync(m => m.IdProduct == id);
             if (product == null)
             {

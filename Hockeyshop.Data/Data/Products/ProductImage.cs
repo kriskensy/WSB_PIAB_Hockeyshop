@@ -16,8 +16,7 @@ namespace Hockeyshop.Data.Data.Products
         [ValidateNever]
         public Product Product { get; set; }
 
-        [Required(ErrorMessage = "The Image URL field is required.")]
         [Display(Name = "Imnage url")]
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
     }
 }

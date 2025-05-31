@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Hockeyshop.Data.Data.Products.Product>
+@using System.Linq
 
 @{
     ViewData["Title"] = "Index";
@@ -15,10 +16,20 @@ else
     <h1 class="mb-4">Products</h1>
 }
 
-<div class="container-fluid">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-        @foreach (var product in Model)
-        {
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning text-center my-5" role="alert">
+        <i class="fa-solid fa-box-open fa-2x mb-3"></i><br />
+        The product you are looking for is not in the store.
+    </div>
+}
+else
+{
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+            @foreach (var product in Model)
+            {
             var firstImage = product.ProductImages?.FirstOrDefault();
             <div class="col">
                 <div class="card h-100 shadow-sm">
@@ -30,22 +41,22 @@ else
                     {
                         <img src="@Url.Content("~/content/no-image.png")" class="card-img-top" alt="No image" style="object-fit:contain; height:220px;" />
                     }
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">@product.Name</h5>
-                    <p class="card-text mb-2">
-                        <strong>Category:</strong> @product.ProductCategory?.Name<br />
-                        <strong>Price:</strong> @product.Price.ToString("C")<br />
-                        <strong>Supplier:</strong> @product.Supplier?.City
-                    </p>
-                    <p class="card-text flex-grow-1">
-                        @(product.Description?.Length > 60
-                                                ? product.Description.Substring(0, 60) + "..."
-                                                : product.Description)
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text mb-2">
+                            <strong>Category:</strong> @product.ProductCategory?.Name<br />
+                            <strong>Price:</strong> @product.Price.ToString("C")<br />
+                        </p>
+                        <p class="card-text flex-grow-1">
+                            @(product.Description?.Length > 60
+                                                            ? product.Description.Substring(0, 60) + "..."
+                                                            : product.Description)
                     </p>
                     <a asp-controller="Products" asp-action="Details" asp-route-id="@product.IdProduct" asp-route-categoryId="@product.IdProductCategory" class="btn btn-outline-success mt-2">Details</a>
+                    </div>
                 </div>
             </div>
+                    }
         </div>
-                }
     </div>
-</div>
+}

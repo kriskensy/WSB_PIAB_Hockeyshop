@@ -1,5 +1,17 @@
 ﻿@model Hockeyshop.Data.Data.Products.Product
 
+@{
+    var firstImage = Model.ProductImages?.FirstOrDefault();
+    var imageUrl = firstImage != null
+        ? $"http://localhost:5000/content/img_products/{firstImage.ImageUrl}"
+        : "https://via.placeholder.com/200x200?text=No+Image";
+}
+<dt class="col-sm-4">Image</dt>
+<dd class="col-sm-8">
+    <img src="@imageUrl" alt="Product image" style="max-width:200px;max-height:200px;" />
+</dd>
+
+
 <dt class="col-sm-4">Product</dt>
 <dd class="col-sm-8">@Model.Name</dd>
 <dt class="col-sm-4">Product Category</dt>

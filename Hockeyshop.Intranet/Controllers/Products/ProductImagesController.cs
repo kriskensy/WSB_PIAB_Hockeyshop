@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hockeyshop.Data.Data;
+using Hockeyshop.Data.Data.Products;
+using Hockeyshop.Intranet.Extensions;
+using Hockeyshop.Intranet.Models;
+using Hockeyshop.Intranet.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Data.Data;
-using Hockeyshop.Data.Data.Products;
-using Hockeyshop.Intranet.Models;
-using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Products
 {
@@ -62,26 +63,60 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // GET: ProductImages/Create
         public IActionResult Create()
         {
-            ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description");
-            return View("~/Views/Products/ProductImages/Create.cshtml");
+            ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Name");
+            return View("~/Views/Products/ProductImages/Create.cshtml", new ProductImageUploadViewModel());
         }
 
-        // POST: ProductImages/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdProductImage,IdProduct,ImageUrl")] ProductImage productImage)
+        public async Task<IActionResult> Create(ProductImageUploadViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(productImage);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Name", model.IdProduct);
+                //return View(model);
+                return View("~/Views/Products/ProductImages/Create.cshtml", model);
             }
-            ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", productImage.IdProduct);
-            return View("~/Views/Products/ProductImages/Create.cshtml", productImage);
+
+            var uploadsPath = Path.Combine("Hockeyshop.PortalWWW", "wwwroot", "content", "img_products");
+            if (!Directory.Exists(uploadsPath))
+                Directory.CreateDirectory(uploadsPath);
+
+            var fileName = Guid.NewGuid() + "_" + Path.GetFileName(model.ImageFile.FileName);
+            var filePath = Path.Combine(uploadsPath, fileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await model.ImageFile.CopyToAsync(fileStream);
+            }
+
+            var productImage = new ProductImage
+            {
+                IdProduct = model.IdProduct,
+                ImageUrl = fileName
+            };
+
+            _context.Add(productImage);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
+
+        // GET: ProductImages/Edit/5
+        //public async Task<IActionResult> Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    var productImage = await _context.ProductImages.FindAsync(id);
+        //    if (productImage == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Name", productImage.IdProduct);
+        //    return View("~/Views/Products/ProductImages/Edit.cshtml", productImage);
+        //}
 
         // GET: ProductImages/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -96,45 +131,196 @@ namespace Hockeyshop.Intranet.Controllers.Products
             {
                 return NotFound();
             }
-            ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", productImage.IdProduct);
-            return View("~/Views/Products/ProductImages/Edit.cshtml", productImage);
+
+            // Mapowanie ProductImage na ProductImageUploadViewModel
+            var viewModel = new ProductImageUploadViewModel
+            {
+                IdProductImage = productImage.IdProductImage,
+                IdProduct = productImage.IdProduct,
+                ImageUrl = productImage.ImageUrl // dla podglądu obecnego obrazka
+                                                 // ImageFile pozostaje null - użytkownik może wybrać nowy plik
+            };
+
+            ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Name", productImage.IdProduct);
+            return View("~/Views/Products/ProductImages/Edit.cshtml", viewModel);
         }
+
 
         // POST: ProductImages/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(int id, [Bind("IdProductImage,IdProduct,ImageUrl")] ProductImage productImage, IFormFile ImageFile)
+        //{
+        //    if (id != productImage.IdProductImage)
+        //        return NotFound();
+
+        //    if (ImageFile != null && ImageFile.Length > 0)
+        //    {
+        //        var uploadsPath = Path.Combine(Directory.GetCurrentDirectory(), "..", "Hockeyshop.PortalWWW", "wwwroot", "content", "img_products");
+        //        if (!Directory.Exists(uploadsPath))
+        //            Directory.CreateDirectory(uploadsPath);
+
+        //        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+        //        var filePath = Path.Combine(uploadsPath, fileName);
+
+        //        using (var fileStream = new FileStream(filePath, FileMode.Create))
+        //        {
+        //            await ImageFile.CopyToAsync(fileStream);
+        //        }
+
+        //        productImage.ImageUrl = fileName;
+        //        ModelState.Remove(nameof(productImage.ImageUrl));
+        //    }
+
+        //    if (string.IsNullOrEmpty(productImage.ImageUrl))
+        //    {
+        //        ModelState.AddModelError(nameof(productImage.ImageUrl), "You must upload an image or provide a URL.");
+        //    }
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            _context.Update(productImage);
+        //            await _context.SaveChangesAsync();
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (!ProductImageExists(productImage.IdProductImage))
+        //                return NotFound();
+        //            else
+        //                throw;
+        //        }
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Name", productImage.IdProduct);
+        //    return View("~/Views/Products/ProductImages/Edit.cshtml", productImage);
+        //}
+
+        // POST: ProductImages/Edit/5
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(int id, ProductImageUploadViewModel model)
+        //{
+        //    if (id != model.IdProductImage)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    if (!ModelState.IsValid)
+        //    {
+        //        ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Name", model.IdProduct);
+        //        return View("~/Views/Products/ProductImages/Edit.cshtml", model);
+        //    }
+
+        //    try
+        //    {
+        //        var productImage = await _context.ProductImages.FindAsync(id);
+        //        if (productImage == null)
+        //        {
+        //            return NotFound();
+        //        }
+
+        //        // Jeśli przesłano nowy plik, zapisz go i zaktualizuj ImageUrl
+        //        if (model.ImageFile != null && model.ImageFile.Length > 0)
+        //        {
+        //            var uploadsPath = Path.Combine("Hockeyshop.PortalWWW", "wwwroot", "content", "img_products");
+        //            if (!Directory.Exists(uploadsPath))
+        //                Directory.CreateDirectory(uploadsPath);
+
+        //            var fileName = Guid.NewGuid() + "_" + Path.GetFileName(model.ImageFile.FileName);
+        //            var filePath = Path.Combine(uploadsPath, fileName);
+
+        //            using (var fileStream = new FileStream(filePath, FileMode.Create))
+        //            {
+        //                await model.ImageFile.CopyToAsync(fileStream);
+        //            }
+
+        //            // Usuń stary plik (opcjonalnie)
+        //            if (!string.IsNullOrEmpty(productImage.ImageUrl))
+        //            {
+        //                var oldFilePath = Path.Combine(uploadsPath, productImage.ImageUrl);
+        //                if (System.IO.File.Exists(oldFilePath))
+        //                {
+        //                    System.IO.File.Delete(oldFilePath);
+        //                }
+        //            }
+
+        //            productImage.ImageUrl = fileName;
+        //        }
+
+        //        // Zaktualizuj inne właściwości
+        //        productImage.IdProduct = model.IdProduct;
+
+        //        _context.Update(productImage);
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!ProductImageExists(model.IdProductImage))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
+        //    return RedirectToAction(nameof(Index));
+        //}
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdProductImage,IdProduct,ImageUrl")] ProductImage productImage)
+        public async Task<IActionResult> Edit(int id, ProductImageUploadViewModel model)
         {
-            if (id != productImage.IdProductImage)
-            {
+            if (id != model.IdProductImage)
                 return NotFound();
+
+            if (!ModelState.IsValid)
+            {
+                ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Name", model.IdProduct);
+                return View("~/Views/Products/ProductImages/Edit.cshtml", model);
             }
 
-            if (ModelState.IsValid)
+            var productImage = await _context.ProductImages.FindAsync(id);
+            if (productImage == null)
+                return NotFound();
+
+            if (model.ImageFile != null && model.ImageFile.Length > 0)
             {
-                try
+                var uploadsPath = Path.Combine("Hockeyshop.PortalWWW", "wwwroot", "content", "img_products");
+                if (!Directory.Exists(uploadsPath))
+                    Directory.CreateDirectory(uploadsPath);
+
+                var fileName = Guid.NewGuid() + "_" + Path.GetFileName(model.ImageFile.FileName);
+                var filePath = Path.Combine(uploadsPath, fileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    _context.Update(productImage);
-                    await _context.SaveChangesAsync();
+                    await model.ImageFile.CopyToAsync(fileStream);
                 }
-                catch (DbUpdateConcurrencyException)
+
+                // (opcjonalnie) usuń stary plik
+                if (!string.IsNullOrEmpty(productImage.ImageUrl))
                 {
-                    if (!ProductImageExists(productImage.IdProductImage))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    var oldFilePath = Path.Combine(uploadsPath, productImage.ImageUrl);
+                    if (System.IO.File.Exists(oldFilePath))
+                        System.IO.File.Delete(oldFilePath);
                 }
-                return RedirectToAction(nameof(Index));
+
+                productImage.ImageUrl = fileName;
             }
-            ViewData["IdProduct"] = new SelectList(_context.Products, "IdProduct", "Description", productImage.IdProduct);
-            return View("~/Views/Products/ProductImages/Edit.cshtml", productImage);
+
+            productImage.IdProduct = model.IdProduct;
+
+            _context.Update(productImage);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
+
 
         // GET: ProductImages/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -155,7 +341,6 @@ namespace Hockeyshop.Intranet.Controllers.Products
             return View("~/Views/Products/ProductImages/Delete.cshtml", productImage);
         }
 
-        // POST: ProductImages/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -165,6 +350,16 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 var productImage = await _context.ProductImages.FindAsync(id);
                 if (productImage != null)
                 {
+                    // Usuń fizyczny plik
+                    if (!string.IsNullOrEmpty(productImage.ImageUrl))
+                    {
+                        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "..", "Hockeyshop.PortalWWW", "wwwroot", "content", "img_products", productImage.ImageUrl);
+                        if (System.IO.File.Exists(filePath))
+                        {
+                            System.IO.File.Delete(filePath);
+                        }
+                    }
+
                     _context.ProductImages.Remove(productImage);
                 }
 

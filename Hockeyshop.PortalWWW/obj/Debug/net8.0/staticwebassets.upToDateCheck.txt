@@ -79,3 +79,9 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\content\img_products\bag.webp
+wwwroot\content\img_products\ball.webp
+wwwroot\content\img_products\glove.webp
+wwwroot\content\img_products\shinguards.webp
+wwwroot\content\img_products\shoes.webp
+wwwroot\content\img_products\stick.webp
