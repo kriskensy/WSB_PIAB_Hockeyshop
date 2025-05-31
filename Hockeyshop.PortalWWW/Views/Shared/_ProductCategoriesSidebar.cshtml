@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Hockeyshop.Data.Data.Products.ProductCategory>
+
+<nav id="sidebar" class="bg-light border-end vh-100 p-3" style="min-width: 250px; max-width: 250px;">
+    <div class="sidebar-header mb-4">
+        <h4>Categories</h4>
+    </div>
+    <ul class="nav flex-column">
+        @foreach (var category in Model)
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Shop" asp-action="ProductCategory" asp-route-id="@category.IdProductCategory">
+                    @category.Name
+                </a>
+            </li>
+        }
+    </ul>
+</nav>

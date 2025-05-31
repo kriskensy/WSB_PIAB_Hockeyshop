@@ -17,70 +17,19 @@
         </div>
     </header>
 
-    <div class="container-fluid mt-5 pt-3">
-        <div class="row">
-
-            <!-- dynamiczne określanie rozwinięcia sekcji na podstawie wyświetlanej strony -->
+    <div class="d-flex mt-5 pt-3">
             @{
-                var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
-                var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
-
-                bool isOrdersSection = currentController == "Orders" || currentController == "OrderItems" || currentController == "Invoices" || currentController == "OrderStatus";
-                bool isProductsSection = currentController == "Products" || currentController == "ProductCategories" || currentController == "ProductImages" || currentController == "Suppliers";
-                bool isMarketingSection = currentController == "Promotions" || currentController == "ProductPromotions" || currentController == "DiscountTypes";
-                bool isPaymentsSection = currentController == "Payments" || currentController == "PaymentMethods" || currentController == "PaymentStatus";
-                bool isUsersSection = currentController == "Users" || currentController == "UserRoles";
-                bool isCartSection = currentController == "UserCarts" || currentController == "CartItems";
+                var categories = ViewBag.ProductCategories as IEnumerable<Hockeyshop.Data.Data.Products.ProductCategory>;
             }
+            @await Html.PartialAsync("_ProductCategoriesSidebar", categories)
 
-            <nav id="sidebar" class="bg-light border-end vh-100 position-fixed">
-                <div class="sidebar-header p-3">
-                    <h2>Shop categories</h2>
+            <div class="flex-grow-1 p-3">
+                <div class="content">
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
                 </div>
-                <ul class="nav flex-column">
-
-                    <!-- products -->
-                    <li class="nav-item">
-                        <a class="nav-link @(isProductsSection ? "" : "collapsed")" data-bs-toggle="collapse" href="#productsSubmenu" role="button" aria-expanded="@(isProductsSection.ToString().ToLower())" aria-controls="productsSubmenu">
-                            <i class="fas fa-shop me-2"></i>Products
-                        </a>
-                        <div class="collapse @(isProductsSection ? "show" : "")" id="productsSubmenu">
-                            <ul class="nav flex-column ms-3">
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Products" asp-action="Index">Product list</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="ProductCategories" asp-action="Index">Product categories</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- odrers -->
-                    <li class="nav-item">
-                        <a class="nav-link @(isOrdersSection ? "" : "collapsed")" data-bs-toggle="collapse" href="#ordersSubmenu" role="button" aria-expanded="@(isOrdersSection.ToString().ToLower())" aria-controls="ordersSubmenu">
-                            <i class="fas fa-box-open me-2"></i>Orders
-                        </a>
-                        <div class="collapse @(isOrdersSection ? "show" : "")" id="ordersSubmenu">
-                            <ul class="nav flex-column ms-3">
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Orders" asp-action="Index">Orders list</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="Invoices" asp-action="Index">Invoices</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="content" style="margin-left: 280px;">
-                <main role="main" class="pb-3">
-                    @RenderBody()
-                </main>
             </div>
-        </div>
     </div>
 
     <footer class="page-footer py-3">
