@@ -36,6 +36,13 @@ namespace Hockeyshop.Data.Data.Products
         [Required(ErrorMessage = "The Description field is required.")]
         public string Description { get; set; }
 
+        [Required(ErrorMessage = "The Description field is required.")]
+        public bool Highlight { get; set; } = false;
+
+        [Required(ErrorMessage = "The Description field is required.")]
+        public bool NewArrival { get; set; } = false;
+
+
         public ICollection<ProductImage> ProductImages { get; } = new List<ProductImage>();
         public ICollection<Stock> Stocks { get; } = new List<Stock>();
         public ICollection<OrderItem> OrderItems { get; } = new List<OrderItem>();

@@ -34,7 +34,9 @@
                         "Discount Value" => promotion.DiscountValue,
                         "Start Date" => promotion.StartDate.ToShortDateString(),
                         "End Date" => promotion.EndDate.ToShortDateString(),
-                        "Active" => promotion.Active,
+                        "Active" => promotion.Active
+                            ? "<span class='text-success'>&#x2714;</span>"
+                            : "<span class='text-danger'>&#x2718;</span>",
                         _ => ""
                     };
                 },

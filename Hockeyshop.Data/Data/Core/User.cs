@@ -2,11 +2,13 @@
 using Hockeyshop.Data.Data.CMS;
 using Hockeyshop.Data.Data.Orders;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hockeyshop.Data.Data.Core
 {
+    [Index(nameof(Login), IsUnique = true)] //wymusza unikalnosc pola Login
     public class User
     {
         [Key]
@@ -24,6 +26,9 @@ namespace Hockeyshop.Data.Data.Core
         [EmailAddress(ErrorMessage = "Invalid email format.")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "Login field is required")]
+        public string Login {  get; set; }
+
         [Required(ErrorMessage = "The Password Hash field is required.")]
         public string PasswordHash { get; set; }
 
@@ -39,7 +44,6 @@ namespace Hockeyshop.Data.Data.Core
         public string StreetAndNumber { get; set; }
 
         [Required(ErrorMessage = "The User Role field is required.")]
-        //[ForeignKey("UserRole")]
         [ForeignKey(nameof(UserRole))]
         [Display(Name = "User role")]
         public int IdUserRole { get; set; }

@@ -4,6 +4,7 @@ using Hockeyshop.Data.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hockeyshop.Data.Migrations
 {
     [DbContext(typeof(HockeyshopContext))]
-    partial class HockeyshopContextModelSnapshot : ModelSnapshot
+    [Migration("20250601100627_AddUniqueLoginToUser")]
+    partial class AddUniqueLoginToUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -152,7 +155,7 @@ namespace Hockeyshop.Data.Migrations
 
                     b.Property<string>("Login")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
@@ -172,9 +175,6 @@ namespace Hockeyshop.Data.Migrations
                     b.HasKey("IdUser");
 
                     b.HasIndex("IdUserRole");
-
-                    b.HasIndex("Login")
-                        .IsUnique();
 
                     b.HasIndex("UserRoleIdUserRole");
 

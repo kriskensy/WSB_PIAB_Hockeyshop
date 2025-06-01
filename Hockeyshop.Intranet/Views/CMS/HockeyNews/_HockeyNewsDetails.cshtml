@@ -9,6 +9,8 @@
 <dt class="col-sm-4">Created At</dt>
 <dd class="col-sm-8">@Model.CreatedAt.ToShortDateString()</dd>
 <dt class="col-sm-4">Published</dt>
-<dd class="col-sm-8">@Model.Published</dd>
+<dd class="col-sm-8">
+    <input type="checkbox" disabled @(Model.Published ? "checked" : "") />
+</dd>
 <dt class="col-sm-4">Image Url</dt>
 <dd class="col-sm-8">@Model.ImageUrl</dd>

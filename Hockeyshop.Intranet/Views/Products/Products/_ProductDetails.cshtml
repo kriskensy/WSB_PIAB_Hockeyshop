@@ -20,5 +20,13 @@
 <dd class="col-sm-8">@Model.Price.ToString("C")</dd>
 <dt class="col-sm-4">Supplier</dt>
 <dd class="col-sm-8">@Model.Supplier?.Name</dd>
+<dt class="col-sm-4">Is Highlight?</dt>
+<dd class="col-sm-8">
+    <input type="checkbox" disabled @(Model.Highlight ? "checked" : "") />
+</dd>
+<dt class="col-sm-4">Is new arrival?</dt>
+<dd class="col-sm-8">
+    <input type="checkbox" disabled @(Model.NewArrival ? "checked" : "") />
+</dd>
 <dt class="col-sm-4">Description</dt>
 <dd class="col-sm-8">@Model.Description</dd>

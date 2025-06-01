@@ -79,7 +79,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdProduct,Name,IdProductCategory,Price,IdSupplier,Description")] Product product)
+        public async Task<IActionResult> Create([Bind("IdProduct,Name,IdProductCategory,Price,IdSupplier, Highlight, NewArrival, Description")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -115,7 +115,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdProduct,Name,IdProductCategory,Price,IdSupplier,Description")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("IdProduct,Name,IdProductCategory,Price,IdSupplier, Highlight, NewArrival, Description")] Product product)
         {
             if (id != product.IdProduct)
             {

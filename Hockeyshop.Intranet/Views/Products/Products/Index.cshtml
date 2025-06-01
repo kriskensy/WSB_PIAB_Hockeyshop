@@ -14,6 +14,8 @@
         "Product Category",
         "Unit Price",
         "Supplier",
+        "Is Highlight?",
+        "Is new arrival?",
         "Description"
     };
 
@@ -36,6 +38,12 @@
                         "Product Category" => product.ProductCategory?.Name,
                         "Unit Price" => product.Price.ToString("C"),
                         "Supplier" => product.Supplier?.Name,
+                        "Is Highlight?" => product.Highlight
+                            ? "<span class='text-success'>&#x2714;</span>"
+                            : "<span class='text-danger'>&#x2718;</span>",
+                        "Is new arrival?" => product.NewArrival
+                            ? "<span class='text-success'>&#x2714;</span>"
+                            : "<span class='text-danger'>&#x2718;</span>",
                         "Description" => product.Description,
                         _ => ""
                     };

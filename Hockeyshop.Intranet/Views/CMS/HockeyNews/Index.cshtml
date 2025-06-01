@@ -31,11 +31,16 @@
                     {
                         "ID" => hockeyNews.IdHockeyNews,
                         "Title" => hockeyNews.Title,
-                        "Content" => hockeyNews.Content,
+                        // "Content" => hockeyNews.Content,
+                        "Content" => (hockeyNews.Content != null && hockeyNews.Content.Length > 120
+                                                                ? hockeyNews.Content.Substring(0, 120) + "..."
+                                                                : hockeyNews.Content),
                         "Author Firstname" => hockeyNews.Author.FirstName,
                         "Author Lastname" => hockeyNews.Author.LastName,
                         "Created At" => hockeyNews.CreatedAt.ToShortDateString(),
-                        "Published?" => hockeyNews.Published,
+                        "Published?" => hockeyNews.Published
+                            ? "<span class='text-success'>&#x2714;</span>"
+                            : "<span class='text-danger'>&#x2718;</span>",
                         "Image Url" => hockeyNews.ImageUrl,
                         _ => ""
                     };

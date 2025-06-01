@@ -11,4 +11,6 @@
 <dt class="col-sm-4">End Date</dt>
 <dd class="col-sm-8">@Model.EndDate.ToShortDateString()</dd>
 <dt class="col-sm-4">Active</dt>
-<dd class="col-sm-8">@Model.Active</dd>
+<dd class="col-sm-8">
+    <input type="checkbox" disabled @(Model.Active ? "checked" : "") />
+</dd>
