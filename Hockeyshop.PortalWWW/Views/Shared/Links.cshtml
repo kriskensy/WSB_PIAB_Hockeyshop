@@ -1,4 +1,6 @@
-﻿<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+﻿@using System.Security.Claims
+
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
     <div class="container-fluid">
 
         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Besthockey</a>
@@ -15,23 +17,40 @@
                 <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" name="searchTerm" />
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-            <a asp-area="" asp-controller="Cart" asp-action="CartIndex" class="btn btn-success me-2">
-                <i class="fa-solid fa-cart-shopping"></i> Cart
-            </a>
-            <div class="btn-group">
-                <a asp-area="" asp-controller="Account" asp-action="AccountIndex" class="btn btn-success dropdown-toggle"
-                   data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-user"></i> Account
+            
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                var fullName = User.FindFirst("FullName")?.Value; //pobiera dane z claims ustawionych przy logowaniu
+
+                <a asp-area="" asp-controller="Cart" asp-action="CartIndex" class="btn btn-success me-2">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                        <a class="dropdown-item" asp-controller="Orders" asp-action="Index">Orders</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" asp-controller="Invoices" asp-action="Index">Invoices</a>
-                    </li>
-                </ul>
-            </div>
+
+                <div class="btn-group">
+                    <a asp-area="" asp-controller="Account" asp-action="AccountIndex" class="btn btn-success dropdown-toggle"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i> @fullName
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" asp-controller="Orders" asp-action="Index">Orders</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="Invoices" asp-action="Index">Invoices</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="Account" asp-action="Logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            }
+            else
+            {
+                <a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-success">
+                    <i class="fa-solid fa-user"></i> Login / Register
+                </a>
+            }
         </div>
     </div>
 </nav>

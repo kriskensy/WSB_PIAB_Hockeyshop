@@ -12,6 +12,7 @@ C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hoc
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Hockeyshop.PortalWWW.pdb
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Azure.Core.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Azure.Identity.dll
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Humanizer.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll

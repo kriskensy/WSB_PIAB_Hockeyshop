@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Tognx5OhhyE=",
+  "dgSpecHash": "h/qmS0C1MLo=",
   "success": true,
   "projectFilePath": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kris\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\Kris\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\font.awesome\\5.15.4\\font.awesome.5.15.4.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

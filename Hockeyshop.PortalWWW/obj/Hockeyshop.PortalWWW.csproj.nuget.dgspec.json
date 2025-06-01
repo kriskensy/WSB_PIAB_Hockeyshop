@@ -142,6 +142,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Font.Awesome": {
               "target": "Package",
               "version": "[5.15.4, )"
