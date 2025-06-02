@@ -13,24 +13,23 @@ namespace Hockeyshop.PortalWWW.Controllers.Shop
             _context = context;
         }
 
-        //do zwracania randomowych produktów z promocji na stronę główną sklepu
         public async Task<IActionResult> Index()
         {
             ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
 
-            var randomPromotedProducts = await _context.Products
-                .Include(p => p.ProductImages)
-                .Where(p => _context.ProductPromotions.Any(pp => pp.IdProduct == p.IdProduct))
-                .OrderBy(p => Guid.NewGuid())
-                .Take(9)
-                .ToListAsync();
+                var randomPromotedProducts = await _context.Products
+                    .Include(p => p.ProductImages)
+                    .Where(p => _context.ProductPromotions.Any(pp => pp.IdProduct == p.IdProduct))
+                    .OrderBy(p => Guid.NewGuid())
+                    .Take(9)
+                    .ToListAsync();
 
-            return View(randomPromotedProducts);
+                return View(randomPromotedProducts);
         }
 
         public async Task<IActionResult> ProductCategory(int id)
         {
-            ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
+            ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.IdProductCategory).ToListAsync();
 
             var category = await _context.ProductCategories
                 .AsNoTracking()
@@ -58,7 +57,7 @@ namespace Hockeyshop.PortalWWW.Controllers.Shop
                 .Include(p => p.ProductImages)
                 .AsQueryable();
 
-            //szukiwanie w rekordach tabel
+            //szukawanie w rekordach tabel
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 query = query.Where(item =>
@@ -79,5 +78,39 @@ namespace Hockeyshop.PortalWWW.Controllers.Shop
 
             return View("~/Views/Products/Products/Index.cshtml", products);
         }
+
+        public async Task<IActionResult> OurHighlights()
+        {
+            ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
+
+            var highlightedProducts = await _context.Products
+                .Include (p => p.ProductCategory)
+                .Include(p => p.Supplier)
+                .Include(p => p.ProductImages)
+                .Where(p => p.Highlight)
+                .OrderBy(p => p.Name)
+                .ToListAsync();
+
+            ViewBag.CurrentCategoryName = "Our Highlights";
+
+            return View("~/Views/Products/Products/Index.cshtml", highlightedProducts);
+        }
+
+        //public async Task<IActionResult> NewArrivals()
+        //{
+        //    ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
+
+        //    var highlightedProducts = await _context.Products
+        //        .Include(p => p.ProductCategory)
+        //        .Include(p => p.Supplier)
+        //        .Include(p => p.ProductImages)
+        //        .Where(p => p.NewArrival)
+        //        .OrderBy(p => p.Name)
+        //        .ToListAsync();
+
+        //    ViewBag.CurrentCategoryName = "New Arrivals";
+
+        //    return View("~/Views/Products/Products/Index.cshtml", highlightedProducts);
+        //}
     }
 }

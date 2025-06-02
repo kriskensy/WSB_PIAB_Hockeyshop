@@ -26,6 +26,15 @@ namespace Hockeyshop.PortalWWW.Controllers
                 .Include(n => n.Author)
                 .ToListAsync();
 
+            //pobieram new arrivals do karuzeli
+            var newArrivals = await _context.Products
+                .Include(p => p.ProductImages)
+                .Where(p => p.NewArrival)
+                .OrderBy(p => p.Name)
+                .ToListAsync();
+
+            ViewBag.NewArrivals = newArrivals;
+
             return View(latestNews);
         }
 

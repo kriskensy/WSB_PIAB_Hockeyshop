@@ -1,4 +1,4 @@
-/*global styles*/
+﻿/*global styles*/
 html {
   font-size: 14px;
 }
@@ -124,13 +124,26 @@ a.btn {
     }
 }
 
-.new-arrivals-carousel .carousel-control-prev-icon,
-.new-arrivals-carousel .carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
-    background-size: 100% 100%;
-    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.25));
+/*carousel control arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(44, 62, 80, 0.8);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    background-size: 22px 22px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
+
+/* Dodatkowe dopasowanie pozycji i odstępów */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 /*products-section*/
 .products-section .card:hover {

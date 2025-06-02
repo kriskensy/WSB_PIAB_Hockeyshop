@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Hockeyshop.Data.Data.Products.Product>
+
+@{
+    var arrivals = Model?.ToList() ?? new List<Hockeyshop.Data.Data.Products.Product>();
+}
+
+@if (arrivals.Any())
+{
+    <div id="newArrivalsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @for (int i = 0; i < arrivals.Count; i++)
+            {
+                var product = arrivals[i];
+                var isActive = i == 0 ? "active" : "";
+                var imageUrl = product.ProductImages?.FirstOrDefault()?.ImageUrl != null
+                ? $"/content/img_products/{product.ProductImages.First().ImageUrl}"
+                : "/content/Placeholder.webp";
+                <div class="carousel-item @isActive">
+                    <div class="d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <a asp-controller="Products"
+                               asp-action="Details"
+                               asp-route-id="@product.IdProduct"
+                               class="text-decoration-none text-dark">
+                                <img src="@imageUrl" class="card-img-top" alt="@product.Name" style="max-height: 200px; object-fit: contain;" />
+                                <div class="card-body">
+                                    <h5 class="card-title">@product.Name</h5>
+                                    <p class="card-text">@product.Description</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+}
+else
+{
+    <div>No new arrivals available.</div>
+}
