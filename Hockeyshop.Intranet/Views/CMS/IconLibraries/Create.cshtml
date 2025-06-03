@@ -1,0 +1,16 @@
+﻿@model Hockeyshop.Data.Data.CMS.IconLibrary
+
+@{
+    ViewData["Title"] = "Create Icon Library";
+    ViewData["FormAction"] = "Create";
+    ViewData["PartialFields"] = "~/Views/CMS/IconLibraries/_IconLibrariesFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

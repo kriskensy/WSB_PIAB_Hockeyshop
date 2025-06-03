@@ -1,0 +1,17 @@
+﻿@model Hockeyshop.Data.Data.CMS.ShopRule
+
+<dt class="col-sm-4">Title</dt>
+<dd class="col-sm-8">@Model.Title</dd>
+<dt class="col-sm-4">Content</dt>
+<dd class="col-sm-8">@Model.Content</dd>
+<dt class="col-sm-4">Icon</dt>
+<dd class="col-sm-8">
+    @if (Model.IconLibrary != null)
+    {
+        <i class="@Model.IconLibrary.ClassName fa-2x"></i>
+    }
+    else
+    {
+        <span>no data</span>
+    }
+</dd>

@@ -24,6 +24,8 @@ namespace Hockeyshop.Data.Data
 
         //CMS
         public DbSet<HockeyNews> HockeyNews { get; set; } = default!;
+        public DbSet<IconLibrary> IconLibraries { get; set; } = default!;
+        public DbSet<ShopRule> ShopRules { get; set; } = default!;
 
         //Core
         public DbSet<User> Users { get; set; } = default!;
@@ -161,6 +163,12 @@ namespace Hockeyshop.Data.Data
             //    .WithMany()
             //    .HasForeignKey(pp => pp.IdPromotion)
             //    .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<ShopRule>()
+                .HasOne(s => s.IconLibrary)
+                .WithMany()
+                .HasForeignKey(s => s.IdIcon)
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProductPromotionConfiguration).Assembly);
         }

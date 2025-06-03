@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Hockeyshop.Data.Data.CMS.IconLibrary>
+
+@{
+    ViewData["Title"] = "IconLibrary";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Name",
+        "Class name",
+        "Icon"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+    {
+        Title = "Icons library",
+        CreateAction = "Create",
+        EnableSearch = true,
+        SearchTerm = ViewBag.SearchTerm as string,
+        Columns = columns,
+        Rows = Model.Cast<object>(),
+        GetValue = (row, col) =>
+        {
+            var iconLibrary = (Hockeyshop.Data.Data.CMS.IconLibrary)row; //rzutowanie wiersza na typ...
+            return col switch
+            {
+                "ID" => iconLibrary.IdIcon,
+                "Name" => iconLibrary.Name,
+                "Class name" => iconLibrary.ClassName,
+                "Icon" => $"<i class='{iconLibrary.ClassName} fa-2x'></i>",
+                _ => ""
+            };
+        },
+        ActionLinks = row =>
+        {
+            var iconLibrary = (Hockeyshop.Data.Data.CMS.IconLibrary)row;
+            return $@"
+                        <a href=""/IconLibraries/Edit/{iconLibrary.IdIcon}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/IconLibraries/Details/{iconLibrary.IdIcon}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/IconLibraries/Delete/{iconLibrary.IdIcon}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+        }
+    };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)

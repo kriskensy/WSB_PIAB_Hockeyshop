@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Hockeyshop.Data.Data.CMS.ShopRule>
+
+@{
+    ViewData["Title"] = "ShopRule";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Icon",
+        "Title",
+        "Content",
+        "Display order"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+    {
+        Title = "Shop rules",
+        CreateAction = "Create",
+        EnableSearch = true,
+        SearchTerm = ViewBag.SearchTerm as string,
+        Columns = columns,
+        Rows = Model.Cast<object>(),
+        GetValue = (row, col) =>
+        {
+            var shopRules = (Hockeyshop.Data.Data.CMS.ShopRule)row; //rzutowanie wiersza na typ...
+            return col switch
+            {
+                "ID" => shopRules.IdShopRule,
+                "Icon" => shopRules.IconLibrary != null
+                    ? $"<i class='{shopRules.IconLibrary.ClassName} fa-2x'></i>"
+                    : "",
+                "Title" => shopRules.Title,
+                "Content" => (shopRules.Content != null && shopRules.Content.Length > 120
+                                                        ? shopRules.Content.Substring(0, 120) + "..."
+                                                        : shopRules.Content),
+                "Display order" => shopRules.DisplayOrder,
+                _ => ""
+            };
+        },
+        ActionLinks = row =>
+        {
+            var shopRules = (Hockeyshop.Data.Data.CMS.ShopRule)row;
+            return $@"
+                        <a href=""/ShopRules/Edit/{shopRules.IdShopRule}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/ShopRules/Details/{shopRules.IdShopRule}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/ShopRules/Delete/{shopRules.IdShopRule}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+        }
+    };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)

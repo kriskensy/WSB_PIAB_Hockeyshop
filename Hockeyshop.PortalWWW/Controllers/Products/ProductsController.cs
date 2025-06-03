@@ -28,28 +28,6 @@ namespace Hockeyshop.PortalWWW.Controllers.Products
         }
 
         // GET: Products/Details/5
-        //public async Task<IActionResult> Details(int? id)
-        //{
-        //    ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
-
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var product = await _context.Products
-        //        .Include(p => p.ProductCategory)
-        //        .Include(p => p.Supplier)
-        //        .FirstOrDefaultAsync(m => m.IdProduct == id);
-        //    if (product == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View("~/Views/Products/Products/Details.cshtml", product);
-        //}
-
-        // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id, int? categoryId)
         {
             ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();

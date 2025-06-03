@@ -33,37 +33,97 @@ namespace Hockeyshop.PortalWWW.Controllers
                 .OrderBy(p => p.Name)
                 .ToListAsync();
 
+            var shopRules = await _context.ShopRules
+                .Include(r => r.IconLibrary)
+                .Where(r => r.DisplayOrder.HasValue)
+                .OrderBy(r => r.DisplayOrder)
+                .Take(3)
+                .Select(r => new ShopRulesViewModel
+                {
+                    IdShopRule = r.IdShopRule,
+                    Title = r.Title,
+                    Content = r.Content,
+                    IconClass = r.IconLibrary.ClassName
+                })
+                .ToListAsync();
+
             ViewBag.NewArrivals = newArrivals;
+            ViewBag.ShopRules = shopRules;
 
             return View(latestNews);
         }
 
-        public IActionResult SticksTechnology()
+        public async Task<IActionResult> SticksTechnology()
         {
+            var shopRules = await _context.ShopRules
+            .Include(r => r.IconLibrary)
+            .Where(r => r.DisplayOrder.HasValue)
+            .OrderBy(r => r.DisplayOrder)
+            .Take(3)
+            .Select(r => new ShopRulesViewModel
+            {
+                IdShopRule = r.IdShopRule,
+                Title = r.Title,
+                Content = r.Content,
+                IconClass = r.IconLibrary.ClassName
+            })
+            .ToListAsync();
+            ViewBag.ShopRules = shopRules;
+
             return View();
         }
 
-        public IActionResult OurTeam()
+        public async Task<IActionResult> OurTeam()
         {
+            var shopRules = await _context.ShopRules
+            .Include(r => r.IconLibrary)
+            .Where(r => r.DisplayOrder.HasValue)
+            .OrderBy(r => r.DisplayOrder)
+            .Take(3)
+            .Select(r => new ShopRulesViewModel
+            {
+                IdShopRule = r.IdShopRule,
+                Title = r.Title,
+                Content = r.Content,
+                IconClass = r.IconLibrary.ClassName
+            })
+            .ToListAsync();
+            ViewBag.ShopRules = shopRules;
+
             return View();
         }
 
-        public IActionResult HockeyNews()
+        public async Task<IActionResult> HockeyNews()
         {
+            var shopRules = await _context.ShopRules
+            .Include(r => r.IconLibrary)
+            .Where(r => r.DisplayOrder.HasValue)
+            .OrderBy(r => r.DisplayOrder)
+            .Take(3)
+            .Select(r => new ShopRulesViewModel
+            {
+                IdShopRule = r.IdShopRule,
+                Title = r.Title,
+                Content = r.Content,
+                IconClass = r.IconLibrary.ClassName
+            })
+            .ToListAsync();
+            ViewBag.ShopRules = shopRules;
+
             return View();
         }
-        public IActionResult OurHighlights()
-        {
-            return View();
-        }
-        public IActionResult GiftCards()
-        {
-            return View();
-        }
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        //public IActionResult OurHighlights()
+        //{
+        //    return View();
+        //}
+        //public IActionResult GiftCards()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Privacy()
+        //{
+        //    return View();
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

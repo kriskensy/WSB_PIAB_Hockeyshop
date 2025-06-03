@@ -1,0 +1,12 @@
+﻿@model Hockeyshop.Data.Data.CMS.ShopRule
+
+@{
+    ViewData["IdField"] = "IdShopRule";
+    ViewData["Title"] = "Shop Rule Details";
+    ViewData["HideEditButton"] = true;
+    ViewData["DeleteButtonText"] = "Confirm deletion!";
+    ViewData["PartialDetails"] = "~/Views/CMS/ShopRules/_ShopRulesDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)

@@ -58,6 +58,61 @@ namespace Hockeyshop.Data.Migrations
                     b.ToTable("HockeyNews");
                 });
 
+            modelBuilder.Entity("Hockeyshop.Data.Data.CMS.IconLibrary", b =>
+                {
+                    b.Property<int>("IdIcon")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdIcon"));
+
+                    b.Property<string>("ClassName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdIcon");
+
+                    b.ToTable("IconLibraries");
+                });
+
+            modelBuilder.Entity("Hockeyshop.Data.Data.CMS.ShopRule", b =>
+                {
+                    b.Property<int>("IdShopRule")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdShopRule"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IconLibraryIdIcon")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdIcon")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdShopRule");
+
+                    b.HasIndex("IconLibraryIdIcon");
+
+                    b.HasIndex("IdIcon");
+
+                    b.ToTable("ShopRules");
+                });
+
             modelBuilder.Entity("Hockeyshop.Data.Data.Cart.CartItem", b =>
                 {
                     b.Property<int>("IdCartItem")
@@ -638,6 +693,21 @@ namespace Hockeyshop.Data.Migrations
                     b.Navigation("Author");
                 });
 
+            modelBuilder.Entity("Hockeyshop.Data.Data.CMS.ShopRule", b =>
+                {
+                    b.HasOne("Hockeyshop.Data.Data.CMS.IconLibrary", null)
+                        .WithMany("ShopRules")
+                        .HasForeignKey("IconLibraryIdIcon");
+
+                    b.HasOne("Hockeyshop.Data.Data.CMS.IconLibrary", "IconLibrary")
+                        .WithMany()
+                        .HasForeignKey("IdIcon")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("IconLibrary");
+                });
+
             modelBuilder.Entity("Hockeyshop.Data.Data.Cart.CartItem", b =>
                 {
                     b.HasOne("Hockeyshop.Data.Data.Products.Product", "Product")
@@ -891,6 +961,11 @@ namespace Hockeyshop.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Hockeyshop.Data.Data.CMS.IconLibrary", b =>
+                {
+                    b.Navigation("ShopRules");
                 });
 
             modelBuilder.Entity("Hockeyshop.Data.Data.Cart.UserCart", b =>

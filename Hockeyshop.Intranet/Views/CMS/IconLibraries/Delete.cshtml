@@ -1,0 +1,12 @@
+﻿@model Hockeyshop.Data.Data.CMS.IconLibrary
+
+@{
+    ViewData["IdField"] = "IdIcon";
+    ViewData["Title"] = "Icon Library Details";
+    ViewData["HideEditButton"] = true;
+    ViewData["DeleteButtonText"] = "Confirm deletion!";
+    ViewData["PartialDetails"] = "~/Views/CMS/IconLibraries/_IconLibrariesDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)

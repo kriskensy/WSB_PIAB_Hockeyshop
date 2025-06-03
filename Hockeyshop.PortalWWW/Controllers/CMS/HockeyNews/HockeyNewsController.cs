@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hockeyshop.Data.Data;
+using Hockeyshop.Data.Data.CMS;
+using Hockeyshop.PortalWWW.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Data.Data;
-using Hockeyshop.Data.Data.CMS;
 
 namespace Hockeyshop.PortalWWW.Controllers.CMS.HockeyNews
 {
@@ -23,6 +24,23 @@ namespace Hockeyshop.PortalWWW.Controllers.CMS.HockeyNews
                 .Where(n => n.Published)
                 .OrderByDescending(n => n.CreatedAt)
                 .ToListAsync();
+
+            var shopRules = await _context.ShopRules
+                .Include(r => r.IconLibrary)
+                .Where(r => r.DisplayOrder.HasValue)
+                .OrderBy(r => r.DisplayOrder)
+                .Take(3)
+                .Select(r => new ShopRulesViewModel
+                {
+                    IdShopRule = r.IdShopRule,
+                    Title = r.Title,
+                    Content = r.Content,
+                    IconClass = r.IconLibrary.ClassName
+                })
+                .ToListAsync();
+
+            ViewBag.ShopRules = shopRules;
+
             return View("~/Views/CMS/HockeyNews/Index.cshtml", news);
         }
 
@@ -38,6 +56,22 @@ namespace Hockeyshop.PortalWWW.Controllers.CMS.HockeyNews
 
             if (hockeyNews == null)
                 return NotFound();
+
+            var shopRules = await _context.ShopRules
+                .Include(r => r.IconLibrary)
+                .Where(r => r.DisplayOrder.HasValue)
+                .OrderBy(r => r.DisplayOrder)
+                .Take(3)
+                .Select(r => new ShopRulesViewModel
+                {
+                    IdShopRule = r.IdShopRule,
+                    Title = r.Title,
+                    Content = r.Content,
+                    IconClass = r.IconLibrary.ClassName
+                })
+                .ToListAsync();
+
+            ViewBag.ShopRules = shopRules;
 
             return View("~/Views/CMS/HockeyNews/Details.cshtml", hockeyNews);
         }

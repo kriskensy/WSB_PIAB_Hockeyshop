@@ -31,6 +31,7 @@
                 bool isPaymentsSection = currentController == "Payments" || currentController == "PaymentMethods" || currentController == "PaymentStatus";
                 bool isUsersSection = currentController == "Users" || currentController == "UserRoles";
                 bool isCartSection = currentController == "UserCarts" || currentController == "CartItems";
+                bool isWebsiteSection = currentController == "IconLibrary" || currentController == "ShopRules";
             }
 
             <nav id="sidebar" class="bg-light border-end vh-100 position-fixed">
@@ -164,6 +165,26 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="CartItems" asp-action="Index">Cart items</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- website -->
+                    <li class="nav-item">
+                        <a class="nav-link @(isWebsiteSection ? "" : "collapsed")" data-bs-toggle="collapse" href="#websiteSubmenu" role="button" aria-expanded="@(isWebsiteSection.ToString().ToLower())" aria-controls="websiteSubmenu">
+                            <i class="fas fa-globe me-2"></i>Website
+                        </a>
+                        <div class="collapse @(isWebsiteSection ? "show" : "")" id="websiteSubmenu">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="IconLibraries" asp-action="Index">
+                                        <i class="fas fa-icons me-2"></i>Icon Library
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="ShopRules" asp-action="Index">
+                                        <i class="fas fa-list-ul me-2"></i>Shop Rules
+                                    </a>
                                 </li>
                             </ul>
                         </div>

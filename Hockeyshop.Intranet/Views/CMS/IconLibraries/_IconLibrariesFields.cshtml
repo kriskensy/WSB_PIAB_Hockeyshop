@@ -1,0 +1,17 @@
+﻿@model Hockeyshop.Data.Data.CMS.IconLibrary
+
+@if (ViewData["FormAction"]?.ToString() == "Edit")
+{
+    <input type="hidden" asp-for="IdIcon" />
+}
+
+<div class="form-group">
+    <label asp-for="Name" class="control-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="ClassName" class="control-label"></label>
+    <input asp-for="ClassName" class="form-control" />
+    <span asp-validation-for="ClassName" class="text-danger"></span>
+</div>

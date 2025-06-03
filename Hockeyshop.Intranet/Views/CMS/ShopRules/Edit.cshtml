@@ -1,0 +1,16 @@
+﻿@model Hockeyshop.Data.Data.CMS.ShopRule
+
+@{
+    ViewData["Title"] = "Edit Shop Rules";
+    ViewData["FormAction"] = "Edit";
+    ViewData["PartialFields"] = "~/Views/CMS/ShopRules/_ShopRulesFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
