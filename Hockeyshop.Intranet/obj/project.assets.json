@@ -3136,19 +3136,6 @@
         "runtime": {
           "bin/placeholder/Hockeyshop.Data.dll": {}
         }
-      },
-      "Hockeyshop.SharedViews/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/Hockeyshop.SharedViews.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Hockeyshop.SharedViews.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -8441,18 +8428,12 @@
       "type": "project",
       "path": "../Hockeyshop.Data/Hockeyshop.Data.csproj",
       "msbuildProject": "../Hockeyshop.Data/Hockeyshop.Data.csproj"
-    },
-    "Hockeyshop.SharedViews/1.0.0": {
-      "type": "project",
-      "path": "../Hockeyshop.SharedViews/Hockeyshop.SharedViews.csproj",
-      "msbuildProject": "../Hockeyshop.SharedViews/Hockeyshop.SharedViews.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Font.Awesome >= 5.15.4",
       "Hockeyshop.Data >= 1.0.0",
-      "Hockeyshop.SharedViews >= 1.0.0",
       "MathNet.Numerics >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.11",
@@ -8494,9 +8475,6 @@
           "projectReferences": {
             "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Data\\Hockeyshop.Data.csproj": {
               "projectPath": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Data\\Hockeyshop.Data.csproj"
-            },
-            "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.SharedViews\\Hockeyshop.SharedViews.csproj": {
-              "projectPath": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.SharedViews\\Hockeyshop.SharedViews.csproj"
             }
           }
         }

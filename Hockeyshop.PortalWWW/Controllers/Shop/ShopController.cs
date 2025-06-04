@@ -95,22 +95,5 @@ namespace Hockeyshop.PortalWWW.Controllers.Shop
 
             return View("~/Views/Products/Products/Index.cshtml", highlightedProducts);
         }
-
-        //public async Task<IActionResult> NewArrivals()
-        //{
-        //    ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
-
-        //    var highlightedProducts = await _context.Products
-        //        .Include(p => p.ProductCategory)
-        //        .Include(p => p.Supplier)
-        //        .Include(p => p.ProductImages)
-        //        .Where(p => p.NewArrival)
-        //        .OrderBy(p => p.Name)
-        //        .ToListAsync();
-
-        //    ViewBag.CurrentCategoryName = "New Arrivals";
-
-        //    return View("~/Views/Products/Products/Index.cshtml", highlightedProducts);
-        //}
     }
 }

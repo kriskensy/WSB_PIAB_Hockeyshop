@@ -17,7 +17,7 @@
         </div>
     </header>
 
-    <div class="d-flex mt-5 pt-3">
+    <div class="d-flex">
             @{
                 var categories = ViewBag.ProductCategories as IEnumerable<Hockeyshop.Data.Data.Products.ProductCategory>;
             }
@@ -32,17 +32,17 @@
             </div>
     </div>
 
-    <footer class="page-footer py-3">
+    <footer class="page-footer py-4">
         <div class="container">
-            <div class="row w-100">
-                <div class="col-12 col-md-4">
-                    <p>Copyright &copy; 2025 Kris</p>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="footer-brand fw-bold">Besthockey</span> &copy; @DateTime.Now.Year. Kris. All rights reserved.
                 </div>
-                <div class="col-12 col-md-6">
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#">About</a></li>
-                        <li class="list-inline-item"><a href="#">Privacy policy</a></li>
-                        <li class="list-inline-item"><a href="#">Returns</a></li>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="social-links justify-content-md-end mb-0">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>

@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hockeyshop.Data\Hockeyshop.Data.csproj" />
-    <ProjectReference Include="..\Hockeyshop.SharedViews\Hockeyshop.SharedViews.csproj" />
   </ItemGroup>
 
 </Project>

@@ -45,11 +45,11 @@
                 <div class="row">
 
                     <!--Our highlights-->
-                    <div class="col-md-6 position-relative">
+                    <div class="col-md-6">
                         <h5 class="card-title">Our highlights</h5>
-                        <div class="card mb-3 position-relative">
+                        <div class="card mb-3 highlights-card">
                             <a class="stretched-link" asp-area="" asp-controller="Shop" asp-action="OurHighlights">
-                                <img src="/_content/Hockeyshop.SharedViews/content/grays highlights.webp" alt="Best hockeysticks" class="card-img-top">
+                                <img src="~/content/grays highlights.webp" alt="Best hockeysticks" class="card-img-top">
                             </a>
                         </div>
                     </div>
@@ -57,19 +57,19 @@
                     <!--Gift cards-->
                     <div class="col-md-6">
                         <h5 class="card-title">Gift cards</h5>
-                        <div class="card mb-3 position-relative">
+                        <div class="card mb-3 gift-cards-card">
                             <a class="stretched-link" asp-area="" asp-controller="Shop" asp-action="ProductCategory" asp-route-id="1">
-                                <img src="/_content/Hockeyshop.SharedViews/content/gift card.jpg" alt="Gift card" class="card-img-top">
+                                <img src="~/content/gift card.jpg" alt="Gift card" class="card-img-top">
                             </a>
                         </div>
                     </div>
 
                     <!--Hockey news-->
-                    <div class="col-12 position-relative">
+                    <div class="hockey-news-section">
                         <h5 class="card-title">Hockey news</h5>
-                        <div class="card mb-3 position-relative">
+                        <div class="card mb-3 hockey-news-card">
                             <a class="stretched-link" asp-area="" asp-controller="HockeyNews" asp-action="Index">
-                                <img src="/_content/Hockeyshop.SharedViews/content/hockey news.jpg" alt="Hockey news" class="card-img-top">
+                                <img src="~/content/hockey news.jpg" alt="Hockey news" class="card-img-top">
                             </a>
                         </div>
                     </div>
@@ -84,14 +84,14 @@
 
         @if (shopRules != null && shopRules.Any())
         {
-            <div class="row">
+            <div class="shop-rules-section row">
                 @foreach (var rule in shopRules)
                 {
                     <div class="col-12 col-md-4">
                         <div class="card p-3 mb-3">
                             <div class="row">
                                 <div class="col-md-2 d-none d-md-block">
-                                    <i class="pt-4 ps-3 @rule.IconClass"></i>
+                                    <i class="pt-4 ps-3 fa-2x @rule.IconClass"></i>
                                 </div>
                                 <div class="col-md-10">
                                     <div class="card-body">
@@ -115,78 +115,59 @@
         }
 
         <!-- Contact section -->
-        <div class="contact-section p-3">
+        <div class="contact-section py-5">
             <div class="container">
-                <div class="row">
-
-                    <div class="col-12 col-md-4 order-3 order-md-1">
-                        <div class="card px-5 mb-3">
-                            <div class="card-body">
-                                <h3>Newsletter</h3>
-                                <p>Subscribe to our newsletter.</p>
-                                <form class="contact-form">
-                                    <div class="mb-3">
-                                        <input type="email" name="email" placeholder="Enter your e-mail" required>
-                                    </div>
-                                    <button type="submit" class="btn btn-success">Submit</button>
-                                </form>
-                            </div>
-                        </div>
+                <div class="row align-items-center">
+                    <div class="col-md-5 offset-md-1 mb-4 mb-md-0 d-flex flex-column justify-content-center">
+                        <h3 class="mb-3">Contact us</h3>
+                        <ul class="contact-info list-unstyled mb-0">
+                            <li><i class="fas fa-map-marker-alt me-2"></i> 123 Hockey St, City</li>
+                            <li><i class="fas fa-envelope me-2"></i> info@besthockey.com</li>
+                            <li><i class="fas fa-phone me-2"></i> +48 123 456 789</li>
+                        </ul>
+                        <ul class="social-links mt-3 mb-0">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
                     </div>
-
-                    <div class="col-12 col-md-4 order-1 order-md-2">
-                        <div class="card px-5 mb-3">
-                            <div class="card-body">
-                                <h3>Social</h3>
-                                <p>Follow us on our social media.</p>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fab fa-youtube"></i>Youtube</a></li>
-                                    <li><a href="#"><i class="fab fa-github"></i>GitHub</a></li>
-                                    <li><a href="#"><i class="fab fa-reddit-alien"></i>Reddit</a></li>
-                                    <li><a href="#"><i class="fab fa-discord"></i>Discord</a></li>
-                                </ul>
+                    <div class="col-md-6">
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your name">
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4 order-2 order-md-3">
-                        <div class="card px-5 mb-3">
-                            <div class="card-body">
-                                <h3>Contact us</h3>
-                                <div class="contact-wrapper">
-                                    <div class="contact-info">
-                                        <p>Starlight str 5</p>
-                                        <p>3245 Brisbane</p>
-                                        <p>Australia</p>
-                                        <a href="#" class="link-primary">support@besthockey.com</a>
-                                    </div>
-                                </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your email">
                             </div>
-                        </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary px-4">Send</button>
+                        </form>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
-
-    <footer class="page-footer py-3">
+    <footer class="page-footer py-4">
         <div class="container">
-            <div class="row w-100">
-                <div class="col-12 col-md-4">
-                    <p>Copyright &copy; 2025 Kris</p>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="footer-brand fw-bold">Besthockey</span> &copy; @DateTime.Now.Year. Kris. All rights reserved.
                 </div>
-                <div class="col-12 col-md-6">
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#">About</a></li>
-                        <li class="list-inline-item"><a href="#">Privacy policy</a></li>
-                        <li class="list-inline-item"><a href="#">Returns</a></li>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="social-links justify-content-md-end mb-0">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

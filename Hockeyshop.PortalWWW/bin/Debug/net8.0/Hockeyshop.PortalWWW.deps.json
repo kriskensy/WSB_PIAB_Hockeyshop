@@ -12,7 +12,6 @@
           "Font.Awesome": "5.15.4",
           "FontAwesome": "4.7.0",
           "Hockeyshop.Data": "1.0.0",
-          "Hockeyshop.SharedViews": "1.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.11",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7"
         },
@@ -2088,14 +2087,6 @@
             "fileVersion": "1.0.0.0"
           }
         }
-      },
-      "Hockeyshop.SharedViews/1.0.0": {
-        "runtime": {
-          "Hockeyshop.SharedViews.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
@@ -3387,11 +3378,6 @@
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
     },
     "Hockeyshop.Data/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Hockeyshop.SharedViews/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

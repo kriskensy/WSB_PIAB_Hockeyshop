@@ -5,6 +5,12 @@
 
         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Besthockey</a>
 
+        <!-- podbija buttony na czerwono-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
         <ul class="nav nav-pills me-auto">
             <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="SticksTechnology"><i class="fas fa-award me-1"></i>Sticks technology</a>
             <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="OurTeam"><i class="fas fa-user-group me-1"></i>Our team</a>
@@ -52,5 +58,8 @@
                 </a>
             }
         </div>
+
+        </div>
+
     </div>
 </nav>
