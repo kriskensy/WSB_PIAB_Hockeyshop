@@ -65,7 +65,44 @@
     </section>
 
     <section class="text-center mt-5">
-        <a class="btn btn-success btn-lg" asp-area="" asp-controller="Shop" asp-action="Sticks">Get in Touch with Us</a>
+        <a class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">Get in Touch with Us</a>
     </section>
+
+    <!--modal z formularzem-->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form asp-controller="Home" asp-action="Contact" method="post">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Name</label>
+                            <input type="text" name="Name" class="form-control" id="contactName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email</label>
+                            <input type="email" name="Email" class="form-control" id="contactEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea name="Message" class="form-control" id="contactMessage" rows="4" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    @if (TempData["ContactSuccess"] != null)
+    {
+        <div class="alert alert-success text-center">@TempData["ContactSuccess"]</div>
+    }
 
 </div>

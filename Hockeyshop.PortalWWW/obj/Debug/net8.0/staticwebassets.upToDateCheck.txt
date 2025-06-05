@@ -27,6 +27,7 @@ wwwroot\content\img_sticksTechnology\manufacturing-process.webp
 wwwroot\content\img_sticksTechnology\stick-comparison.jpg
 wwwroot\content\Placeholder.webp
 wwwroot\css\site.css
+wwwroot\css\variables.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

@@ -11,25 +11,24 @@
 
 </head>
 <body>
+    <div class="page-wrapper d-flex flex-column min-vh-100">
     <header>
         <div class="container mt-5 pt-3">
             @await Html.PartialAsync("Links")
         </div>
     </header>
 
-    <div class="d-flex">
-            @{
-                var categories = ViewBag.ProductCategories as IEnumerable<Hockeyshop.Data.Data.Products.ProductCategory>;
-            }
-            @await Html.PartialAsync("_ProductCategoriesSidebar", categories)
+    <div class="main-content d-flex flex-grow-1" style="min-height: 0;">
+        @{
+            var categories = ViewBag.ProductCategories as IEnumerable<Hockeyshop.Data.Data.Products.ProductCategory>;
+        }
+        @await Html.PartialAsync("_ProductCategoriesSidebar", categories)
 
-            <div class="flex-grow-1 p-3">
-                <div class="content">
-                    <main role="main" class="pb-3">
-                        @RenderBody()
-                    </main>
-                </div>
-            </div>
+        <div class="main-area flex-grow-1 p-3" style="min-height: 0;">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
     </div>
 
     <footer class="page-footer py-4">
@@ -48,6 +47,7 @@
             </div>
         </div>
     </footer>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

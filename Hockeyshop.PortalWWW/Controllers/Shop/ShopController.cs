@@ -46,6 +46,17 @@ namespace Hockeyshop.PortalWWW.Controllers.Shop
             return View("~/Views/Products/Products/Index.cshtml", products);
         }
 
+        public async Task<IActionResult> HockeySticks() //akcja przenosi do kategorii hockey sticks (po nazwie kategorii)
+        {
+            var category = await _context.ProductCategories
+                .FirstOrDefaultAsync(c => c.Name == "Hockey Sticks");
+
+            if(category == null)
+                return NotFound();
+
+            return RedirectToAction("ProductCategory", new { id = category.IdProductCategory });
+        }
+
         // GET: Shop/Search
         public async Task<IActionResult> Search(string searchTerm)
         {

@@ -3,6 +3,14 @@
 /* global styles */
 html {
     font-size: 14px;
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    min-height: 100%;
+    background-color: var(--color-app-bg);
 }
 
 @media (min-width: 768px) {
@@ -22,6 +30,28 @@ html {
 
 .body {
     margin: 0px;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+    .page-wrapper > header {
+        flex-shrink: 0;
+    }
+
+    .page-wrapper > .flex-grow-1 {
+        flex: 1 0 auto;
+        display: flex;
+        min-height: 0;
+    }
+
+.main-content {
+    display: flex;
+    flex: 1 0 auto;
+    min-height: 0;
 }
 
 .card a {
@@ -175,6 +205,18 @@ a.btn {
     background: var(--color-bg);
     min-width: var(--sidebar-width);
     max-width: var(--sidebar-width);
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.main-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding: 1rem;
 }
 
     #sidebar .sidebar-header h4 {
@@ -344,27 +386,28 @@ a.btn {
     color: var(--color-white);
     font-size: 1rem;
     border-top: 1px solid #444;
+    flex-shrink: 0;
 }
 
-    .page-footer .footer-brand {
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        color: var(--color-primary);
-    }
+.page-footer .footer-brand {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+}
 
-    .page-footer .social-links {
-        gap: var(--spacing-sm);
-    }
+.page-footer .social-links {
+    gap: var(--spacing-sm);
+}
 
-        .page-footer .social-links li a {
-            background: var(--color-secondary);
-            color: var(--color-primary);
-            width: 32px;
-            height: 32px;
-            font-size: 16px;
-        }
+.page-footer .social-links li a {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+}
 
-            .page-footer .social-links li a:hover {
-                background: var(--color-primary);
-                color: var(--color-white);
-            }
+.page-footer .social-links li a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}

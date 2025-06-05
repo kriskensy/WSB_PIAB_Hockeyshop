@@ -49,6 +49,7 @@ namespace Hockeyshop.PortalWWW.Controllers
 
             ViewBag.NewArrivals = newArrivals;
             ViewBag.ShopRules = shopRules;
+            ViewBag.ShowNewArrivals = true; //flaga żeby na widoku Hockey news nie było tej karuzeli
 
             return View(latestNews);
         }
@@ -70,6 +71,17 @@ namespace Hockeyshop.PortalWWW.Controllers
             .ToListAsync();
             ViewBag.ShopRules = shopRules;
 
+            var newArrivals = await _context.Products
+            .Include(p => p.ProductImages)
+            .Where(p => p.NewArrival)
+            .OrderByDescending(p => p.IdProduct)
+            .Take(10)
+            .ToListAsync();
+
+            ViewBag.NewArrivals = newArrivals;
+
+            ViewBag.ShowNewArrivals = true; //flaga żeby na widoku Hockey news nie było tej karuzeli
+
             return View();
         }
 
@@ -90,6 +102,17 @@ namespace Hockeyshop.PortalWWW.Controllers
             .ToListAsync();
             ViewBag.ShopRules = shopRules;
 
+            var newArrivals = await _context.Products
+            .Include(p => p.ProductImages)
+            .Where(p => p.NewArrival)
+            .OrderByDescending(p => p.IdProduct)
+            .Take(10)
+            .ToListAsync();
+
+            ViewBag.NewArrivals = newArrivals;
+
+            ViewBag.ShowNewArrivals = true; //flaga żeby na widoku Hockey news nie było tej karuzeli
+
             return View();
         }
 
@@ -108,10 +131,29 @@ namespace Hockeyshop.PortalWWW.Controllers
                 IconClass = r.IconLibrary.ClassName
             })
             .ToListAsync();
+
             ViewBag.ShopRules = shopRules;
+
+            var newArrivals = await _context.Products
+            .Include(p => p.ProductImages)
+            .Where(p => p.NewArrival)
+            .OrderByDescending(p => p.IdProduct)
+            .Take(10)
+            .ToListAsync();
+
+            ViewBag.NewArrivals = newArrivals;
 
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Contact(string Name, string Email, string Message)
+        {
+            //to powinna byc obsluzona prawdziwa wysylka
+            TempData["ContactSuccess"] = "Your message has been sent.";
+            return RedirectToAction("OurTeam");
+        }
+
         //public IActionResult OurHighlights()
         //{
         //    return View();

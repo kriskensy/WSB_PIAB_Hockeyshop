@@ -76,6 +76,7 @@ namespace Hockeyshop.PortalWWW.Controllers.CMS.HockeyNews
             return View("~/Views/CMS/HockeyNews/Details.cshtml", hockeyNews);
         }
 
+
         private bool HockeyNewsExists(int id)
         {
             return _context.HockeyNews.Any(e => e.IdHockeyNews == id);
