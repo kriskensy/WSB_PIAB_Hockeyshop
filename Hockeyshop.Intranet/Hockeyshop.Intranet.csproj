@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Hockeyshop.Data\Hockeyshop.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\content\" />
+  </ItemGroup>
+
 </Project>

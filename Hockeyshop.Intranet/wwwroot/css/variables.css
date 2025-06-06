@@ -1,0 +1,31 @@
+﻿:root {
+    /*colors*/
+    --color-app-bg: #f6f6f6;
+    --color-primary: #ff5252;
+    --color-secondary: #44445a;
+    --color-accent: #258cfb;
+    --color-bg: #f8f9fa;
+    --color-footer-bg: #2a2a2e;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #fafafa;
+    --color-border: #ddd;
+    --color-shoprules-bg: #f0f8ff;
+    /*text*/
+    --text-main: #333;
+    --text-light: #fff;
+    --text-muted: #555;
+    /*margin, padding*/
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 48px;
+    /*radius*/
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    /*oders*/
+    --navbar-height: 64px;
+    --sidebar-width: 250px;
+}

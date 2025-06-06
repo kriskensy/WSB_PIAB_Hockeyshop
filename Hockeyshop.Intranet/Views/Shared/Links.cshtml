@@ -1,30 +1,54 @@
-﻿<nav class="navbar navbar-expand-md fixed-top navbar-dark admin-navbar">
+﻿@using System.Security.Claims
+
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
     <div class="container-fluid">
 
-        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-user-shield me-2"></i>Besthockey Employee Dashboard</a>
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BestHockey Intranet</a>
+
+        <!-- podbija buttony na czerwono-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
 
         <ul class="nav nav-pills me-auto">
             <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="SticksTechnology"><i class="fas fa-award me-1"></i>Sticks technology</a>
             <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="OurTeam"><i class="fas fa-user-group me-1"></i>Our team</a>
-            <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="HockeyNews"><i class="fas fa-newspaper me-1"></i>News</a>
-            <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="HockeyNews"><i class="fas fa-store me-1"></i>Shop</a>
+            <a class="btn btn-success" asp-area="" asp-controller="HockeyNews" asp-action="Index"><i class="fas fa-newspaper me-1"></i>News</a>
         </ul>
 
-        <!-- w obecnej formie projektu logowanie nie jest przewidziane -->
+        <div class="d-flex ms-auto align-items-center">
+            <form class="d-flex me-2" asp-controller="Shop" asp-action="Search" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" name="searchTerm" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            
 
-@*         <div class="btn-group ms-auto">
-            <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">
-                <i class="fas fa-user-cog me-1"></i>@User.Identity.Name
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li>
-                    <a class="dropdown-item text-danger" asp-area="" asp-controller="Auth" asp-action="Logout">
-                        <i class="fas fa-sign-out-alt me-2"></i>Logout
+            @if (User.Identity.IsAuthenticated)
+            {
+                var fullName = User.FindFirst("FullName")?.Value; //pobiera dane z claims ustawionych przy logowaniu
+
+                <div class="btn-group">
+                    <a asp-area="" asp-controller="Account" asp-action="AccountIndex" class="btn btn-success dropdown-toggle"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i> @fullName
                     </a>
-                </li>
-            </ul>
-        </div> *@
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" asp-controller="Account" asp-action="Logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            }
+            else
+            {
+                <a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-success">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+            }
+        </div>
+
+        </div>
+
     </div>
 </nav>

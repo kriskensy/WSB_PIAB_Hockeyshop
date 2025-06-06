@@ -25,6 +25,7 @@ wwwroot\content\img_sticksTechnology\evolution-of-hockey-sticks.jpg
 wwwroot\content\img_sticksTechnology\fiberglass.webp
 wwwroot\content\img_sticksTechnology\manufacturing-process.webp
 wwwroot\content\img_sticksTechnology\stick-comparison.jpg
+wwwroot\content\Logo_BestHockey.png
 wwwroot\content\Placeholder.webp
 wwwroot\css\site.css
 wwwroot\css\variables.css

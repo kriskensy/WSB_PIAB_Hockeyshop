@@ -6,13 +6,16 @@
 
 <section class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-12">
-            <div class="card shadow-lg">
+        <div class="col-12 col-lg-10 col-xl-9">
+            <div class="card hockey-news-card shadow-lg" style="border-radius: var(--radius-lg); overflow: hidden;">
                 @if (!string.IsNullOrEmpty(Model.ImageUrl))
                 {
-                    <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.Title" style="object-fit:cover; max-height:320px;">
+                    <img src="@Model.ImageUrl"
+                         class="card-img-top"
+                         alt="@Model.Title"
+                         style="object-fit:cover; max-height:320px; border-top-left-radius: var(--radius-lg); border-top-right-radius: var(--radius-lg);" />
                 }
-                <div class="card-body">
+                <div class="card-body" style="padding: var(--spacing-md);">
                     <h2 class="card-title mb-3">@Model.Title</h2>
                     <div class="mb-3 text-muted small">
                         <i class="fa-regular fa-user"></i>

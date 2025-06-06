@@ -1,4 +1,6 @@
+wwwroot\content\Logo_BestHockey.png
 wwwroot\css\site.css
+wwwroot\css\variables.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

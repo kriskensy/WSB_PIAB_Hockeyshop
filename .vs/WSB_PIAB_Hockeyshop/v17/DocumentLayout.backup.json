@@ -3,44 +3,44 @@
   "WorkspaceRootPath": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\controllers\\shop\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\controllers\\shop\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\home\\stickstechnology.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\home\\stickstechnology.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\cms\\hockeynews\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\cms\\hockeynews\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\wwwroot\\css\\variables.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\wwwroot\\css\\variables.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\controllers\\cms\\hockeynews\\hockeynewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\controllers\\cms\\hockeynews\\hockeynewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\cms\\hockeynews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\cms\\hockeynews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\shared\\links.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\shared\\links.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\shared\\_newarrivalscarousel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\shared\\_newarrivalscarousel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\shared\\_productcategoriessidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\shared\\_productcategoriessidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\shared\\_shoplayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\shared\\_shoplayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\controllers\\shop\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\controllers\\shop\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\shared\\_productcategoriessidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\shared\\_productcategoriessidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.portalwww\\views\\shared\\_newarrivalscarousel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAB4055F-F8C7-45B1-B82A-8AFA93ECB943}|Hockeyshop.PortalWWW\\Hockeyshop.PortalWWW.csproj|solutionrelative:hockeyshop.portalwww\\views\\shared\\_newarrivalscarousel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7522FFB5-29D2-4709-8E3D-114D649977BC}|Hockeyshop.Intranet\\Hockeyshop.Intranet.csproj|c:\\programming\\_studia wsb-nlu\\dotnet courses\\internet applications\\wsb_piab_hockeyshop\\hockeyshop.intranet\\views\\products\\productimages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -81,90 +81,103 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 64,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 72,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "variables.css",
+              "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\variables.css",
+              "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\wwwroot\\css\\variables.css",
+              "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\wwwroot\\css\\variables.css",
+              "RelativeToolTip": "Hockeyshop.PortalWWW\\wwwroot\\css\\variables.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-06T15:51:05.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shop\\Index.cshtml",
+              "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Views\\Shop\\Index.cshtml",
+              "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shop\\Index.cshtml",
+              "RelativeToolTip": "Hockeyshop.PortalWWW\\Views\\Shop\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T15:44:55.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\CMS\\HockeyNews\\Details.cshtml",
+              "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Views\\CMS\\HockeyNews\\Details.cshtml",
+              "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\CMS\\HockeyNews\\Details.cshtml",
+              "RelativeToolTip": "Hockeyshop.PortalWWW\\Views\\CMS\\HockeyNews\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T15:37:37.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\CMS\\HockeyNews\\Index.cshtml",
+              "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Views\\CMS\\HockeyNews\\Index.cshtml",
+              "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\CMS\\HockeyNews\\Index.cshtml",
+              "RelativeToolTip": "Hockeyshop.PortalWWW\\Views\\CMS\\HockeyNews\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T15:31:02.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ShopController.cs",
               "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Controllers\\Shop\\ShopController.cs",
               "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Controllers\\Shop\\ShopController.cs",
               "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Controllers\\Shop\\ShopController.cs",
               "RelativeToolTip": "Hockeyshop.PortalWWW\\Controllers\\Shop\\ShopController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAwDgAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T19:17:26.095Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SticksTechnology.cshtml",
-              "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Home\\SticksTechnology.cshtml",
-              "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Views\\Home\\SticksTechnology.cshtml",
-              "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Home\\SticksTechnology.cshtml",
-              "RelativeToolTip": "Hockeyshop.PortalWWW\\Views\\Home\\SticksTechnology.cshtml",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAkwGwAAACLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T19:16:43.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HockeyNewsController.cs",
-              "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Controllers\\CMS\\HockeyNews\\HockeyNewsController.cs",
-              "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Controllers\\CMS\\HockeyNews\\HockeyNewsController.cs",
-              "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Controllers\\CMS\\HockeyNews\\HockeyNewsController.cs",
-              "RelativeToolTip": "Hockeyshop.PortalWWW\\Controllers\\CMS\\HockeyNews\\HockeyNewsController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowEwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:56:01.858Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Hockeyshop.PortalWWW\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCUAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T18:53:13.772Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "_ShopLayout.cshtml",
               "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shared\\_ShopLayout.cshtml",
               "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Views\\Shared\\_ShopLayout.cshtml",
               "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shared\\_ShopLayout.cshtml",
               "RelativeToolTip": "Hockeyshop.PortalWWW\\Views\\Shared\\_ShopLayout.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-04T17:18:43.75Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shop\\Index.cshtml",
-              "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Views\\Shop\\Index.cshtml",
-              "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shop\\Index.cshtml",
-              "RelativeToolTip": "Hockeyshop.PortalWWW\\Views\\Shop\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T18:27:39.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "_ProductCategoriesSidebar.cshtml",
               "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shared\\_ProductCategoriesSidebar.cshtml",
               "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Views\\Shared\\_ProductCategoriesSidebar.cshtml",
@@ -172,24 +185,12 @@
               "RelativeToolTip": "Hockeyshop.PortalWWW\\Views\\Shared\\_ProductCategoriesSidebar.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T18:25:31.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Links.cshtml",
-              "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shared\\Links.cshtml",
-              "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Views\\Shared\\Links.cshtml",
-              "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shared\\Links.cshtml",
-              "RelativeToolTip": "Hockeyshop.PortalWWW\\Views\\Shared\\Links.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T18:13:02.611Z",
+              "WhenOpened": "2025-06-04T18:25:31.311Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "_NewArrivalsCarousel.cshtml",
               "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shared\\_NewArrivalsCarousel.cshtml",
               "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Views\\Shared\\_NewArrivalsCarousel.cshtml",
@@ -202,13 +203,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Hockeyshop.PortalWWW\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.PortalWWW\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Hockeyshop.PortalWWW\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAB2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-01T18:16:57.755Z",
               "EditorCaption": ""
@@ -216,7 +217,7 @@
           ]
         },
         {
-          "DockedWidth": 22,
+          "DockedWidth": 14,
           "SelectedChildIndex": 0,
           "Children": [
             {

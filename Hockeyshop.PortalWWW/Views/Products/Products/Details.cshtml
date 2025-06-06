@@ -10,38 +10,48 @@
 <section class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
-            <div class="card shadow-lg">
+            <div class="card shadow-lg" style="border-radius: var(--radius-lg); overflow: hidden;">
                 @if (firstImage != null && !string.IsNullOrEmpty(firstImage.ImageUrl))
                 {
-                    <img src="@Url.Content("~/content/" + firstImage.ImageUrl)" class="card-img-top" alt="@Model.Name" style="object-fit:contain; height:320px;" />
+                    <img src="@Url.Content("~/content/" + firstImage.ImageUrl)"
+                         class="card-img-top"
+                         alt="@Model.Name"
+                         style="object-fit:contain; height:320px; border-top-left-radius: var(--radius-lg); border-top-right-radius: var(--radius-lg);" />
                 }
                 else
                 {
-                    <img src="@Url.Content("~/content/Placeholder.webp")" class="card-img-top" alt="No image" style="object-fit:contain; height:320px;" />
+                    <img src="@Url.Content("~/content/Placeholder.webp")"
+                         class="card-img-top"
+                         alt="No image"
+                         style="object-fit:contain; height:320px; border-top-left-radius: var(--radius-lg); border-top-right-radius: var(--radius-lg);" />
                 }
-                <div class="card-body">
+                <div class="card-body" style="padding: var(--spacing-md);">
                     <h2 class="card-title mb-3">@Model.Name</h2>
-
                     <div class="mb-3 text-muted small">
                         <strong>Category:</strong> @Model.ProductCategory?.Name<br />
-                        <strong>Supplier:</strong> @Model.Supplier?.City
+                        <strong>Supplier:</strong> @Model.Supplier?.Name
                     </div>
                     <h4 class="text-success mb-3">@Model.Price.ToString("C")</h4>
                     <p class="card-text fs-5">
                         @Model.Description
                     </p>
-                    @if (categoryId.HasValue)
-                    {
-                        <a asp-controller="Shop" asp-action="ProductCategory" asp-route-id="@categoryId" class="btn btn-outline-primary mt-3">
-                            <i class="fa-solid fa-arrow-left"></i> Back to @Model.ProductCategory?.Name
-                        </a>
-                    }
-                    else
-                    {
-                        <a asp-controller="Products" asp-action="Index" class="btn btn-outline-primary mt-3">
-                            <i class="fa-solid fa-arrow-left"></i> Back to products
-                        </a>
-                    }
+                    <div class="d-flex gap-2">
+                        @if (categoryId.HasValue)
+                        {
+                            <a asp-controller="Shop" asp-action="ProductCategory" asp-route-id="@categoryId" class="btn btn-outline-success">
+                                <i class="fa-solid fa-arrow-left"></i> Back to @Model.ProductCategory?.Name
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Products" asp-action="Index" class="btn btn-outline-success">
+                                <i class="fa-solid fa-arrow-left"></i> Back to products
+                            </a>
+                        }
+                        <button type="button" class="btn btn-success">
+                            <i class="fa-solid fa-cart-shopping"></i> Add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
