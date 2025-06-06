@@ -1,0 +1,77 @@
+﻿@model Hockeyshop.PortalWWW.Models.UserCartViewModel
+
+@{
+    ViewData["Title"] = "Your Cart";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+
+<h2 class="mb-4">Your Cart</h2>
+
+@if (TempData["CartMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["CartMessage"]</div>
+}
+@if (TempData["CartError"] != null)
+{
+    <div class="alert alert-danger">@TempData["CartError"]</div>
+}
+
+@if (!Model.Items.Any())
+{
+    <div class="alert alert-info text-center my-5">
+        <i class="fa-solid fa-box-open fa-2x mb-3"></i><br />
+        Your cart is empty.
+    </div>
+}
+else
+{
+    <div class="container-fluid shop-section">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div class="card shadow-sm" style="border-radius: var(--radius-md);">
+                    <div class="card-body p-4">
+                        <form asp-action="Update" method="post">
+                            <table class="table table-bordered shop-table align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th class="text-end">Price</th>
+                                        <th style="width: 120px;" class="text-center">Quantity</th>
+                                        <th class="text-end">Total</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Items)
+                                    {
+                                        <tr>
+                                            <td>@item.ProductName</td>
+                                            <td class="text-end">@item.Price.ToString("C")</td>
+                                            <td class="text-center">
+                                                <input type="number" name="quantities[@item.IdProduct]" value="@item.Quantity" min="1" class="form-control text-center" style="width:80px; margin: 0 auto;" />
+                                            </td>
+                                            <td class="text-end">@item.TotalPrice.ToString("C")</td>
+                                            <td class="text-center">
+                                                <a asp-action="Remove" asp-route-productId="@item.IdProduct" class="btn btn-danger btn-sm" title="Remove">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <div class="my-3 text-end">
+                                <strong>Total: @Model.TotalAmount.ToString("C")</strong>
+                            </div>
+                            <div class="d-flex gap-2 justify-content-end">
+                                <button type="submit" class="btn btn-primary">Update quantities</button>
+                                <a asp-action="Clear" class="btn btn-outline-secondary">Cancel</a>
+                                <button type="submit" formaction="@Url.Action("Buy")" formmethod="post" class="btn btn-success">Buy</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

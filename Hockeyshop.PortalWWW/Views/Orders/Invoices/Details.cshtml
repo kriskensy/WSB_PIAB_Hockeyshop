@@ -1,51 +1,41 @@
 ﻿@model Hockeyshop.Data.Data.Orders.Invoice
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Invoice details";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
 }
 
-<h1>Invoice</h1>
+<h1 class="mb-4">Invoice <span class="fw-semibold">@Model.InvoiceNumber</span></h1>
 
-<div>
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Order.IdOrder)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Order.IdOrder)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.InvoiceNumber)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.InvoiceNumber)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IssueDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IssueDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Order.TotalAmount)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Order.TotalAmount)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.User)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.User.FirstName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User.LastName)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Index">Back to invoices</a>
+<div class="container-fluid shop-section">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-sm" style="border-radius: var(--radius-md);">
+                <div class="card-body p-4">
+                    <dl class="row mb-0">
+                        <dt class="col-sm-4">Invoice number</dt>
+                        <dd class="col-sm-8 fw-semibold">@Model.InvoiceNumber</dd>
+
+                        <dt class="col-sm-4">Issue date</dt>
+                        <dd class="col-sm-8">@Model.IssueDate.ToString("yyyy-MM-dd")</dd>
+
+                        <dt class="col-sm-4">Order number</dt>
+                        <dd class="col-sm-8">
+                            <span class="badge bg-secondary" style="border-radius: var(--radius-sm);">
+                                @Model.Order?.IdOrder
+                            </span>
+                        </dd>
+
+                        <dt class="col-sm-4">Order total</dt>
+                        <dd class="col-sm-8 fw-bold">@Model.Order?.TotalAmount.ToString("C")</dd>
+                    </dl>
+                </div>
+                <div class="card-footer bg-transparent border-0 text-end">
+                    <a asp-action="Index" class="btn btn-outline-success">
+                        <i class="fa fa-arrow-left"></i> Back to invoices
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

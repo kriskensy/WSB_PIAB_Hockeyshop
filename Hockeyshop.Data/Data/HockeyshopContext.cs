@@ -100,7 +100,7 @@ namespace Hockeyshop.Data.Data
 
             modelBuilder.Entity<OrderItem>()
                 .HasOne(oi => oi.Order)
-                .WithMany()
+                .WithMany(o => o.OrderItems)
                 .HasForeignKey(oi => oi.IdOrder)
                 .OnDelete(DeleteBehavior.NoAction);
 
@@ -109,6 +109,7 @@ namespace Hockeyshop.Data.Data
                 .WithMany()
                 .HasForeignKey(oi => oi.IdProduct)
                 .OnDelete(DeleteBehavior.NoAction);
+
 
             modelBuilder.Entity<Payment>()
                 .HasOne(p => p.Order)

@@ -1,42 +1,76 @@
-﻿@model IEnumerable<Hockeyshop.Data.Data.Orders.Order>
+﻿@using Hockeyshop.Data.Data.Payments
+@model IEnumerable<Hockeyshop.Data.Data.Orders.Order>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "My Orders";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
 }
 
-<h1>My orders</h1>
+<h1 class="mb-4">My Orders</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderStatus)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderStatus.Name)
-            </td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.IdOrder">Details</a>
-            </td>
-        </tr>
+@if (!Model.Any())
+{
+    <div class="alert alert-info text-center my-5" role="alert">
+        <i class="fa-solid fa-box-open fa-2x mb-3"></i><br />
+        You have no orders yet.
+    </div>
 }
-    </tbody>
-</table>
+else
+{
+    <div class="container-fluid shop-section">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-sm" style="border-radius: var(--radius-md);">
+                    <div class="card-body p-4">
+                        <table class="table table-bordered table-hover shop-table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Total</th>
+                                    <th>Payment status</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    var payment = item.Payments?.FirstOrDefault();
+                                    <tr>
+                                        <td>@item.OrderDate.ToString("yyyy-MM-dd")</td>
+                                        <td>
+                                            <span class="badge" style="background: var(--color-accent); color: var(--color-white); border-radius: var(--radius-sm);">
+                                                @item.OrderStatus?.Name
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold">@item.TotalAmount.ToString("C")</span>
+                                        </td>
+                                        <td>
+                                            @if (payment != null)
+                                            {
+                                                <span class="d-block">@payment.Amount.ToString("C")</span>
+                                                <span class="badge bg-secondary mt-1">
+                                                    @(payment.PaymentStatus != null ? payment.PaymentStatus.Name : "Unknown")
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-danger">No payment</span>
+                                            }
+                                        </td>
+                                        <td class="text-center">
+                                            <a asp-action="Details" asp-route-id="@item.IdOrder" class="btn btn-outline-success btn-sm">
+                                                <i class="fa fa-eye"></i> Details
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

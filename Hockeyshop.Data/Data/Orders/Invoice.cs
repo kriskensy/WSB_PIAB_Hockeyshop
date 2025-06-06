@@ -31,5 +31,7 @@ namespace Hockeyshop.Data.Data.Orders
         public int IdUser { get; set; }
         [ValidateNever]
         public User User { get; set; }
+
+        public decimal TotalAmount { get; set; }
     }
 }

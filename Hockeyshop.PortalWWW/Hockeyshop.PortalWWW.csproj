@@ -22,11 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Cart\" />
     <Folder Include="Controllers\Core\" />
     <Folder Include="Components\" />
     <Folder Include="Services\" />
-    <Folder Include="Views\Cart\" />
     <Folder Include="Views\Core\" />
   </ItemGroup>
 

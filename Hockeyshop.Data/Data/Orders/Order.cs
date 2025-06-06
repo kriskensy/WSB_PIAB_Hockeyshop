@@ -32,8 +32,19 @@ namespace Hockeyshop.Data.Data.Orders
         [Display(Name = "Total amount")]
         public decimal TotalAmount { get; set; }
 
-        public ICollection<OrderItem> OrderItems { get; } = new List<OrderItem>();
-        public ICollection<Invoice> Invoices { get; } = new List<Invoice>();
-        public ICollection<Payment> Payments { get; } = new List<Payment>();
+        //public ICollection<OrderItem> OrderItems { get; } = new List<OrderItem>();
+        //public ICollection<Invoice> Invoices { get; } = new List<Invoice>();
+        //public ICollection<Payment> Payments { get; } = new List<Payment>();
+
+        public ICollection<OrderItem> OrderItems { get; set; }
+        public ICollection<Invoice> Invoices { get; set; }
+        public ICollection<Payment> Payments { get; set; }
+
+        public Order()
+        {
+            OrderItems = new List<OrderItem>();
+            Invoices = new List<Invoice>();
+            Payments = new List<Payment>();
+        }
     }
 }

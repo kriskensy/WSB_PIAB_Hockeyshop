@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hockeyshop.Data.Data;
+using Hockeyshop.Data.Data.Orders;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Data.Data;
-using Hockeyshop.Data.Data.Orders;
 
 namespace Hockeyshop.PortalWWW.Controllers.Orders
 {
@@ -16,15 +17,28 @@ namespace Hockeyshop.PortalWWW.Controllers.Orders
         }
 
         // GET: Invoices
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-            var hockeyshopContext = _context.Invoices.Include(i => i.Order).Include(i => i.User);
-            return View("~/Views/Orders/Invoices/Index.cshtml", await hockeyshopContext.ToListAsync());
+            ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
+
+            var userId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
+
+            var invoices = await _context.Invoices
+                .Where(i => i.IdUser == userId)
+                .Include(i => i.Order)
+                .OrderByDescending(i => i.IssueDate)
+                .ToListAsync();
+
+            return View("~/Views/Orders/Invoices/Index.cshtml", invoices);
         }
+
 
         // GET: Invoices/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
+
             if (id == null)
             {
                 return NotFound();

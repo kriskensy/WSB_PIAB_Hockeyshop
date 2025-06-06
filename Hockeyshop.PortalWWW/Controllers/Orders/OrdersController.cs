@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hockeyshop.Data.Data;
+using Hockeyshop.Data.Data.Orders;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Data.Data;
-using Hockeyshop.Data.Data.Orders;
 
 namespace Hockeyshop.PortalWWW.Controllers.Orders
 {
@@ -16,15 +17,34 @@ namespace Hockeyshop.PortalWWW.Controllers.Orders
         }
 
         // GET: Orders
+
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-            var hockeyshopContext = _context.Orders.Include(o => o.OrderStatus).Include(o => o.User);
-            return View(await hockeyshopContext.ToListAsync());
+            ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
+
+            var userId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
+
+            var orders = await _context.Orders
+                .Where(o => o.IdUser == userId)
+                .Include(o => o.OrderStatus)
+                .Include(o => o.OrderItems)
+                    .ThenInclude(o => o.Product)
+                .Include(o => o.Payments)
+                    .ThenInclude(o => o.PaymentStatus)
+                .Include(o => o.User)
+                .OrderByDescending(o => o.OrderDate)
+                .ToListAsync();
+
+            return View("~/Views/Orders/Orders/Index.cshtml", orders);
         }
+
 
         // GET: Orders/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
+
             if (id == null)
             {
                 return NotFound();
@@ -32,14 +52,17 @@ namespace Hockeyshop.PortalWWW.Controllers.Orders
 
             var order = await _context.Orders
                 .Include(o => o.OrderStatus)
-                .Include(o => o.User)
+                .Include(o => o.OrderItems)
+                    .ThenInclude(o => o.Product)
+                .Include(o => o.Payments)
                 .FirstOrDefaultAsync(m => m.IdOrder == id);
+
             if (order == null)
             {
                 return NotFound();
             }
 
-            return View(order);
+            return View("~/Views/Orders/Orders/Details.cshtml", order);
         }
 
         private bool OrderExists(int id)

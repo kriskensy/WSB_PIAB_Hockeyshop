@@ -58,7 +58,7 @@ namespace Hockeyshop.PortalWWW.Controllers.Shop
         }
 
         // GET: Shop/Search
-        public async Task<IActionResult> Search(string searchTerm)
+        public async Task<IActionResult> Search(string searchTerm, int? categoryId)
         {
             ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
 
@@ -68,7 +68,18 @@ namespace Hockeyshop.PortalWWW.Controllers.Shop
                 .Include(p => p.ProductImages)
                 .AsQueryable();
 
-            //szukawanie w rekordach tabel
+            if (categoryId.HasValue)
+            {
+                query = query.Where(p => p.IdProductCategory == categoryId.Value);
+                var category = await _context.ProductCategories.FindAsync(categoryId.Value);
+                ViewBag.CurrentCategoryName = category?.Name ?? "Unknown category";
+                ViewBag.CategoryId = categoryId.Value;
+            }
+            else
+            {
+                ViewBag.CurrentCategoryName = "All products";
+            }
+
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 query = query.Where(item =>
@@ -76,19 +87,13 @@ namespace Hockeyshop.PortalWWW.Controllers.Shop
                     item.Supplier.Name.Contains(searchTerm) ||
                     item.Description.Contains(searchTerm) ||
                     item.Name.Contains(searchTerm));
-
-                ViewBag.CurrentCategoryName = $"Search results for: \"{searchTerm}\"";
-            }
-            else
-            {
-                ViewBag.CurrentCategoryName = "All products";
+                ViewBag.SearchTerm = searchTerm;
             }
 
             var products = await query.OrderBy(p => p.Name).ToListAsync();
-            ViewBag.SearchTerm = searchTerm;
-
             return View("~/Views/Products/Products/Index.cshtml", products);
         }
+
 
         public async Task<IActionResult> OurHighlights()
         {

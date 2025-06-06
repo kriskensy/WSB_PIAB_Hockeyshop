@@ -1,74 +1,11 @@
-﻿@* @model IEnumerable<Hockeyshop.Data.Data.Products.Product>
+﻿@model IEnumerable<Hockeyshop.Data.Data.Products.Product>
 @using System.Linq
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_ShopLayout.cshtml";
     var categoryName = ViewBag.CurrentCategoryName as string;
-}
-
-@if (!string.IsNullOrEmpty(categoryName))
-{
-    <h1 class="mb-4">@categoryName</h1>
-}
-else
-{
-    <h1 class="mb-4">Products</h1>
-}
-
-
-@if (!Model.Any())
-{
-    <div class="alert alert-warning text-center my-5" role="alert">
-        <i class="fa-solid fa-box-open fa-2x mb-3"></i><br />
-        The product you are looking for is not in the store.
-    </div>
-}
-else
-{
-    <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
-            @foreach (var product in Model)
-            {
-            var firstImage = product.ProductImages?.FirstOrDefault();
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    @if (firstImage != null && !string.IsNullOrEmpty(firstImage.ImageUrl))
-                    {
-                        <img src="@Url.Content("~/content/" + firstImage.ImageUrl)" class="card-img-top" alt="@product.Name" style="object-fit:contain; height:220px;" />
-                    }
-                    else
-                    {
-                            <img src="@Url.Content("~/content/Placeholder.webp")" class="card-img-top" alt="No image" style="object-fit:contain; height:220px;" />
-                    }
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">@product.Name</h5>
-                        <p class="card-text mb-2">
-                            <strong>Category:</strong> @product.ProductCategory?.Name<br />
-                            <strong>Price:</strong> @product.Price.ToString("C")<br />
-                        </p>
-                        <p class="card-text flex-grow-1">
-                            @(product.Description?.Length > 60
-                                                            ? product.Description.Substring(0, 60) + "..."
-                                                            : product.Description)
-                    </p>
-                    <a asp-controller="Products" asp-action="Details" asp-route-id="@product.IdProduct" asp-route-categoryId="@product.IdProductCategory" class="btn btn-outline-success mt-2">Details</a>
-                    </div>
-                </div>
-            </div>
-                    }
-        </div>
-    </div>
-}
- *@
-
-@model IEnumerable<Hockeyshop.Data.Data.Products.Product>
-@using System.Linq
-
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_ShopLayout.cshtml";
-    var categoryName = ViewBag.CurrentCategoryName as string;
+    var categoryId = ViewBag.CategoryId as int? ?? Model.FirstOrDefault()?.IdProductCategory;
 }
 
 @if (!string.IsNullOrEmpty(categoryName))
@@ -90,6 +27,17 @@ else
 else
 {
     <div class="container-fluid shop-section">
+
+        <div class="row mb-4">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto">
+                <form class="d-flex" asp-controller="Shop" asp-action="Search" method="get" role="search">
+                    <input type="hidden" name="categoryId" value="@categoryId" />
+                    <input class="form-control me-2" type="search" placeholder="Search in category..." aria-label="Search" name="searchTerm" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
             @foreach (var product in Model)
             {
@@ -101,20 +49,20 @@ else
                        asp-route-categoryId="@product.IdProductCategory"
                        class="text-decoration-none text-dark d-block h-100">
                         <div class="card h-100 shadow-sm shop-section-card"
-                             style="border-radius: var(--radius-md); transition: box-shadow 0.3s;">
+                             style="border-radius: var(--radius-sm); transition: box-shadow 0.3s;">
                             @if (firstImage != null && !string.IsNullOrEmpty(firstImage.ImageUrl))
                             {
                                 <img src="@Url.Content("~/content/" + firstImage.ImageUrl)"
                                      class="card-img-top"
                                      alt="@product.Name"
-                                     style="object-fit:contain; height:220px; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md);" />
+                                     style="object-fit:contain; height:180px; border-top-left-radius: var(--radius-sm); border-top-right-radius: var(--radius-sm); border-bottom: 1px solid var(--color-border);" />
                             }
                             else
                             {
                                 <img src="@Url.Content("~/content/Placeholder.webp")"
                                      class="card-img-top"
                                      alt="No image"
-                                     style="object-fit:contain; height:220px; border-top-left-radius: var(--radius-md); border-top-right-radius: var(--radius-md);" />
+                                     style="object-fit:contain; height:180px; border-top-left-radius: var(--radius-sm); border-top-right-radius: var(--radius-sm); border-bottom: 1px solid var(--color-border);" />
                             }
                         <div class="card-body d-flex flex-column" style="padding: var(--spacing-sm); min-height: 170px;">
                             <h5 class="card-title">@product.Name</h5>
