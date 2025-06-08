@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hockeyshop.PortalWWW.Controllers.CMS.HockeyNews
 {
-    public class HockeyNewsController : Controller
+    public class HockeyNewsController : BaseController
     {
         private readonly HockeyshopContext _context;
 

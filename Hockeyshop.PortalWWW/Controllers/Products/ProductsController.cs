@@ -6,7 +6,7 @@ using Hockeyshop.Data.Data.Products;
 
 namespace Hockeyshop.PortalWWW.Controllers.Products
 {
-    public class ProductsController : Controller
+    public class ProductsController : BaseController
     {
         private readonly HockeyshopContext _context;
 

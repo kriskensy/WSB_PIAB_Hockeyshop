@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace Hockeyshop.PortalWWW.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
         private readonly HockeyshopContext _context;

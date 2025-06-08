@@ -10,7 +10,7 @@ using System.Security.Claims;
 
 namespace Hockeyshop.PortalWWW.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         private readonly HockeyshopContext _context;
 

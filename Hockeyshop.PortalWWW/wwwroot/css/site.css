@@ -114,6 +114,24 @@ a.btn {
         color: var(--color-white);
     }
 
+.cart-badge {
+    position: absolute;
+    transform: translate(85%, -85%);
+    font-size: 0.85em;
+    min-width: 1.5em;
+    padding: 0.2em 0.5em;
+    background: var(--color-accent, #dc3545);
+    color: var(--color-white, #fff);
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    z-index: 2;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+}
+
+
 /* New arrivals carousel cards */
 .new-arrival-card {
     width: 18rem;

@@ -8,7 +8,7 @@ using System.Security.Claims;
 
 namespace Hockeyshop.PortalWWW.Controllers.Cart
 {
-    public class CartController : Controller
+    public class CartController : BaseController
     {
         private readonly HockeyshopContext _context;
 

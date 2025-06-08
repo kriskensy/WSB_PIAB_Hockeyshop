@@ -10,7 +10,7 @@ using Hockeyshop.Data.Data.Orders;
 
 namespace Hockeyshop.PortalWWW.Controllers.Orders
 {
-    public class OrderStatusController : Controller
+    public class OrderStatusController : BaseController
     {
         private readonly HockeyshopContext _context;
 

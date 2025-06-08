@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hockeyshop.PortalWWW.Controllers.Shop
 {
-    public class ShopController : Controller
+    public class ShopController : BaseController
     {
         private readonly HockeyshopContext _context;
 

@@ -6,7 +6,7 @@ using Hockeyshop.Data.Data.Payments;
 
 namespace Hockeyshop.PortalWWW.Controllers.Payments
 {
-    public class PaymentsController : Controller
+    public class PaymentsController : BaseController
     {
         private readonly HockeyshopContext _context;
 

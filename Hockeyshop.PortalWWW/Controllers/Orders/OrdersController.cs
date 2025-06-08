@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hockeyshop.PortalWWW.Controllers.Orders
 {
-    public class OrdersController : Controller
+    public class OrdersController : BaseController
     {
         private readonly HockeyshopContext _context;
 

@@ -29,8 +29,17 @@
             {
                 var fullName = User.FindFirst("FullName")?.Value; //pobiera dane z claims ustawionych przy logowaniu
 
-                <a asp-area="" asp-controller="Cart" asp-action="Index" class="btn btn-success me-2">
+                int cartCount = ViewBag.CartCount ?? 0;
+
+                <a asp-area="" asp-controller="Cart" asp-action="Index" class="btn btn-success me-2 position-relative">
                     <i class="fa-solid fa-cart-shopping"></i> Cart
+                    @if (cartCount > 0)
+                    {
+                        <span class="cart-badge badge rounded-pill bg-danger">
+                            @cartCount
+                            <span class="visually-hidden">items in cart</span>
+                        </span>
+                    }
                 </a>
 
                 <div class="btn-group">
