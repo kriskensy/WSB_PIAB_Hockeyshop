@@ -102,9 +102,68 @@ namespace Hockeyshop.PortalWWW.Controllers.Cart
             return RedirectToAction("Index");
         }
 
+        //GET: Checkout form
+        [Authorize]
+        public async Task<IActionResult> Checkout()
+        {
+            ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
+
+            var cart = GetCartFromSession();
+
+            if(!cart.Items.Any())
+            {
+                TempData["CartError"] = "Your cart is empty.";
+                return RedirectToAction("Index");
+            }
+
+            var paymentMethods = await _context.PaymentMethods
+                .OrderBy(pm => pm.Name)
+                .Select(pm => new PaymentMethodOption
+                {
+                    Id = pm.IdPaymentMethod,
+                    Name = pm.Name
+                }).ToListAsync();
+
+            var model = new CheckoutViewModel
+            {
+                Cart = cart,
+                PaymentMethods = paymentMethods
+            };
+
+            return View(model);
+        }
+
+        //POST: Process checkout
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Buy()
+        public async Task<IActionResult> Checkout(CheckoutViewModel model)
+        {
+            ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
+
+            model.Cart = GetCartFromSession(); //ładuje koszyk
+
+            if (!ModelState.IsValid)
+            {
+                model.PaymentMethods = await _context.PaymentMethods
+                    .OrderBy(pm => pm.Name)
+                    .Select(pm => new PaymentMethodOption
+                    {
+                        Id = pm.IdPaymentMethod,
+                        Name = pm.Name
+                    }).ToListAsync();
+
+                return View(model);
+            }
+
+            //zapis metody do sesji
+            HttpContext.Session.SetInt32("SelectedPaymentMethod", model.SelectedPaymentMethodId);
+
+            return RedirectToAction("ProcessOrder");
+        }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> ProcessOrder()
         {
             ViewBag.ProductCategories = await _context.ProductCategories.OrderBy(c => c.Name).ToListAsync();
 
@@ -114,6 +173,8 @@ namespace Hockeyshop.PortalWWW.Controllers.Cart
                 TempData["CartError"] = "Your cart is empty.";
                 return RedirectToAction("Index");
             }
+
+            var selectedPaymentMethod = HttpContext.Session.GetInt32("SelectedPaymentMethod") ?? 1;
 
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
@@ -143,10 +204,11 @@ namespace Hockeyshop.PortalWWW.Controllers.Cart
             {
                 IdOrder = order.IdOrder,
                 PaymentDate = DateTime.Now,
-                IdPaymentMethod = 1, //cash
+                IdPaymentMethod = selectedPaymentMethod, //wybrana metoda
                 IdPaymentStatus = 1, //pending
                 Amount = cart.TotalAmount
             };
+            _context.Payments.Add(payment);
 
             var invoiceNumber = await GenerateInvoiceNumber(); //najpierw generownie nr faktury
 
@@ -159,9 +221,13 @@ namespace Hockeyshop.PortalWWW.Controllers.Cart
                 TotalAmount = cart.TotalAmount
             };
             _context.Invoices.Add(invoice);
+
             await _context.SaveChangesAsync();
 
+            //czyszczenie sesji
             HttpContext.Session.Remove("Cart");
+            HttpContext.Session.Remove("SelectedPaymentMethod");
+
             TempData["CartMessage"] = "Order placed successfully!";
             return RedirectToAction("OrderConfirmation");
         }
