@@ -46,6 +46,8 @@ namespace Hockeyshop.PortalWWW.Controllers.Orders
 
             var invoice = await _context.Invoices
                 .Include(i => i.Order)
+                    .ThenInclude(i => i.OrderItems)
+                        .ThenInclude(i => i.Product)
                 .Include(i => i.User)
                 .FirstOrDefaultAsync(m => m.IdInvoice == id);
             if (invoice == null)

@@ -264,3 +264,7 @@ C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hoc
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\Hockeyshop.Intranet.pdb
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\Hockeyshop.Intranet.genruntimeconfig.cache
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\ref\Hockeyshop.Intranet.dll
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.Intranet\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
