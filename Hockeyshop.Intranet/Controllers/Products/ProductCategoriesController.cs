@@ -1,38 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Data.Data;
-using Hockeyshop.Data.Data.Products;
+﻿using Hockeyshop.Data.Data.Products;
+using Hockeyshop.Interfaces;
+using Hockeyshop.Interfaces.Products;
 using Hockeyshop.Intranet.Models;
-using Hockeyshop.Intranet.Extensions;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hockeyshop.Intranet.Controllers.Products
 {
     public class ProductCategoriesController : Controller
     {
-        private readonly HockeyshopContext _context;
+        private readonly IProductCategoryService _categoryService;
 
-        public ProductCategoriesController(HockeyshopContext context)
+        public ProductCategoriesController(IProductCategoryService categoryService)
         {
-            _context = context;
+            _categoryService = categoryService;
         }
 
         // GET: ProductCategories
         public async Task<IActionResult> Index(string searchTerm)
         {
-            var query = _context.ProductCategories.AsQueryable();
-
-            //wyszukiwanie w rekordach tabeli
-            if (!string.IsNullOrEmpty(searchTerm))
-            {
-                query = query.Where(pm => pm.Name.Contains(searchTerm));
-            }
-
-            //użycie extension do sortowania tabel po id desc
-            query = query.OrderByIdDescending();
-
-            var model = await query.ToListAsync();
+            var model = await _categoryService.GetAllAsync(searchTerm);
             ViewBag.SearchTerm = searchTerm;
-
             return View("~/Views/Products/ProductCategories/Index.cshtml", model);
         }
 
@@ -44,8 +32,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
 
-            var productCategory = await _context.ProductCategories
-                .FirstOrDefaultAsync(m => m.IdProductCategory == id);
+            var productCategory = await _categoryService.GetByIdAsync(id.Value);
             if (productCategory == null)
             {
                 return NotFound();
@@ -61,16 +48,13 @@ namespace Hockeyshop.Intranet.Controllers.Products
         }
 
         // POST: ProductCategories/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdProductCategory,Name")] ProductCategory productCategory)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(productCategory);
-                await _context.SaveChangesAsync();
+                await _categoryService.CreateAsync(productCategory);
                 return RedirectToAction(nameof(Index));
             }
             return View("~/Views/Products/ProductCategories/Create.cshtml", productCategory);
@@ -84,7 +68,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
 
-            var productCategory = await _context.ProductCategories.FindAsync(id);
+            var productCategory = await _categoryService.GetByIdAsync(id.Value);
             if (productCategory == null)
             {
                 return NotFound();
@@ -93,8 +77,6 @@ namespace Hockeyshop.Intranet.Controllers.Products
         }
 
         // POST: ProductCategories/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdProductCategory,Name")] ProductCategory productCategory)
@@ -108,8 +90,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
             {
                 try
                 {
-                    _context.Update(productCategory);
-                    await _context.SaveChangesAsync();
+                    await _categoryService.UpdateAsync(productCategory);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -135,8 +116,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
                 return NotFound();
             }
 
-            var productCategory = await _context.ProductCategories
-                .FirstOrDefaultAsync(m => m.IdProductCategory == id);
+            var productCategory = await _categoryService.GetByIdAsync(id.Value);
             if (productCategory == null)
             {
                 return NotFound();
@@ -152,16 +132,10 @@ namespace Hockeyshop.Intranet.Controllers.Products
         {
             try
             {
-                var productCategory = await _context.ProductCategories.FindAsync(id);
-                if (productCategory != null)
-                {
-                    _context.ProductCategories.Remove(productCategory);
-                }
-
-                await _context.SaveChangesAsync();
+                await _categoryService.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
-            catch (DbUpdateException ex)
+            catch (DbUpdateException)
             {
                 return View("Error", new ErrorViewModel
                 {
@@ -172,7 +146,7 @@ namespace Hockeyshop.Intranet.Controllers.Products
 
         private bool ProductCategoryExists(int id)
         {
-            return _context.ProductCategories.Any(e => e.IdProductCategory == id);
+            return _categoryService.Exists(id);
         }
     }
 }

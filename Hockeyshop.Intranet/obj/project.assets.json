@@ -3136,6 +3136,33 @@
         "runtime": {
           "bin/placeholder/Hockeyshop.Data.dll": {}
         }
+      },
+      "Hockeyshop.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Hockeyshop.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Hockeyshop.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Hockeyshop.Interfaces.dll": {}
+        }
+      },
+      "Hockeyshop.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Hockeyshop.Data": "1.0.0",
+          "Hockeyshop.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Hockeyshop.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Hockeyshop.Services.dll": {}
+        }
       }
     }
   },
@@ -8428,12 +8455,24 @@
       "type": "project",
       "path": "../Hockeyshop.Data/Hockeyshop.Data.csproj",
       "msbuildProject": "../Hockeyshop.Data/Hockeyshop.Data.csproj"
+    },
+    "Hockeyshop.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../Hockeyshop.Interfaces/Hockeyshop.Interfaces.csproj",
+      "msbuildProject": "../Hockeyshop.Interfaces/Hockeyshop.Interfaces.csproj"
+    },
+    "Hockeyshop.Services/1.0.0": {
+      "type": "project",
+      "path": "../Hockeyshop.Services/Hockeyshop.Services.csproj",
+      "msbuildProject": "../Hockeyshop.Services/Hockeyshop.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Font.Awesome >= 5.15.4",
       "Hockeyshop.Data >= 1.0.0",
+      "Hockeyshop.Interfaces >= 1.0.0",
+      "Hockeyshop.Services >= 1.0.0",
       "MathNet.Numerics >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.11",
@@ -8475,6 +8514,12 @@
           "projectReferences": {
             "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Data\\Hockeyshop.Data.csproj": {
               "projectPath": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Data\\Hockeyshop.Data.csproj"
+            },
+            "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Interfaces\\Hockeyshop.Interfaces.csproj": {
+              "projectPath": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Interfaces\\Hockeyshop.Interfaces.csproj"
+            },
+            "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Services\\Hockeyshop.Services.csproj": {
+              "projectPath": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Services\\Hockeyshop.Services.csproj"
             }
           }
         }

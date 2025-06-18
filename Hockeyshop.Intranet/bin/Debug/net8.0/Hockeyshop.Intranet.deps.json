@@ -10,6 +10,8 @@
         "dependencies": {
           "Font.Awesome": "5.15.4",
           "Hockeyshop.Data": "1.0.0",
+          "Hockeyshop.Interfaces": "1.0.0",
+          "Hockeyshop.Services": "1.0.0",
           "MathNet.Numerics": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.11",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.11",
@@ -2086,6 +2088,29 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Hockeyshop.Interfaces/1.0.0": {
+        "dependencies": {
+          "Hockeyshop.Data": "1.0.0"
+        },
+        "runtime": {
+          "Hockeyshop.Interfaces.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Hockeyshop.Services/1.0.0": {
+        "dependencies": {
+          "Hockeyshop.Data": "1.0.0",
+          "Hockeyshop.Interfaces": "1.0.0"
+        },
+        "runtime": {
+          "Hockeyshop.Services.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -3370,6 +3395,16 @@
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
     },
     "Hockeyshop.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Hockeyshop.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Hockeyshop.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

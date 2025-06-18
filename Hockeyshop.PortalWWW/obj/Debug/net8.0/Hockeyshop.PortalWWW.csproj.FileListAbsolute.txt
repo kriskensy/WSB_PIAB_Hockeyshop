@@ -240,8 +240,13 @@ C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hoc
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Hockeyshop.Data.dll
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Hockeyshop.Interfaces.dll
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Hockeyshop.Services.dll
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Hockeyshop.Data.pdb
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Hockeyshop.Interfaces.pdb
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\bin\Debug\net8.0\Hockeyshop.Services.pdb
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.csproj.AssemblyReference.cache
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\rpswa.dswa.cache.json
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.GeneratedMSBuildEditorConfig.editorconfig
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.AssemblyInfoInputs.cache
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.AssemblyInfo.cs
@@ -251,6 +256,9 @@ C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hoc
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.RazorAssemblyInfo.cache
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.RazorAssemblyInfo.cs
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.sourcelink.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\scopedcss\bundle\Hockeyshop.PortalWWW.styles.css
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\scopedcss\projectbundle\Hockeyshop.PortalWWW.bundle.scp.css
@@ -265,7 +273,3 @@ C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hoc
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.pdb
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\Hockeyshop.PortalWWW.genruntimeconfig.cache
 C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\ref\Hockeyshop.PortalWWW.dll
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Programming\_Studia WSB-NLU\dotNET courses\Internet Applications\WSB_PIAB_Hockeyshop\Hockeyshop.PortalWWW\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

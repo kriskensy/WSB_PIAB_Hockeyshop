@@ -1,9 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hockeyshop.Data.Data;
+using Hockeyshop.Interfaces;
+using Hockeyshop.Interfaces.Products;
+using Hockeyshop.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Hockeyshop.Data.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<HockeyshopContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("HockeyshopContext") ?? throw new InvalidOperationException("Connection string 'HockeyshopContext' not found.")));
+
+builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

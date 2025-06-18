@@ -1,9 +1,12 @@
 ﻿using Hockeyshop.Data.Data;
+using Hockeyshop.Interfaces.Products;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
 
 builder.Services.AddControllersWithViews();
 

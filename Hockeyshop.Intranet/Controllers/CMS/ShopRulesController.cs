@@ -70,23 +70,6 @@ namespace Hockeyshop.Intranet.Controllers.CMS
             return View("~/Views/CMS/ShopRules/Create.cshtml");
         }
 
-        // POST: ShopRules/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create([Bind("IdShopRule,IdIcon,Title,Content")] ShopRule shopRule)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        _context.Add(shopRule);
-        //        await _context.SaveChangesAsync();
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    ViewData["IdIcon"] = new SelectList(_context.IconLibraries, "IdIcon", "ClassName", shopRule.IdIcon);
-        //    return View("~/Views/CMS/ShopRules/Create.cshtml", shopRule);
-        //}
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdShopRule,IdIcon,Title,Content,DisplayOrder")] ShopRule shopRule)
@@ -140,42 +123,6 @@ namespace Hockeyshop.Intranet.Controllers.CMS
             ViewData["IdIcon"] = new SelectList(_context.IconLibraries, "IdIcon", "Name", shopRule.IdIcon);
             return View("~/Views/CMS/ShopRules/Edit.cshtml", shopRule);
         }
-
-        // POST: ShopRules/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Edit(int id, [Bind("IdShopRule,IdIcon,Title,Content")] ShopRule shopRule)
-        //{
-        //    if (id != shopRule.IdShopRule)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            _context.Update(shopRule);
-        //            await _context.SaveChangesAsync();
-        //        }
-        //        catch (DbUpdateConcurrencyException)
-        //        {
-        //            if (!ShopRuleExists(shopRule.IdShopRule))
-        //            {
-        //                return NotFound();
-        //            }
-        //            else
-        //            {
-        //                throw;
-        //            }
-        //        }
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    ViewData["IdIcon"] = new SelectList(_context.IconLibraries, "IdIcon", "ClassName", shopRule.IdIcon);
-        //    return View("~/Views/CMS/ShopRules/Edit.cshtml", shopRule);
-        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]

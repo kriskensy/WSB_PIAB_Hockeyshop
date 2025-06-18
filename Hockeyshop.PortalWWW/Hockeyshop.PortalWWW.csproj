@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hockeyshop.Data\Hockeyshop.Data.csproj" />
+    <ProjectReference Include="..\Hockeyshop.Interfaces\Hockeyshop.Interfaces.csproj" />
+    <ProjectReference Include="..\Hockeyshop.Services\Hockeyshop.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
