@@ -1,0 +1,12 @@
+﻿@model Hockeyshop.Data.Data.CMS.WelcomeText
+
+@{
+    ViewData["IdField"] = "Id";
+    ViewData["Title"] = "Welcome Text Details";
+    ViewData["HideDeleteButton"] = true;
+    ViewData["HideEditButton"] = true;
+    ViewData["PartialDetails"] = "~/Views/CMS/WelcomeText/_WelcomeTextDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)

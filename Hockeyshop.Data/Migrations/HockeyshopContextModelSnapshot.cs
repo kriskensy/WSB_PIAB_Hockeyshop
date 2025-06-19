@@ -22,6 +22,62 @@ namespace Hockeyshop.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Hockeyshop.Data.Data.CMS.ContactSection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ContactSections");
+                });
+
+            modelBuilder.Entity("Hockeyshop.Data.Data.CMS.FooterSection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FooterLogoText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FooterText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FooterSections");
+                });
+
             modelBuilder.Entity("Hockeyshop.Data.Data.CMS.HockeyNews", b =>
                 {
                     b.Property<int>("IdHockeyNews")
@@ -111,6 +167,30 @@ namespace Hockeyshop.Data.Migrations
                     b.HasIndex("IdIcon");
 
                     b.ToTable("ShopRules");
+                });
+
+            modelBuilder.Entity("Hockeyshop.Data.Data.CMS.WelcomeText", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("WelcomeTexts");
                 });
 
             modelBuilder.Entity("Hockeyshop.Data.Data.Cart.CartItem", b =>
@@ -439,9 +519,6 @@ namespace Hockeyshop.Data.Migrations
                     b.Property<int>("IdProduct")
                         .HasColumnType("int");
 
-                    b.Property<int?>("OrderIdOrder")
-                        .HasColumnType("int");
-
                     b.Property<int?>("ProductIdProduct")
                         .HasColumnType("int");
 
@@ -456,8 +533,6 @@ namespace Hockeyshop.Data.Migrations
                     b.HasIndex("IdOrder");
 
                     b.HasIndex("IdProduct");
-
-                    b.HasIndex("OrderIdOrder");
 
                     b.HasIndex("ProductIdProduct");
 
@@ -865,7 +940,7 @@ namespace Hockeyshop.Data.Migrations
             modelBuilder.Entity("Hockeyshop.Data.Data.Orders.OrderItem", b =>
                 {
                     b.HasOne("Hockeyshop.Data.Data.Orders.Order", "Order")
-                        .WithMany()
+                        .WithMany("OrderItems")
                         .HasForeignKey("IdOrder")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
@@ -875,10 +950,6 @@ namespace Hockeyshop.Data.Migrations
                         .HasForeignKey("IdProduct")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.HasOne("Hockeyshop.Data.Data.Orders.Order", null)
-                        .WithMany("OrderItems")
-                        .HasForeignKey("OrderIdOrder");
 
                     b.HasOne("Hockeyshop.Data.Data.Products.Product", null)
                         .WithMany("OrderItems")

@@ -1,0 +1,16 @@
+﻿@model Hockeyshop.Data.Data.CMS.WelcomeText
+
+@{
+    ViewData["Title"] = "Edit Welcome Text";
+    ViewData["FormAction"] = "Edit";
+    ViewData["PartialFields"] = "~/Views/CMS/WelcomeText/_WelcomeTextFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

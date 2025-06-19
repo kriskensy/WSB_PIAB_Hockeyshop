@@ -26,6 +26,9 @@ namespace Hockeyshop.Data.Data
         public DbSet<HockeyNews> HockeyNews { get; set; } = default!;
         public DbSet<IconLibrary> IconLibraries { get; set; } = default!;
         public DbSet<ShopRule> ShopRules { get; set; } = default!;
+        public DbSet<WelcomeText> WelcomeTexts { get; set; }
+        public DbSet<ContactSection> ContactSections { get; set; }
+        public DbSet<FooterSection> FooterSections { get; set; }
 
         //Core
         public DbSet<User> Users { get; set; } = default!;

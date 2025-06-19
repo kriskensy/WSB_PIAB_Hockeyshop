@@ -1,0 +1,22 @@
+﻿@model Hockeyshop.Data.Data.CMS.WelcomeText
+
+@if (Model == null)
+{
+    <div class="alert alert-info">No active welcome text.</div>
+}
+else
+{
+    <div class="d-flex align-items-center justify-content-center vh-100">
+        <div class="card highlights-card w-100 h-100 shadow" style="max-width: 2000px; min-width: 340px; border-radius: var(--radius-lg);">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center p-4" style="min-height: 0; flex: 0 0 auto;">
+                <h1 class="card-title mb-2 fs-2">@Model.Title</h1>
+                <p class="card-text text-center mb-0 fs-5 lh-base">
+                    @Html.Raw(Model.Description)
+                </p>
+            </div>
+            <img src="~/content/Logo_BestHockey.png" alt="Besthockey Logo"
+                 class="card-img-bottom"
+                 style="width: 100%; object-fit: contain; background: var(--color-white);" />
+        </div>
+    </div>
+}

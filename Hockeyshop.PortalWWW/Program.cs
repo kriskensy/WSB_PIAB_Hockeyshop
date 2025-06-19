@@ -1,12 +1,19 @@
 ﻿using Hockeyshop.Data.Data;
+using Hockeyshop.Interfaces.CMS;
 using Hockeyshop.Interfaces.Products;
+using Hockeyshop.Services.CMS;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.EntityFrameworkCore;
+using Hockeyshop.Interfaces.CMS;
+using Hockeyshop.Services.CMS;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
+builder.Services.AddScoped<IWelcomeTextService, WelcomeTextService>();
+builder.Services.AddScoped<IFooterSectionService, FooterSectionService>();
+builder.Services.AddScoped<IContactSectionService, ContactSectionService>();
 
 builder.Services.AddControllersWithViews();
 

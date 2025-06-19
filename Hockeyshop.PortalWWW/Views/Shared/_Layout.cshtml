@@ -121,7 +121,9 @@
         }
 
         <!-- Contact section -->
-        <div class="contact-section py-5">
+        @await Component.InvokeAsync("ContactSection")
+
+@*         <div class="contact-section py-5">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-5 offset-md-1 mb-4 mb-md-0 d-flex flex-column justify-content-center">
@@ -153,10 +155,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> *@
+
     </div>
 
-    <footer class="page-footer py-4">
+    @await Component.InvokeAsync("FooterSection")
+
+@*     <footer class="page-footer py-4">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
@@ -172,7 +177,7 @@
             </div>
         </div>
     </footer>
-
+ *@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

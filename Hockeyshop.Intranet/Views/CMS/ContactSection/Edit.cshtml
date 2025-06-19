@@ -1,0 +1,16 @@
+﻿@model Hockeyshop.Data.Data.CMS.ContactSection
+
+@{
+    ViewData["Title"] = "Edit Contact Section";
+    ViewData["FormAction"] = "Edit";
+    ViewData["PartialFields"] = "~/Views/CMS/ContactSection/_ContactSectionFields.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudFormContainer", Model)
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

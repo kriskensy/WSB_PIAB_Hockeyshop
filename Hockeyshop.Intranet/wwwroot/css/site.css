@@ -65,6 +65,10 @@ html {
         text-decoration: none;
     }
 
+.line-breaks {
+    white-space: pre-line;
+}
+
 /* buttons */
 button,
 a.btn {

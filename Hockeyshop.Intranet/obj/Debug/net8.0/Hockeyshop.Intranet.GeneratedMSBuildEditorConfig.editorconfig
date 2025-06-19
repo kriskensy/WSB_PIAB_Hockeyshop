@@ -84,6 +84,62 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxVc2VyQ2FydHNcX1VzZXJDYXJ0RmllbGRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/ContactSection/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXENvbnRhY3RTZWN0aW9uXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/ContactSection/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXENvbnRhY3RTZWN0aW9uXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/ContactSection/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXENvbnRhY3RTZWN0aW9uXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/ContactSection/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXENvbnRhY3RTZWN0aW9uXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/ContactSection/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXENvbnRhY3RTZWN0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/ContactSection/_ContactSectionDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXENvbnRhY3RTZWN0aW9uXF9Db250YWN0U2VjdGlvbkRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/ContactSection/_ContactSectionFields.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXENvbnRhY3RTZWN0aW9uXF9Db250YWN0U2VjdGlvbkZpZWxkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/FooterSection/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXEZvb3RlclNlY3Rpb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/FooterSection/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXEZvb3RlclNlY3Rpb25cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/FooterSection/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXEZvb3RlclNlY3Rpb25cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/FooterSection/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXEZvb3RlclNlY3Rpb25cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/FooterSection/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXEZvb3RlclNlY3Rpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/FooterSection/_FooterSectionDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXEZvb3RlclNlY3Rpb25cX0Zvb3RlclNlY3Rpb25EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/FooterSection/_FooterSectionFields.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXEZvb3RlclNlY3Rpb25cX0Zvb3RlclNlY3Rpb25GaWVsZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/HockeyNews/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXEhvY2tleU5ld3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -166,6 +222,34 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/ShopRules/_ShopRulesFields.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXFNob3BSdWxlc1xfU2hvcFJ1bGVzRmllbGRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/WelcomeText/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXFdlbGNvbWVUZXh0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/WelcomeText/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXFdlbGNvbWVUZXh0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/WelcomeText/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXFdlbGNvbWVUZXh0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/WelcomeText/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXFdlbGNvbWVUZXh0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/WelcomeText/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXFdlbGNvbWVUZXh0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/WelcomeText/_WelcomeTextDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXFdlbGNvbWVUZXh0XF9XZWxjb21lVGV4dERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/CMS/WelcomeText/_WelcomeTextFields.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ01TXFdlbGNvbWVUZXh0XF9XZWxjb21lVGV4dEZpZWxkcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Programming/_Studia WSB-NLU/dotNET courses/Internet Applications/WSB_PIAB_Hockeyshop/Hockeyshop.Intranet/Views/Core/UserRoles/Create.cshtml]

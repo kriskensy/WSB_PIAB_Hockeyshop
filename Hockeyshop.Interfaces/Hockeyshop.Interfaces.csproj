@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hockeyshop.Data\Hockeyshop.Data.csproj" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CMS\" />
+    <ProjectReference Include="..\Hockeyshop.Data\Hockeyshop.Data.csproj" />
   </ItemGroup>
 
 </Project>

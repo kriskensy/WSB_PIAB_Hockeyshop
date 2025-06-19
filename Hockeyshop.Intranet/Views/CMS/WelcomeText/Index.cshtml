@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Hockeyshop.Data.Data.CMS.WelcomeText>
+
+@{
+    ViewData["Title"] = "Welcome Text";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Title",
+        "Description",
+        "Active"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+    {
+        Title = "Welcome Text",
+        CreateAction = "Create",
+        EnableSearch = true,
+        SearchTerm = ViewBag.SearchTerm as string,
+        Columns = columns,
+        Rows = Model.Cast<object>(),
+        GetValue = (row, col) =>
+        {
+            var welcomeText = (Hockeyshop.Data.Data.CMS.WelcomeText)row;
+            return col switch
+            {
+                "ID" => welcomeText.Id,
+                "Title" => welcomeText.Title,
+                "Description" => (welcomeText.Description != null && welcomeText.Description.Length > 100
+                    ? welcomeText.Description.Substring(0, 100) + "..."
+                    : welcomeText.Description),
+                "Active" => welcomeText.IsActive
+                    ? "<span class='text-success'>&#x2714;</span>"
+                    : "<span class='text-danger'>&#x2718;</span>",
+                _ => ""
+            };
+        },
+        ActionLinks = row =>
+        {
+            var welcomeText = (Hockeyshop.Data.Data.CMS.WelcomeText)row;
+            return $@"
+                <a href=""/WelcomeText/Edit/{welcomeText.Id}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                <a href=""/WelcomeText/Details/{welcomeText.Id}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                <a href=""/WelcomeText/Delete/{welcomeText.Id}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+            ";
+        }
+    };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)

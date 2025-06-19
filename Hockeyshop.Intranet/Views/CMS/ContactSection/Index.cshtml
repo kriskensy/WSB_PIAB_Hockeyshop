@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Hockeyshop.Data.Data.CMS.ContactSection>
+
+@{
+    ViewData["Title"] = "Contact Section";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Title",
+        "Address",
+        "Email",
+        "Phone",
+        "Active"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+    {
+        Title = "Contact Section",
+        CreateAction = "Create",
+        EnableSearch = true,
+        SearchTerm = ViewBag.SearchTerm as string,
+        Columns = columns,
+        Rows = Model.Cast<object>(),
+        GetValue = (row, col) =>
+        {
+            var contact = (Hockeyshop.Data.Data.CMS.ContactSection)row;
+            return col switch
+            {
+                "ID" => contact.Id,
+                "Title" => contact.Title,
+                "Address" => contact.Address,
+                "Email" => contact.Email,
+                "Phone" => contact.Phone,
+                "Active" => contact.IsActive
+                    ? "<span class='text-success'>&#x2714;</span>"
+                    : "<span class='text-danger'>&#x2718;</span>",
+                _ => ""
+            };
+        },
+        ActionLinks = row =>
+        {
+            var contact = (Hockeyshop.Data.Data.CMS.ContactSection)row;
+            return $@"
+                <a href=""/ContactSection/Edit/{contact.Id}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                <a href=""/ContactSection/Details/{contact.Id}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                <a href=""/ContactSection/Delete/{contact.Id}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+            ";
+        }
+    };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)

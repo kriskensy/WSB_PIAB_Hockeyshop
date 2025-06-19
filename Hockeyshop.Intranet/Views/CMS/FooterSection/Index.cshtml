@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Hockeyshop.Data.Data.CMS.FooterSection>
+
+@{
+    ViewData["Title"] = "Footer Section";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Footer Text",
+        "Footer Logo Text",
+        "Active"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+    {
+        Title = "Footer Section",
+        CreateAction = "Create",
+        EnableSearch = true,
+        SearchTerm = ViewBag.SearchTerm as string,
+        Columns = columns,
+        Rows = Model.Cast<object>(),
+        GetValue = (row, col) =>
+        {
+            var footer = (Hockeyshop.Data.Data.CMS.FooterSection)row;
+            return col switch
+            {
+                "ID" => footer.Id,
+                "Footer Text" => (footer.FooterText != null && footer.FooterText.Length > 100
+                    ? footer.FooterText.Substring(0, 100) + "..."
+                    : footer.FooterText),
+                "Footer Logo Text" => footer.FooterLogoText,
+                "Active" => footer.IsActive
+                    ? "<span class='text-success'>&#x2714;</span>"
+                    : "<span class='text-danger'>&#x2718;</span>",
+                _ => ""
+            };
+        },
+        ActionLinks = row =>
+        {
+            var footer = (Hockeyshop.Data.Data.CMS.FooterSection)row;
+            return $@"
+                <a href=""/FooterSection/Edit/{footer.Id}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                <a href=""/FooterSection/Details/{footer.Id}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                <a href=""/FooterSection/Delete/{footer.Id}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+            ";
+        }
+    };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)
