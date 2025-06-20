@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9xIpyVOFeiY=",
+  "dgSpecHash": "d3RT5rXvTtg=",
   "success": true,
   "projectFilePath": "C:\\Programming\\_Studia WSB-NLU\\dotNET courses\\Internet Applications\\WSB_PIAB_Hockeyshop\\Hockeyshop.Intranet\\Hockeyshop.Intranet.csproj",
   "expectedPackageFiles": [
@@ -173,6 +173,7 @@
     "C:\\Users\\Kris\\.nuget\\packages\\nuget.projectmodel\\6.11.0\\nuget.projectmodel.6.11.0.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\nuget.protocol\\6.11.0\\nuget.protocol.6.11.0.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\nuget.versioning\\6.11.0\\nuget.versioning.6.11.0.nupkg.sha512",
+    "C:\\Users\\Kris\\.nuget\\packages\\questpdf\\2025.5.1\\questpdf.2025.5.1.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Kris\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",

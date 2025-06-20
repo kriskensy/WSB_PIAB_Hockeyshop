@@ -1,20 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hockeyshop.Data.Data;
+using Hockeyshop.Data.Data.Orders;
+using Hockeyshop.Interfaces.Orders;
+using Hockeyshop.Intranet.Extensions;
+using Hockeyshop.Intranet.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hockeyshop.Data.Data;
-using Hockeyshop.Data.Data.Orders;
-using Hockeyshop.Intranet.Models;
-using Hockeyshop.Intranet.Extensions;
 
 namespace Hockeyshop.Intranet.Controllers.Orders
 {
     public class InvoicesController : Controller
     {
         private readonly HockeyshopContext _context;
+        private readonly IInvoiceService _invoiceService;
 
-        public InvoicesController(HockeyshopContext context)
+        public InvoicesController(HockeyshopContext context, IInvoiceService invoiceService)
         {
             _context = context;
+            _invoiceService = invoiceService;
         }
 
         // GET: Invoices
@@ -39,6 +42,21 @@ namespace Hockeyshop.Intranet.Controllers.Orders
             return View("~/Views/Orders/Invoices/Index.cshtml", model);
         }
 
+        //faktura pdf
+        public async Task<IActionResult> DownloadPdf(int id)
+        {
+            try
+            {
+                var pdfBytes = await _invoiceService.GeneratePdfAsync(id);
+                var invoice = await _context.Invoices.FindAsync(id);
+                return File(pdfBytes, "application/pdf", $"Invoice-{invoice?.InvoiceNumber ?? id.ToString()}.pdf");
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+        }
+
         // GET: Invoices/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -49,6 +67,8 @@ namespace Hockeyshop.Intranet.Controllers.Orders
 
             var invoice = await _context.Invoices
                 .Include(i => i.Order)
+                    .ThenInclude(o => o.OrderItems)
+                        .ThenInclude(oi => oi.Product)
                 .Include(i => i.User)
                 .FirstOrDefaultAsync(m => m.IdInvoice == id);
             if (invoice == null)

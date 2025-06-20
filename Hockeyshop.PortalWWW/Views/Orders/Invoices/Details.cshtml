@@ -56,6 +56,9 @@
                     <a asp-action="Index" class="btn btn-outline-success">
                         <i class="fa fa-arrow-left"></i> Back to invoices
                     </a>
+                    <a asp-action="DownloadPdf" asp-route-id="@Model.IdInvoice" class="btn btn-primary ms-2">
+                        <i class="fa fa-file-pdf"></i> Download PDF
+                    </a>
                 </div>
             </div>
         </div>

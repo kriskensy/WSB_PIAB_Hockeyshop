@@ -5,6 +5,7 @@
     string editButtonText = ViewData["EditButtonText"] as string ?? "Edit";
     string deleteButtonText = ViewData["DeleteButtonText"] as string ?? "Delete";
     string backButtonText = ViewData["BackButtonText"] as string ?? "Back to list";
+    string downloadInvoiceButtonText = ViewData["DownloadInvoice"] as string ?? "Download Invoice";
 
 
     object idValue = null;
@@ -44,6 +45,12 @@
                 }
 
                 <a asp-action="Index" class="btn btn-outline-secondary ml-2">@backButtonText</a>
+
+                @if (ViewData.ContainsKey("HideDownloadInvoiceButton") && idValue != null)
+                {
+                    <a asp-action="DownloadPdf" asp-route-id="@idValue" class="btn btn-outline-success ms-2"> @downloadInvoiceButtonText</a>
+                }
+
             </div>
         </div>
     </div>
