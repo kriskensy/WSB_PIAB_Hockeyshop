@@ -25,7 +25,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Shared\Components\FooterSection\" />
     <Folder Include="wwwroot\content\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\Hockeyshop.PortalWWW\Views\Shared\Components\FooterSection\Default.cshtml" Link="Views\Shared\Components\FooterSection\Default.cshtml" />
   </ItemGroup>
 
 </Project>
