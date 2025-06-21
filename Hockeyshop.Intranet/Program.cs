@@ -3,6 +3,7 @@ using Hockeyshop.Interfaces;
 using Hockeyshop.Interfaces.CMS;
 using Hockeyshop.Interfaces.Orders;
 using Hockeyshop.Interfaces.Products;
+using Hockeyshop.Intranet.Hubs;
 using Hockeyshop.Services;
 using Hockeyshop.Services.CMS;
 using Hockeyshop.Services.Orders;
@@ -29,6 +30,7 @@ builder.Services.AddScoped<IContactMessageService, ContactMessageService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -50,5 +52,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapHub<NotificationHub>("/notificationHub");
 
 app.Run();

@@ -22,7 +22,21 @@
                 <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" name="searchTerm" />
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-            
+
+            <!--button z messages-->
+            <button id="messagesBtn"
+                    type="button"
+                    class="btn btn-success position-relative d-none notification-btn"
+                    onclick="location.href='/ContactMessage/Index'">
+                <i class="fas fa-envelope"></i>
+                <span class="ms-1">Messages</span>
+                <span id="messagesBadge"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger notification-badge">
+                    0
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+            </button>
+
 
             @if (User.Identity.IsAuthenticated)
             {

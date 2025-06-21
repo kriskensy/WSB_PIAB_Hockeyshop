@@ -1,4 +1,4 @@
-@import url('variables.css');
+﻿@import url('variables.css');
 
 /* global styles */
 html {
@@ -117,6 +117,51 @@ a.btn {
         background-color: var(--color-primary);
         color: var(--color-white);
     }
+
+.notification-btn {
+    margin-right: var(--spacing-sm);
+    font-size: 1.2rem;
+    background: var(--color-accent, #222);
+    color: var(--color-white, #fff);
+    border: none;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+    .notification-btn:hover, .notification-btn:focus {
+        background: var(--color-primary, #e84141);
+        color: var(--color-white, #fff);
+    }
+
+.notification-badge {
+    font-size: 0.75em;
+    font-weight: bold;
+    min-width: 1.4em;
+    height: 1.4em;
+    padding: 0 0.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    box-shadow: 0 0 0 2px var(--color-white, #fff);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 2px var(--color-white, #fff);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px var(--color-primary, #e84141);
+    }
+
+    100% {
+        box-shadow: 0 0 0 2px var(--color-white, #fff);
+    }
+}
+
 
 /* New arrivals carousel cards */
 .new-arrival-card {

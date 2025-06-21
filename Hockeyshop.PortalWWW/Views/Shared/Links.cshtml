@@ -32,15 +32,17 @@
                 int cartCount = ViewBag.CartCount ?? 0;
 
                 <a asp-area="" asp-controller="Cart" asp-action="Index" class="btn btn-success me-2 position-relative">
-                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="ms-1">Cart</span>
                     @if (cartCount > 0)
                     {
-                        <span class="cart-badge badge rounded-pill bg-danger">
+                        <span class="cart-badge badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">
                             @cartCount
                             <span class="visually-hidden">items in cart</span>
                         </span>
                     }
                 </a>
+
 
                 <div class="btn-group">
                     <a asp-area="" asp-controller="Account" asp-action="AccountIndex" class="btn btn-success dropdown-toggle"

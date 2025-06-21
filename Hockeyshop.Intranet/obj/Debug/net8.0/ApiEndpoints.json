@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "Hockeyshop.Intranet.Controllers.Api.NotificationsController",
+    "Method": "NewMessage",
+    "RelativePath": "api/notifications/new-message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

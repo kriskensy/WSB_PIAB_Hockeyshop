@@ -26,6 +26,8 @@ builder.Services.AddScoped<IContactMessageService, ContactMessageService>();
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddHttpClient(); //SignalR
+
 //obsługa sesji
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>

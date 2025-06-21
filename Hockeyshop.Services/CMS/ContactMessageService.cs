@@ -60,6 +60,12 @@ namespace Hockeyshop.Services.CMS
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<int> GetUnreadCountAsync()
+        {
+            return await _context.ContactMessages.CountAsync(m => !m.IsRead);
+        }
+
     }
 }
 

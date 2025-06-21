@@ -11,5 +11,6 @@ namespace Hockeyshop.Interfaces.CMS
         Task CreateAsync(ContactMessage message);
         Task MarkAsReadAsync(int id);
         Task DeleteAsync(int id);
+        Task<int> GetUnreadCountAsync(); //do wyświetlania na kopercie w intranet
     }
 }

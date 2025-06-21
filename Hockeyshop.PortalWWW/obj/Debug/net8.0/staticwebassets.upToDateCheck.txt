@@ -31,6 +31,7 @@ wwwroot\css\site.css
 wwwroot\css\table.css
 wwwroot\css\variables.css
 wwwroot\favicon.ico
+wwwroot\js\contact.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

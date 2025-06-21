@@ -208,4 +208,3 @@ namespace Hockeyshop.Intranet.Controllers.Marketing
         }
     }
 }
-}
