@@ -27,6 +27,7 @@ builder.Services.AddScoped<IFooterSectionService, FooterSectionService>();
 builder.Services.AddScoped<IContactSectionService, ContactSectionService>();
 builder.Services.AddScoped<IInvoiceService, InvoiceService>();
 builder.Services.AddScoped<IContactMessageService, ContactMessageService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductImageService, ProductImageService>();
 
 

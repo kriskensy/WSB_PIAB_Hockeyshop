@@ -16,7 +16,8 @@
     {
         Title = "Product Images",
         CreateAction = "Create",
-        EnableSearch = false,
+        EnableSearch = true,
+        SearchTerm = ViewBag.SearchTerm as string,
         Columns = columns,
         Rows = Model.Cast<object>(),
         GetValue = (row, col) =>

@@ -2,6 +2,8 @@
 using Hockeyshop.Interfaces.Products;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace Hockeyshop.Web.Controllers
@@ -9,10 +11,12 @@ namespace Hockeyshop.Web.Controllers
     public class ProductImagesController : Controller
     {
         private readonly IProductImageService _imageService;
+        private readonly IProductService _productService;
 
-        public ProductImagesController(IProductImageService imageService)
+        public ProductImagesController(IProductImageService imageService, IProductService productService)
         {
             _imageService = imageService;
+            _productService = productService;
         }
 
         public async Task<IActionResult> Index(int productId)
@@ -23,28 +27,44 @@ namespace Hockeyshop.Web.Controllers
         }
 
         //GET
-        public IActionResult Create(int productId)
+        public async Task<IActionResult> Create(int? productId = null)
         {
-            var model = new ProductImage { IdProduct = productId };
+            // Pobierz produkty przez serwis
+            var products = await _productService.GetAllAsync();
+            ViewBag.Products = products
+                .Select(p => new SelectListItem
+                {
+                    Value = p.IdProduct.ToString(),
+                    Text = p.Name
+                })
+                .ToList();
+
+            var model = new ProductImage { IdProduct = productId ?? 0};
             return View("~/Views/Products/ProductImages/Create.cshtml", model);
         }
 
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(int productId, IFormFile image)
+        public async Task<IActionResult> Create(ProductImage model, IFormFile image)
         {
-
-            Console.WriteLine($"DEBUG: Otrzymane productId = {productId}");//debug
+            // Pobierz produkty przez serwis (na wypadek błędu walidacji)
+            var products = await _productService.GetAllAsync();
+            ViewBag.Products = products
+                .Select(p => new SelectListItem
+                {
+                    Value = p.IdProduct.ToString(),
+                    Text = p.Name
+                })
+                .ToList();
 
             if (image != null)
             {
-                await _imageService.CreateAsync(productId, image);
-                return RedirectToAction(nameof(Index), new { productId });
+                await _imageService.CreateAsync(model.IdProduct, image);
+                return RedirectToAction(nameof(Index), new { productId = model.IdProduct });
             }
             ModelState.AddModelError("", "Choose image file.");
-            //ViewBag.ProductId = productId;
-            var model = new ProductImage { IdProduct = productId };
+
             return View("~/Views/Products/ProductImages/Create.cshtml", model);
         }
 
