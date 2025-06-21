@@ -15,5 +15,10 @@
     <ProjectReference Include="..\Hockeyshop.Data\Hockeyshop.Data.csproj" />
     <ProjectReference Include="..\Hockeyshop.Interfaces\Hockeyshop.Interfaces.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+	<FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
 
 </Project>

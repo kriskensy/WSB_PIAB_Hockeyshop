@@ -27,6 +27,7 @@
   <ItemGroup>
     <Folder Include="Views\Shared\Components\FooterSection\" />
     <Folder Include="wwwroot\content\" />
+    <Folder Include="wwwroot\uploads\products\" />
   </ItemGroup>
 
   <ItemGroup>

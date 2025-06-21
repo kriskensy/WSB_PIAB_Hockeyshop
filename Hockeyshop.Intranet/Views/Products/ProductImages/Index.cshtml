@@ -1,51 +1,45 @@
 ﻿@using Hockeyshop.Intranet.Extensions
-
 @model IEnumerable<Hockeyshop.Data.Data.Products.ProductImage>
 
 @{
-    ViewData["Title"] = "ProductImage";
+    ViewData["Title"] = "Products images";
     Layout = "_Layout";
 
     var columns = new List<string>
     {
         "ID",
-        "Product",
-        "Product Category",
         "Image",
-        "Image Url"
+        "Product ID"
     };
 
     CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+    {
+        Title = "Product Images",
+        CreateAction = "Create",
+        EnableSearch = false,
+        Columns = columns,
+        Rows = Model.Cast<object>(),
+        GetValue = (row, col) =>
+        {
+            var img = (Hockeyshop.Data.Data.Products.ProductImage)row;
+            return col switch
             {
-                Title = "Product Image",
-                CreateAction = "Create",
-                EnableSearch = true,
-                SearchTerm = ViewBag.SearchTerm as string,
-                Columns = columns,
-                Rows = Model.Cast<object>(),
-                GetValue = (row, col) =>
-                {
-                    var productImage = (Hockeyshop.Data.Data.Products.ProductImage)row; //rzutowanie wiersza na typ...
-                    return col switch
-                    {
-                        "ID" => productImage.IdProductImage,
-                        "Product" => productImage.Product?.Name,
-                        "Product Category" => productImage.Product?.ProductCategory?.Name,
-                        "Image" => productImage.GetImageHtml(),
-                        "Image Url" => productImage.ImageUrl,
-                        _ => ""
-                    };
-                },
-                ActionLinks = row =>
-                {
-                    var productImage = (Hockeyshop.Data.Data.Products.ProductImage)row;
-                    return $@"
-                        <a href=""/ProductImages/Edit/{productImage.IdProductImage}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
-                        <a href=""/ProductImages/Details/{productImage.IdProductImage}"" class=""btn btn-sm btn-outline-info"">Details</a>
-                        <a href=""/ProductImages/Delete/{productImage.IdProductImage}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
-                    ";
-                }
+                "ID" => img.IdProductImage,
+                "Image" => $"<img src='{img.ImageUrl}' alt='img' style='max-width:80px;max-height:80px;' />",
+                "Product ID" => img.IdProduct,
+                _ => ""
             };
+        },
+        ActionLinks = row =>
+        {
+            var img = (Hockeyshop.Data.Data.Products.ProductImage)row;
+            return $@"
+                        <a href=""/ProductImages/Edit/{img.IdProductImage}"" class=""btn btn-sm btn-outline-primary"">Edit</a>
+                        <a href=""/ProductImages/Details/{img.IdProductImage}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                        <a href=""/ProductImages/Delete/{img.IdProductImage}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+                    ";
+        }
+    };
 }
 
 @await Html.PartialAsync("_CrudIndexContainer", containerModel)

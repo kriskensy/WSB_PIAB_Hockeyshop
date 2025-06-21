@@ -36,10 +36,10 @@ namespace Hockeyshop.Data.Data.Products
         [Required(ErrorMessage = "The Description field is required.")]
         public string Description { get; set; }
 
-        [Required(ErrorMessage = "The Description field is required.")]
+        [Required(ErrorMessage = "The Highlight field is required.")]
         public bool Highlight { get; set; } = false;
 
-        [Required(ErrorMessage = "The Description field is required.")]
+        [Required(ErrorMessage = "The NewArrival field is required.")]
         public bool NewArrival { get; set; } = false;
 
 

@@ -1,17 +1,12 @@
 ﻿@model Hockeyshop.Data.Data.Products.ProductImage
 
-<dt class="col-sm-4">Product</dt>
-<dd class="col-sm-8">@Model.Product?.Name</dd>
-<dt class="col-sm-4">Image Preview</dt>
+<dt class="col-sm-4">ID image</dt>
+<dd class="col-sm-8">@Model.IdProductImage</dd>
+
+<dt class="col-sm-4">Preview</dt>
 <dd class="col-sm-8">
-    @if (!string.IsNullOrEmpty(Model.ImageUrl))
-    {
-        <img src="http://localhost:7174/content/img_products/@Model.ImageUrl" alt="Product image" style="max-width:200px;max-height:200px;" />
-    }
-    else
-    {
-        <span class="text-muted">No image</span>
-    }
+    <img src="@Model.ImageUrl" alt="Product image" style="max-width:200px;max-height:200px;" />
 </dd>
-<dt class="col-sm-4">Image Url</dt>
-<dd class="col-sm-8">@Model.ImageUrl</dd>
+
+<dt class="col-sm-4">ID product</dt>
+<dd class="col-sm-8">@Model.IdProduct</dd>

@@ -7,6 +7,7 @@ using Hockeyshop.Intranet.Hubs;
 using Hockeyshop.Services;
 using Hockeyshop.Services.CMS;
 using Hockeyshop.Services.Orders;
+using Hockeyshop.Services.Products;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using QuestPDF.Infrastructure;
@@ -26,6 +27,7 @@ builder.Services.AddScoped<IFooterSectionService, FooterSectionService>();
 builder.Services.AddScoped<IContactSectionService, ContactSectionService>();
 builder.Services.AddScoped<IInvoiceService, InvoiceService>();
 builder.Services.AddScoped<IContactMessageService, ContactMessageService>();
+builder.Services.AddScoped<IProductImageService, ProductImageService>();
 
 
 // Add services to the container.

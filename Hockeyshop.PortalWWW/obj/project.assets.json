@@ -3816,7 +3816,10 @@
         },
         "runtime": {
           "bin/placeholder/Hockeyshop.Services.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

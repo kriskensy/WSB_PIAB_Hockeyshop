@@ -1,4 +1,4 @@
-﻿@model Hockeyshop.Intranet.Models.ViewModels.ProductImageUploadViewModel
+﻿@model Hockeyshop.Data.Data.Products.ProductImage
 
 @{
     ViewData["Title"] = "Create Product Image";
@@ -7,10 +7,8 @@
     Layout = "_Layout";
 }
 
-@await Html.PartialAsync("_ProductImageFields", Model)
+@await Html.PartialAsync("_CrudFormContainer", Model)
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
+@* @section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+} *@

@@ -14,13 +14,17 @@
 
 <div class="row">
     <div class="col-md-6">
-        <form asp-action="@formAction" method="post">
+        <form asp-action="@formAction" method="post" enctype="multipart/form-data">
             @Html.AntiForgeryToken()
 
             @await Html.PartialAsync("_ValidationCreateAlert")
 
             <h3 class="mb-3">@title</h3>
+
+            <!--
             <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+            -->
+            
 
             <!-- konieczne rzutowanie na objekt bo PartialAsync nie może być wywoływane z dynamicznymi argumentami -->
             @await Html.PartialAsync(partialFields, (object)Model)
