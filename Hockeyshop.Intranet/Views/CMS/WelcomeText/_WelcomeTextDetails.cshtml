@@ -3,10 +3,7 @@
 <dt class="col-sm-4">Title</dt>
 <dd class="col-sm-8">@Model.Title</dd>
 <dt class="col-sm-4">Description</dt>
-@* <dd class="col-sm-8">
-    <span class="line-breaks">@Model.Description</span> <!-- dodatkowa klasa do łamania tekstów do nowej linii-->
-</dd> *@
 <dd class="col-sm-8">
-    @Html.Raw(Html.Encode(Model.Description).Replace("\n", "<br />").Replace("\r", ""))
+    @Html.Raw(Html.Encode(Model.Description).Replace("\n", "<br />").Replace("\r", ""))<!--łamanie tekstów do nowej linii-->
 </dd>
 

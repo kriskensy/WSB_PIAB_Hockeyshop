@@ -19,20 +19,40 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <form>
+
+                    <form id="contactForm" method="post" asp-controller="Contact" asp-action="Send">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your name">
+                            <input type="text" name="Name" class="form-control" placeholder="Your name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your email">
+                            <input type="email" name="Email" class="form-control" placeholder="Your email" required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                            <textarea name="Message" class="form-control" rows="3" placeholder="Message" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary px-4">Send</button>
                     </form>
+                    <div id="contactFormResult" class="mt-2"></div>
+
                 </div>
             </div>
         </div>
     </div>
 }
+
+<div class="modal fade" id="contactSuccessModal" tabindex="-1" aria-labelledby="contactSuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactSuccessModalLabel">Thank you!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Your message has been sent successfully.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

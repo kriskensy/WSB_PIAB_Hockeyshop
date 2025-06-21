@@ -12,9 +12,12 @@ Model.ActionLinks -> HTML, renderuje akcje dla rekordu *@
             <div class="crud-index-container">
                 <div class="index-header mb-4 d-flex justify-content-between align-items-center">
                     <h3>@Model.Title</h3>
-                    <a asp-action="@Model.CreateAction" class="btn btn-success"> <!--akcja kontrolera-->
-                        <i class="bi bi-plus-circle"></i> Create New
-                    </a>
+                    @if (!Model.HideCreateButton)
+                    {
+                        <a asp-action="@Model.CreateAction" class="btn btn-success">
+                            <i class="bi bi-plus-circle"></i> Create New
+                        </a>
+                    }
                 </div>
 
                 <!-- wyszukiwanie dynamiczne w zależności od flagi (jeśli true to formularz jest renderowany-->
@@ -46,7 +49,6 @@ Model.ActionLinks -> HTML, renderuje akcje dla rekordu *@
                                 <tr>
                                     @foreach(var col in Model.Columns)
                                     {
-                                        @* <td>@Model.GetValue(row, col)</td> //pobiera wartość komórki *@
                                         <td>@Html.Raw(Model.GetValue(row, col))</td>
                                         //pobiera wartość komórki
                                     }

@@ -34,7 +34,7 @@
             bool isPaymentsSection = currentController == "Payments" || currentController == "PaymentMethods" || currentController == "PaymentStatus";
             bool isUsersSection = currentController == "Users" || currentController == "UserRoles";
             bool isCartSection = currentController == "UserCarts" || currentController == "CartItems";
-            bool isWebsiteSection = currentController == "IconLibraries" || currentController == "ShopRules" || currentController == "WelcomeText" || currentController == "ContactSection" || currentController == "FooterSection";
+            bool isWebsiteSection = currentController == "IconLibraries" || currentController == "ShopRules" || currentController == "WelcomeText" || currentController == "ContactSection" || currentController == "FooterSection" || currentController == "ContactMessage";
         }
 
         <div class="flex-grow-1 d-flex" style="min-height: 0;">
@@ -191,6 +191,9 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="FooterSection" asp-action="Index"></i>Footer section</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="ContactMessage" asp-action="Index"></i>Contact Messages</a>
                                 </li>
                             </ul>
                         </div>

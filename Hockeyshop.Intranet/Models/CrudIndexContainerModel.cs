@@ -10,5 +10,6 @@
         public IEnumerable<object> Rows { get; set; } //kolekcja wierszy jako objekt bo różne modele
         public Func<object, string, object> GetValue { get; set; } //ta funkcja zwraca wartość dla danego wiersza i danej kolumny
         public Func<object, string> ActionLinks { get; set; } //ta funkcja generuje buttony akcji dla rekordu
+        public bool HideCreateButton { get; set; } = false; //domyślnie pokazuje button Create na widokach Index (hide na false)
     }
 }

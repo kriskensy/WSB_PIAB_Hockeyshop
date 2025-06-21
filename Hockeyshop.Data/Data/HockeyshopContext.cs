@@ -29,6 +29,8 @@ namespace Hockeyshop.Data.Data
         public DbSet<WelcomeText> WelcomeTexts { get; set; }
         public DbSet<ContactSection> ContactSections { get; set; }
         public DbSet<FooterSection> FooterSections { get; set; }
+        public DbSet<ContactEmail> ContactEmails { get; set; }
+        public DbSet<ContactMessage> ContactMessages { get; set; }
 
         //Core
         public DbSet<User> Users { get; set; } = default!;

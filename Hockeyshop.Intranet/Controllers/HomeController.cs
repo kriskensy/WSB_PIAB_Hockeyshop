@@ -16,17 +16,6 @@ namespace Hockeyshop.Intranet.Controllers
             _context = context;
         }
 
-        //public async Task <IActionResult> Index()
-        //{
-        //    ViewBag.ModelPage =
-        //        (
-        //            from page in _context.Page
-        //            orderby page.Position
-        //            select page
-        //        ).ToList();
-        //    return View();
-        //}
-
         public IActionResult Index()
         {
             return View();

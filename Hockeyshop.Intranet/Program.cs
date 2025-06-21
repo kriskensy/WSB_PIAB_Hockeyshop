@@ -24,6 +24,8 @@ builder.Services.AddScoped<IWelcomeTextService, WelcomeTextService>();
 builder.Services.AddScoped<IFooterSectionService, FooterSectionService>();
 builder.Services.AddScoped<IContactSectionService, ContactSectionService>();
 builder.Services.AddScoped<IInvoiceService, InvoiceService>();
+builder.Services.AddScoped<IContactMessageService, ContactMessageService>();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

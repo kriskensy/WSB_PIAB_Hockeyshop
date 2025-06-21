@@ -31,7 +31,6 @@
                     {
                         "ID" => hockeyNews.IdHockeyNews,
                         "Title" => hockeyNews.Title,
-                        // "Content" => hockeyNews.Content,
                         "Content" => (hockeyNews.Content != null && hockeyNews.Content.Length > 120
                                                                 ? hockeyNews.Content.Substring(0, 120) + "..."
                                                                 : hockeyNews.Content),

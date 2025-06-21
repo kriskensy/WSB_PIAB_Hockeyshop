@@ -13,7 +13,6 @@
 <body class="d-flex flex-column min-vh-100">
     <header>
         @await Html.PartialAsync("Links")
-        @* @await Html.PartialAsync("Links", (IEnumerable<Hockeyshop.Data.Data.CMS.HockeyNews>)ViewBag.ModelPage) *@
     </header>
 
     <div class="container mt-5 pt-3">
@@ -31,8 +30,6 @@
 
                     <!--New arrivals-->
                     <div class="col-12">
-                        @* <h4>New arrivals</h4>
-                        @await Html.PartialAsync("_NewArrivalsCarousel", ViewBag.NewArrivals as IEnumerable<Hockeyshop.Data.Data.Products.Product>) *@
                         @if (ViewBag.ShowNewArrivals == true) //flaga żeby na widoku Hockey news nie było tej karuzeli
                         {
                             <h4>New arrivals</h4>
@@ -129,6 +126,9 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/contact.js"></script> <!--modal z potwierdzeniem wysłania wiadomości-->
+
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

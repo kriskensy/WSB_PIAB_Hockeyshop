@@ -1,0 +1,12 @@
+﻿@model Hockeyshop.Data.Data.CMS.ContactMessage
+
+<dt class="col-sm-4">Name</dt>
+<dd class="col-sm-8">@Model.Name</dd>
+<dt class="col-sm-4">Email</dt>
+<dd class="col-sm-8">@Model.Email</dd>
+<dt class="col-sm-4">Message</dt>
+<dd class="col-sm-8">@Model.Message</dd>
+<dt class="col-sm-4">Submitted At</dt>
+<dd class="col-sm-8">@Model.SubmittedAt.ToString("yyyy-MM-dd HH:mm")</dd>
+<dt class="col-sm-4">Read</dt>
+<dd class="col-sm-8">@Model.IsRead</dd>

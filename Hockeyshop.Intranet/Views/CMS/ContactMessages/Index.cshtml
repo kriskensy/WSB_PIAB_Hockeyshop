@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Hockeyshop.Data.Data.CMS.ContactMessage>
+
+@{
+    ViewData["Title"] = "Contact Messages";
+    Layout = "_Layout";
+
+    var columns = new List<string>
+    {
+        "ID",
+        "Name",
+        "Email",
+        "Message",
+        "Submitted At",
+        "Read"
+    };
+
+    CrudIndexContainerModel containerModel = new CrudIndexContainerModel
+    {
+        Title = "Contact Messages",
+        EnableSearch = true,
+        SearchTerm = ViewBag.SearchTerm as string,
+        Columns = columns,
+        Rows = Model.Cast<object>(),
+        HideCreateButton = true, //ukrywa button Create New
+        GetValue = (row, col) =>
+        {
+            var msg = (Hockeyshop.Data.Data.CMS.ContactMessage)row;
+            return col switch
+            {
+                "ID" => msg.Id,
+                "Name" => msg.Name,
+                "Email" => msg.Email,
+                "Message" => msg.Message?.Length > 50 ? msg.Message.Substring(0, 50) + "..." : msg.Message,
+                "Submitted At" => msg.SubmittedAt.ToString("yyyy-MM-dd HH:mm"),
+                "Read" => msg.IsRead
+                    ? "<span class='text-success'>&#x2714;</span>"
+                    : "<span class='text-danger'>&#x2718;</span>",
+                _ => ""
+            };
+        },
+        ActionLinks = row =>
+        {
+            var msg = (Hockeyshop.Data.Data.CMS.ContactMessage)row;
+            return $@"
+                <a href=""/ContactMessage/Details/{msg.Id}"" class=""btn btn-sm btn-outline-info"">Details</a>
+                <a href=""/ContactMessage/Delete/{msg.Id}"" class=""btn btn-sm btn-outline-danger"">Delete</a>
+            ";
+        }
+    };
+}
+
+@await Html.PartialAsync("_CrudIndexContainer", containerModel)

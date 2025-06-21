@@ -1,0 +1,12 @@
+﻿@model Hockeyshop.Data.Data.CMS.ContactMessage
+
+@{
+    ViewData["IdField"] = "Id";
+    ViewData["Title"] = "Delete Contact Message";
+    ViewData["HideEditButton"] = true;
+    ViewData["DeleteButtonText"] = "Confirm deletion!";
+    ViewData["PartialDetails"] = "~/Views/CMS/ContactMessages/_ContactMessageDetails.cshtml";
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("_CrudDetailsContainer", Model)

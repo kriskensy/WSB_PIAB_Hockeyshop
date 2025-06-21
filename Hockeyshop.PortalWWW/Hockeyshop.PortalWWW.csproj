@@ -26,8 +26,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\Core\" />
-    <Folder Include="Services\" />
-    <Folder Include="Views\Core\" />
   </ItemGroup>
 
 </Project>

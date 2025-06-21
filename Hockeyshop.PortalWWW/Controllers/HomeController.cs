@@ -154,19 +154,6 @@ namespace Hockeyshop.PortalWWW.Controllers
             return RedirectToAction("OurTeam");
         }
 
-        //public IActionResult OurHighlights()
-        //{
-        //    return View();
-        //}
-        //public IActionResult GiftCards()
-        //{
-        //    return View();
-        //}
-        //public IActionResult Privacy()
-        //{
-        //    return View();
-        //}
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
