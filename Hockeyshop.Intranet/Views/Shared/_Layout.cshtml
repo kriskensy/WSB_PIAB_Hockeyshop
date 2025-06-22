@@ -44,6 +44,11 @@
                     <h4>Menu</h4>
                 </div>
                 <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="ContactMessage" asp-action="Index">
+                            <i class="fas fa-envelope"></i>Contact Messages
+                        </a>
+                    </li>
                     <!--Hockey news-->
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="HockeyNews" asp-action="Index">
@@ -192,9 +197,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="FooterSection" asp-action="Index"></i>Footer section</a>
                                 </li>
-                                <li class="nav-item">
+@*                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="ContactMessage" asp-action="Index"></i>Contact Messages</a>
-                                </li>
+                                </li> *@
                             </ul>
                         </div>
                     </li>
